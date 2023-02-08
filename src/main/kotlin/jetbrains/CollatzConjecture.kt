@@ -1,0 +1,4 @@
+package jetbrains
+
+class CollatzConjecture {
+}
