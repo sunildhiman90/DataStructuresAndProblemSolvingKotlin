@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Two Problems solved from jetbrains kotlin basics">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/jetbrains/SumOfDigits.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/utils/Utils.kt" afterDir="false" />
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="SUm Of Digits Problems solved from jetbrains kotlin basics">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/jetbrains/SumOfDigits.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/jetbrains/SumOfDigits.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676450372374</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="SUm Of Digits Problems solved from jetbrains kotlin basics">
+      <created>1676829853512</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676829853512</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,6 +111,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Minor changes" />
     <MESSAGE value="Two Problems solved from jetbrains kotlin basics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Two Problems solved from jetbrains kotlin basics" />
+    <MESSAGE value="SUm Of Digits Problems solved from jetbrains kotlin basics" />
+    <option name="LAST_COMMIT_MESSAGE" value="SUm Of Digits Problems solved from jetbrains kotlin basics" />
   </component>
 </project>

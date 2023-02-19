@@ -21,13 +21,19 @@ fun main() {
         //2nd way
         println(num.map(Char::toString).sumOf(String::toInt))
     }
-    println("2nd way took: $duration seconds")
+    println("2nd way took: $duration2 seconds")
 
     val (result3: Unit, duration3: Double) = measureTimedValueCustom {
         //3rd way
         println(sumOfDigitsCore(num.toInt()))
     }
-    println("3rd way took: $duration seconds")
+    println("3rd way took: $duration3 seconds")
+
+    val (result4: Unit, duration4: Double) = measureTimedValueCustom {
+        //4th way
+        print(readln().sumOf { it.digitToInt() })
+    }
+    println("4th way took: $duration4 seconds")
 
 
 }
@@ -38,7 +44,7 @@ fun sumOfDigitsCore(number: Int): Int {
     var sum = 0
     while (num > 0) {
         sum += num % 10
-        num = num / 10
+        num /= 10
     }
     return sum
 }
