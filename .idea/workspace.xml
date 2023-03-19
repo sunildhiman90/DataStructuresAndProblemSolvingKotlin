@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Added 4th way for sun of digits">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/jetbrains/NumberOfTensUsingString.kt" afterDir="false" />
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Number of tens using string">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/array/KadaneAlgo.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,9 +42,16 @@
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.SumOfDigitsKt">
+  <component name="RunManager" selected="Kotlin.KadaneAlgoKt">
     <configuration name="DaysMinutesSecondsFromCurrentTimeMillisKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jetbrains.DaysMinutesSecondsFromCurrentTimeMillisKt" />
+      <module name="ProblemSolvingKotlin" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KadaneAlgoKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="array.KadaneAlgoKt" />
       <module name="ProblemSolvingKotlin" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -59,6 +66,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.KadaneAlgoKt" />
         <item itemvalue="Kotlin.SumOfDigitsKt" />
         <item itemvalue="Kotlin.DaysMinutesSecondsFromCurrentTimeMillisKt" />
       </list>
@@ -101,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676830000445</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Number of tens using string">
+      <created>1677566766384</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677566766384</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -120,6 +135,7 @@
     <MESSAGE value="Two Problems solved from jetbrains kotlin basics" />
     <MESSAGE value="SUm Of Digits Problems solved from jetbrains kotlin basics" />
     <MESSAGE value="Added 4th way for sun of digits" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added 4th way for sun of digits" />
+    <MESSAGE value="Number of tens using string" />
+    <option name="LAST_COMMIT_MESSAGE" value="Number of tens using string" />
   </component>
 </project>
