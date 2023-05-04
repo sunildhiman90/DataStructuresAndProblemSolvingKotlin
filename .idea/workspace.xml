@@ -1,17 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Kadane algo">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/multithreading/ProducerConsumer2.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/multithreading/ProducerConsumer4.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/multithreading/ProducerConsumerMultipleItemsAtOnce.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/multithreading/ProducerConsumerSingleItemAtATime.kt" afterDir="false" />
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Producer Consumer Single item at a time&#10;Producer Consumer Multiple items at a time using buffer">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProblemSolvingKotlin.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/untitled">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ProblemSolvingKotlin" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -21,6 +50,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -37,12 +71,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/sunil/Intellij/ProblemSolvingKotlin/src/main/kotlin",
+    "last_opened_file_path": "/Users/sunil/Intellij/ProblemSolvingKotlin",
     "settings.editor.selected.configurable": "preferences.startup.tasks"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
@@ -50,48 +85,30 @@
     </key>
   </component>
   <component name="RunManager" selected="Kotlin.ProducerConsumerSingleItemAtATime">
-    <configuration name="KadaneAlgoKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="array.KadaneAlgoKt" />
-      <module name="ProblemSolvingKotlin" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PCGFG" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="multithreading.PCGFG" />
-      <module name="ProblemSolvingKotlin" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProducerConsumer2" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="multithreading.ProducerConsumer2" />
-      <module name="ProblemSolvingKotlin" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProducerConsumerMultipleItemsAtOnce" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+    <configuration name="ProducerConsumerMultipleItemsAtOnce" type="JetRunConfigurationType" temporary="true">
       <option name="MAIN_CLASS_NAME" value="multithreading.ProducerConsumerMultipleItemsAtOnce" />
-      <module name="ProblemSolvingKotlin" />
+      <module name="ProblemSolvingKotlin.main" />
+      <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProducerConsumerSingleItemAtATime" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+    <configuration name="ProducerConsumerSingleItemAtATime" type="JetRunConfigurationType" temporary="true">
       <option name="MAIN_CLASS_NAME" value="multithreading.ProducerConsumerSingleItemAtATime" />
-      <module name="ProblemSolvingKotlin" />
+      <module name="ProblemSolvingKotlin.main" />
+      <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Kotlin.ProducerConsumerMultipleItemsAtOnce" />
+      <item itemvalue="Kotlin.ProducerConsumerSingleItemAtATime" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.ProducerConsumerSingleItemAtATime" />
         <item itemvalue="Kotlin.ProducerConsumerMultipleItemsAtOnce" />
-        <item itemvalue="Kotlin.ProducerConsumer2" />
-        <item itemvalue="Kotlin.PCGFG" />
-        <item itemvalue="Kotlin.KadaneAlgoKt" />
       </list>
     </recent_temporary>
   </component>
@@ -175,5 +192,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ProblemSolvingKotlin$ProducerConsumer3.ic" NAME="ProducerConsumer3 Coverage Results" MODIFIED="1683178312972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/ProblemSolvingKotlin$ProducerConsumerSingleItemAtATime__1_.ic" NAME="ProducerConsumerSingleItemAtATime (1) Coverage Results" MODIFIED="1683185389154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
