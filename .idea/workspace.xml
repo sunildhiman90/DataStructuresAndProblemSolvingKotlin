@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Number of tens using string">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/array/KadaneAlgo.kt" afterDir="false" />
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Kadane algo">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/multithreading/ProducerConsumer2.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/multithreading/ProducerConsumer4.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/multithreading/ProducerConsumerMultipleItemsAtOnce.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/multithreading/ProducerConsumerSingleItemAtATime.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,27 +32,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sunil/Intellij/ProblemSolvingKotlin/src/main/kotlin&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/sunil/Intellij/ProblemSolvingKotlin/src/main/kotlin",
+    "settings.editor.selected.configurable": "preferences.startup.tasks"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
     </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="multithreading" />
+    </key>
   </component>
-  <component name="RunManager" selected="Kotlin.KadaneAlgoKt">
-    <configuration name="DaysMinutesSecondsFromCurrentTimeMillisKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jetbrains.DaysMinutesSecondsFromCurrentTimeMillisKt" />
-      <module name="ProblemSolvingKotlin" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.ProducerConsumerSingleItemAtATime">
     <configuration name="KadaneAlgoKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="array.KadaneAlgoKt" />
       <module name="ProblemSolvingKotlin" />
@@ -57,8 +57,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SumOfDigitsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jetbrains.SumOfDigitsKt" />
+    <configuration name="PCGFG" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="multithreading.PCGFG" />
+      <module name="ProblemSolvingKotlin" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProducerConsumer2" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="multithreading.ProducerConsumer2" />
+      <module name="ProblemSolvingKotlin" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProducerConsumerMultipleItemsAtOnce" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="multithreading.ProducerConsumerMultipleItemsAtOnce" />
+      <module name="ProblemSolvingKotlin" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProducerConsumerSingleItemAtATime" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="multithreading.ProducerConsumerSingleItemAtATime" />
       <module name="ProblemSolvingKotlin" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -66,9 +87,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.ProducerConsumerSingleItemAtATime" />
+        <item itemvalue="Kotlin.ProducerConsumerMultipleItemsAtOnce" />
+        <item itemvalue="Kotlin.ProducerConsumer2" />
+        <item itemvalue="Kotlin.PCGFG" />
         <item itemvalue="Kotlin.KadaneAlgoKt" />
-        <item itemvalue="Kotlin.SumOfDigitsKt" />
-        <item itemvalue="Kotlin.DaysMinutesSecondsFromCurrentTimeMillisKt" />
       </list>
     </recent_temporary>
   </component>
@@ -116,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677566766384</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Kadane algo">
+      <created>1679250826706</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679250826706</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,6 +166,14 @@
     <MESSAGE value="SUm Of Digits Problems solved from jetbrains kotlin basics" />
     <MESSAGE value="Added 4th way for sun of digits" />
     <MESSAGE value="Number of tens using string" />
-    <option name="LAST_COMMIT_MESSAGE" value="Number of tens using string" />
+    <MESSAGE value="Kadane algo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kadane algo" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ProblemSolvingKotlin$ProducerConsumer3.ic" NAME="ProducerConsumer3 Coverage Results" MODIFIED="1683178312972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
