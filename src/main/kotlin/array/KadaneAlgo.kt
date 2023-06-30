@@ -16,7 +16,7 @@ fun kadaneAlgo(arr: List<Int>): Int {
             sumSoFar = 0 //reset
         }
     }
-    return sumGlobal;
+    return sumGlobal
 }
 
 fun main() {

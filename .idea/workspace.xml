@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Gradle support added" />
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Gradle support added">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/leetcode/ReverseWordsInAString.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/array/KadaneAlgo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/array/KadaneAlgo.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,6 +68,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/sunil/Intellij/ProblemSolvingKotlin&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.startup.tasks&quot;
   }
@@ -77,7 +83,7 @@
       <recent name="multithreading" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.ProducerConsumerSingleItemAtATime">
+  <component name="RunManager" selected="Kotlin.ReverseWordsInAStringKt">
     <configuration name="ProducerConsumerMultipleItemsAtOnce" type="JetRunConfigurationType" temporary="true">
       <option name="MAIN_CLASS_NAME" value="multithreading.ProducerConsumerMultipleItemsAtOnce" />
       <module name="ProblemSolvingKotlin.main" />
@@ -94,12 +100,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReverseWordsInAStringKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.ReverseWordsInAStringKt" />
+      <module name="ProblemSolvingKotlin.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Kotlin.ReverseWordsInAStringKt" />
       <item itemvalue="Kotlin.ProducerConsumerMultipleItemsAtOnce" />
       <item itemvalue="Kotlin.ProducerConsumerSingleItemAtATime" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.ReverseWordsInAStringKt" />
         <item itemvalue="Kotlin.ProducerConsumerSingleItemAtATime" />
         <item itemvalue="Kotlin.ProducerConsumerMultipleItemsAtOnce" />
       </list>
@@ -170,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683185595358</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Gradle support added">
+      <created>1683185637385</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683185637385</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
