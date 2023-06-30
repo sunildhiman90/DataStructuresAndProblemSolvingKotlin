@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Gradle support added">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/leetcode/ReverseWordsInAString.kt" afterDir="false" />
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="leetcode ReverseWordsInAString solution">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/array/KadaneAlgo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/array/KadaneAlgo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/leetcode/ReverseWordsInAString.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/leetcode/ReverseWordsInAString.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683185637385</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="leetcode ReverseWordsInAString solution">
+      <created>1688111779963</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1688111779963</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,7 +220,8 @@
     <MESSAGE value="Number of tens using string" />
     <MESSAGE value="Kadane algo" />
     <MESSAGE value="Gradle support added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gradle support added" />
+    <MESSAGE value="leetcode ReverseWordsInAString solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode ReverseWordsInAString solution" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

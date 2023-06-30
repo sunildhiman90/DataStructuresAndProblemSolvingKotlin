@@ -5,7 +5,7 @@ import java.util.*
 class ReverseWordsInAString {}
 
 fun reverseWords(s: String): String {
-    val words = s.split("\\s+".toRegex()).toMutableList() //remove one or more spaces and convert List to MutableList for updating elements
+    val words = s.trim().split("\\s+".toRegex()).toMutableList() //remove one or more spaces and convert List to MutableList for updating elements
     var i = 0
     var j = words.size - 1
     while(i < j) {
@@ -20,7 +20,7 @@ fun reverseWords(s: String): String {
 }
 
 fun reverseWordsUsingStack(s: String): String {
-    val words = s.split("\\s+".toRegex()).toMutableList() //remove one or more spaces and convert List to MutableList for updating elements
+    val words = s.trim().split("\\s+".toRegex()).toMutableList() //remove one or more spaces and convert List to MutableList for updating elements
     val stack = Stack<String>()
     for(word in words) {
       stack.push(word)
