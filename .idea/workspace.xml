@@ -4,54 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="CalculateXPowerNEfficient, PerfectSquare, SquareRootXOptimized Implementations">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/arrays/SortArrayOfZerosOnes2s.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/graph/GraphBFS.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/graph/GraphDFS.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/linkedlist/DetectCycle.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/linkedlist/LinkedList.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/linkedlist/PalindromeLinkedList.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/linkedlist/RemoveCycleFromLinkedList.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/linkedlist/RemoveNthNodeFromEnd.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/linkedlist/SinglyLinkedList.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/queue/CircularQueueUsingArray.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/queue/QueueUsing2Stacks.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/queue/QueueUsingArray.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/queue/QueueUsingArrayList.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/queue/QueueUsingLinkedList.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/searching/BinarySearch.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/searching/LinearSearch.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/sorting/BubbleSort.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/sorting/HeapSort.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/sorting/InsertionSort.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/sorting/MergeSort.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/sorting/QuickSort.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/sorting/SelectionSort.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/EvaluatePostfixExpression.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/InfixToPostfix.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/PushAtTheBottomIterative.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/PushAtTheBottomOfStackRecursive.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/ReverseStack.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/ReverseStackIterative.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/StackUsingArray.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/StackUsingArrayList.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/StackUsingLinkedList.kt" afterDir="false" />
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Merged DSAKotlin and ProblemSolvingKotlin repos in single repo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/array/KadaneAlgo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/array/KadaneAlgo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/PerfectSquare.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/binarysearch/SquareRootXOptimized.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/SquareRootXOptimized.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/bitmanipulation/NumberOfSetBits.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/bitmanipulation/NumberOfSetBits.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/jetbrains/CollatzConjecture.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/jetbrains/CollatzConjecture.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/jetbrains/DaysMinutesSecondsFromCurrentTimeMillis.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/jetbrains/DaysMinutesSecondsFromCurrentTimeMillis.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/jetbrains/NumberOfTens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/jetbrains/NumberOfTens.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/jetbrains/NumberOfTensUsingString.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/jetbrains/NumberOfTensUsingString.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/jetbrains/SumOfDigits.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/jetbrains/SumOfDigits.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/leetcode/ReverseWordsInAString.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/leetcode/ReverseWordsInAString.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/multithreading/ProducerConsumer2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/multithreading/ProducerConsumer2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/multithreading/ProducerConsumer4.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/multithreading/ProducerConsumer4.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/multithreading/ProducerConsumerMultipleItemsAtOnce.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/multithreading/ProducerConsumerMultipleItemsAtOnce.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/multithreading/ProducerConsumerSingleItemAtATime.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/multithreading/ProducerConsumerSingleItemAtATime.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/recursion/CalculateXPowerNEfficient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/recursion/CalculateXPowerNEfficient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +82,15 @@
       <recent name="multithreading" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.SortArrayOfZerosOnes2sKt">
+  <component name="RunManager" selected="Kotlin.BinarySearchKt">
+    <configuration name="BinarySearchKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dsa.searching.BinarySearchKt" />
+      <module name="DataStructuresAndProblemSolvingKotlin.main" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CalculateXPowerNEfficientKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="recursion.CalculateXPowerNEfficientKt" />
       <module name="ProblemSolvingKotlin.main" />
@@ -135,8 +98,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NumberOfSetBitsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bitmanipulation.NumberOfSetBitsKt" />
+    <configuration name="PerfectSquareKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="problemsolving.binarysearch.PerfectSquareKt" />
       <module name="ProblemSolvingKotlin.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,27 +119,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SquareRootXOptimizedKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="binarysearch.SquareRootXOptimizedKt" />
-      <module name="ProblemSolvingKotlin.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Kotlin.BinarySearchKt" />
+      <item itemvalue="Kotlin.PerfectSquareKt (1)" />
       <item itemvalue="Kotlin.SortArrayOfZerosOnes2sKt" />
       <item itemvalue="Kotlin.CalculateXPowerNEfficientKt" />
-      <item itemvalue="Kotlin.NumberOfSetBitsKt" />
       <item itemvalue="Kotlin.PerfectSquareKt" />
-      <item itemvalue="Kotlin.SquareRootXOptimizedKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.BinarySearchKt" />
+        <item itemvalue="Kotlin.PerfectSquareKt (1)" />
         <item itemvalue="Kotlin.SortArrayOfZerosOnes2sKt" />
         <item itemvalue="Kotlin.CalculateXPowerNEfficientKt" />
         <item itemvalue="Kotlin.PerfectSquareKt" />
-        <item itemvalue="Kotlin.SquareRootXOptimizedKt" />
-        <item itemvalue="Kotlin.NumberOfSetBitsKt" />
       </list>
     </recent_temporary>
   </component>
@@ -282,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689664377267</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Merged DSAKotlin and ProblemSolvingKotlin repos in single repo">
+      <option name="closed" value="true" />
+      <created>1689665702517</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1689665702517</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -308,7 +272,8 @@
     <MESSAGE value="leetcode ReverseWordsInAString solution applied trim" />
     <MESSAGE value="numberOfSetBits implementation" />
     <MESSAGE value="CalculateXPowerNEfficient, PerfectSquare, SquareRootXOptimized Implementations" />
-    <option name="LAST_COMMIT_MESSAGE" value="CalculateXPowerNEfficient, PerfectSquare, SquareRootXOptimized Implementations" />
+    <MESSAGE value="Merged DSAKotlin and ProblemSolvingKotlin repos in single repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merged DSAKotlin and ProblemSolvingKotlin repos in single repo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

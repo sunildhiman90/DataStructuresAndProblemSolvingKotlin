@@ -5,5 +5,5 @@ pluginManagement {
     }
     
 }
-rootProject.name = "ProblemSolvingKotlin"
+rootProject.name = "DataStructuresAndProblemSolvingKotlin"
 
