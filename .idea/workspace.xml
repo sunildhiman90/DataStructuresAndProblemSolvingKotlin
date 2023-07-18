@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="leetcode ReverseWordsInAString solution applied trim">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/bitmanipulation/NumberOfSetBits.kt" afterDir="false" />
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="numberOfSetBits implementation">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/binarysearch/SquareRootXOptimized.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/recursion/CalculateXPowerNEfficient.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +84,14 @@
       <recent name="multithreading" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.NumberOfSetBitsKt">
+  <component name="RunManager" selected="Kotlin.CalculateXPowerNEfficientKt">
+    <configuration name="CalculateXPowerNEfficientKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="recursion.CalculateXPowerNEfficientKt" />
+      <module name="ProblemSolvingKotlin.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NumberOfSetBitsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bitmanipulation.NumberOfSetBitsKt" />
       <module name="ProblemSolvingKotlin.main" />
@@ -91,18 +99,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProducerConsumerMultipleItemsAtOnce" type="JetRunConfigurationType" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="multithreading.ProducerConsumerMultipleItemsAtOnce" />
+    <configuration name="PerfectSquareKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="binarysearch.PerfectSquareKt" />
       <module name="ProblemSolvingKotlin.main" />
-      <shortenClasspath name="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProducerConsumerSingleItemAtATime" type="JetRunConfigurationType" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="multithreading.ProducerConsumerSingleItemAtATime" />
-      <module name="ProblemSolvingKotlin.main" />
-      <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -114,18 +113,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SquareRootXOptimizedKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="binarysearch.SquareRootXOptimizedKt" />
+      <module name="ProblemSolvingKotlin.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Kotlin.CalculateXPowerNEfficientKt" />
       <item itemvalue="Kotlin.NumberOfSetBitsKt" />
+      <item itemvalue="Kotlin.PerfectSquareKt" />
+      <item itemvalue="Kotlin.SquareRootXOptimizedKt" />
       <item itemvalue="Kotlin.ReverseWordsInAStringKt" />
-      <item itemvalue="Kotlin.ProducerConsumerMultipleItemsAtOnce" />
-      <item itemvalue="Kotlin.ProducerConsumerSingleItemAtATime" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.CalculateXPowerNEfficientKt" />
+        <item itemvalue="Kotlin.PerfectSquareKt" />
+        <item itemvalue="Kotlin.SquareRootXOptimizedKt" />
         <item itemvalue="Kotlin.NumberOfSetBitsKt" />
         <item itemvalue="Kotlin.ReverseWordsInAStringKt" />
-        <item itemvalue="Kotlin.ProducerConsumerSingleItemAtATime" />
-        <item itemvalue="Kotlin.ProducerConsumerMultipleItemsAtOnce" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688111956639</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="numberOfSetBits implementation">
+      <option name="closed" value="true" />
+      <created>1689658216871</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1689658216871</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,7 +255,89 @@
     <MESSAGE value="Gradle support added" />
     <MESSAGE value="leetcode ReverseWordsInAString solution" />
     <MESSAGE value="leetcode ReverseWordsInAString solution applied trim" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode ReverseWordsInAString solution applied trim" />
+    <MESSAGE value="numberOfSetBits implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="numberOfSetBits implementation" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <line>17</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <line>25</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <line>19</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <line>20</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <line>18</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <line>22</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <line>9</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <line>12</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/recursion/CalculateXPowerNEfficient.kt</url>
+          <line>19</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/recursion/CalculateXPowerNEfficient.kt</url>
+          <line>26</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/recursion/CalculateXPowerNEfficient.kt</url>
+          <line>27</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/recursion/CalculateXPowerNEfficient.kt</url>
+          <line>29</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/recursion/CalculateXPowerNEfficient.kt</url>
+          <line>21</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/recursion/CalculateXPowerNEfficient.kt</url>
+          <line>23</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
