@@ -4,11 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="numberOfSetBits implementation">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/binarysearch/SquareRootXOptimized.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/recursion/CalculateXPowerNEfficient.kt" afterDir="false" />
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="CalculateXPowerNEfficient, PerfectSquare, SquareRootXOptimized Implementations">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/arrays/SortArrayOfZerosOnes2s.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/graph/GraphBFS.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/graph/GraphDFS.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/linkedlist/DetectCycle.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/linkedlist/LinkedList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/linkedlist/PalindromeLinkedList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/linkedlist/RemoveCycleFromLinkedList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/linkedlist/RemoveNthNodeFromEnd.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/linkedlist/SinglyLinkedList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/queue/CircularQueueUsingArray.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/queue/QueueUsing2Stacks.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/queue/QueueUsingArray.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/queue/QueueUsingArrayList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/queue/QueueUsingLinkedList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/searching/BinarySearch.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/searching/LinearSearch.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/sorting/BubbleSort.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/sorting/HeapSort.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/sorting/InsertionSort.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/sorting/MergeSort.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/sorting/QuickSort.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/sorting/SelectionSort.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/EvaluatePostfixExpression.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/InfixToPostfix.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/PushAtTheBottomIterative.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/PushAtTheBottomOfStackRecursive.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/ReverseStack.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/ReverseStackIterative.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/StackUsingArray.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/StackUsingArrayList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/StackUsingLinkedList.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/array/KadaneAlgo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/array/KadaneAlgo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/PerfectSquare.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/binarysearch/SquareRootXOptimized.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/SquareRootXOptimized.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/bitmanipulation/NumberOfSetBits.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/bitmanipulation/NumberOfSetBits.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/jetbrains/CollatzConjecture.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/jetbrains/CollatzConjecture.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/jetbrains/DaysMinutesSecondsFromCurrentTimeMillis.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/jetbrains/DaysMinutesSecondsFromCurrentTimeMillis.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/jetbrains/NumberOfTens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/jetbrains/NumberOfTens.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/jetbrains/NumberOfTensUsingString.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/jetbrains/NumberOfTensUsingString.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/jetbrains/SumOfDigits.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/jetbrains/SumOfDigits.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/leetcode/ReverseWordsInAString.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/leetcode/ReverseWordsInAString.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/multithreading/ProducerConsumer2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/multithreading/ProducerConsumer2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/multithreading/ProducerConsumer4.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/multithreading/ProducerConsumer4.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/multithreading/ProducerConsumerMultipleItemsAtOnce.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/multithreading/ProducerConsumerMultipleItemsAtOnce.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/multithreading/ProducerConsumerSingleItemAtATime.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/multithreading/ProducerConsumerSingleItemAtATime.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/recursion/CalculateXPowerNEfficient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/recursion/CalculateXPowerNEfficient.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,27 +107,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sunil/Intellij/ProblemSolvingKotlin&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.startup.tasks&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/sunil/Intellij/ProblemSolvingKotlin/src/main/kotlin",
+    "settings.editor.selected.configurable": "preferences.startup.tasks"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
+      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="multithreading" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.CalculateXPowerNEfficientKt">
+  <component name="RunManager" selected="Kotlin.SortArrayOfZerosOnes2sKt">
     <configuration name="CalculateXPowerNEfficientKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="recursion.CalculateXPowerNEfficientKt" />
       <module name="ProblemSolvingKotlin.main" />
@@ -106,8 +149,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReverseWordsInAStringKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.ReverseWordsInAStringKt" />
+    <configuration name="SortArrayOfZerosOnes2sKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dsa.arrays.SortArrayOfZerosOnes2sKt" />
       <module name="ProblemSolvingKotlin.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -121,19 +164,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Kotlin.SortArrayOfZerosOnes2sKt" />
       <item itemvalue="Kotlin.CalculateXPowerNEfficientKt" />
       <item itemvalue="Kotlin.NumberOfSetBitsKt" />
       <item itemvalue="Kotlin.PerfectSquareKt" />
       <item itemvalue="Kotlin.SquareRootXOptimizedKt" />
-      <item itemvalue="Kotlin.ReverseWordsInAStringKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.SortArrayOfZerosOnes2sKt" />
         <item itemvalue="Kotlin.CalculateXPowerNEfficientKt" />
         <item itemvalue="Kotlin.PerfectSquareKt" />
         <item itemvalue="Kotlin.SquareRootXOptimizedKt" />
         <item itemvalue="Kotlin.NumberOfSetBitsKt" />
-        <item itemvalue="Kotlin.ReverseWordsInAStringKt" />
       </list>
     </recent_temporary>
   </component>
@@ -231,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689658216871</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="CalculateXPowerNEfficient, PerfectSquare, SquareRootXOptimized Implementations">
+      <option name="closed" value="true" />
+      <created>1689664377267</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1689664377267</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -256,83 +307,84 @@
     <MESSAGE value="leetcode ReverseWordsInAString solution" />
     <MESSAGE value="leetcode ReverseWordsInAString solution applied trim" />
     <MESSAGE value="numberOfSetBits implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="numberOfSetBits implementation" />
+    <MESSAGE value="CalculateXPowerNEfficient, PerfectSquare, SquareRootXOptimized Implementations" />
+    <option name="LAST_COMMIT_MESSAGE" value="CalculateXPowerNEfficient, PerfectSquare, SquareRootXOptimized Implementations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/PerfectSquare.kt</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/PerfectSquare.kt</url>
           <line>17</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/PerfectSquare.kt</url>
           <line>25</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/PerfectSquare.kt</url>
           <line>19</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/PerfectSquare.kt</url>
           <line>20</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/PerfectSquare.kt</url>
           <line>18</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/PerfectSquare.kt</url>
           <line>22</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/PerfectSquare.kt</url>
           <line>9</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/binarysearch/PerfectSquare.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/PerfectSquare.kt</url>
           <line>12</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/recursion/CalculateXPowerNEfficient.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/problemsolving/recursion/CalculateXPowerNEfficient.kt</url>
           <line>19</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/recursion/CalculateXPowerNEfficient.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/problemsolving/recursion/CalculateXPowerNEfficient.kt</url>
           <line>26</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/recursion/CalculateXPowerNEfficient.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/problemsolving/recursion/CalculateXPowerNEfficient.kt</url>
           <line>27</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/recursion/CalculateXPowerNEfficient.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/problemsolving/recursion/CalculateXPowerNEfficient.kt</url>
           <line>29</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/recursion/CalculateXPowerNEfficient.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/problemsolving/recursion/CalculateXPowerNEfficient.kt</url>
           <line>21</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/recursion/CalculateXPowerNEfficient.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/problemsolving/recursion/CalculateXPowerNEfficient.kt</url>
           <line>23</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
