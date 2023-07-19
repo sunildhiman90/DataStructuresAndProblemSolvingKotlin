@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Implementation of MonotonicStack.kt and NextGreaterElement" />
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Some refactoring">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +83,7 @@
   </component>
   <component name="RunManager" selected="Kotlin.MonotonicStackKt">
     <configuration name="BinarySearchKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dsa.searching.BinarySearchKt" />
+      <option name="MAIN_CLASS_NAME" value="datastructures.searching.BinarySearchKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
       <shortenClasspath name="NONE" />
       <method v="2">
@@ -89,7 +91,7 @@
       </method>
     </configuration>
     <configuration name="MonotonicStackKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dsa.stack.MonotonicStackKt" />
+      <option name="MAIN_CLASS_NAME" value="datastructures.stack.MonotonicStackKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,7 +112,7 @@
       </method>
     </configuration>
     <configuration name="SortArrayOfZerosOnes2sKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dsa.arrays.SortArrayOfZerosOnes2sKt" />
+      <option name="MAIN_CLASS_NAME" value="datastructures.arrays.SortArrayOfZerosOnes2sKt" />
       <module name="ProblemSolvingKotlin.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -259,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689746988805</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Some refactoring">
+      <option name="closed" value="true" />
+      <created>1689747137115</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1689747137115</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,7 +298,8 @@
     <MESSAGE value="Merged DSAKotlin and ProblemSolvingKotlin repos in single repo" />
     <MESSAGE value="Renamed project" />
     <MESSAGE value="Implementation of MonotonicStack.kt and NextGreaterElement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementation of MonotonicStack.kt and NextGreaterElement" />
+    <MESSAGE value="Some refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
