@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Renamed project">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dsa/stack/MonotonicStack.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack/NextGreaterElement.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Implementation of MonotonicStack.kt and NextGreaterElement" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -255,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689666321901</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Implementation of MonotonicStack.kt and NextGreaterElement">
+      <option name="closed" value="true" />
+      <created>1689746988805</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1689746988805</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,7 +287,8 @@
     <MESSAGE value="CalculateXPowerNEfficient, PerfectSquare, SquareRootXOptimized Implementations" />
     <MESSAGE value="Merged DSAKotlin and ProblemSolvingKotlin repos in single repo" />
     <MESSAGE value="Renamed project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed project" />
+    <MESSAGE value="Implementation of MonotonicStack.kt and NextGreaterElement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementation of MonotonicStack.kt and NextGreaterElement" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
