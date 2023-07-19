@@ -7,8 +7,6 @@ import java.util.*
  */
  // Related Problem links :
  // https://practice.geeksforgeeks.org/problems/fab3dbbdce746976ba35c7b9b24afde40eae5a04/1
-class NextSmallerElement {
-}
 
 fun main() {
 
@@ -21,7 +19,7 @@ fun nextSmallerElement(nums: Array<Int>): Array<Int> {
     val hashMap = mutableMapOf<Int, Int>()
     val stack = Stack<Int>()
     var element = nums[0]
-    var next = -1
+    var next: Int
 
     stack.push(element)
 
