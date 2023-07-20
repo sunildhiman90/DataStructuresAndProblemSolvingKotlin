@@ -4,8 +4,7 @@ import java.util.*
 
 // Find next greater element of each element of array after that element
 // https://leetcode.com/problems/next-greater-element-i/
-class NextGreaterElement {
-}
+class NextGreaterElement
 
 fun main() {
 
@@ -82,11 +81,12 @@ fun nextGreaterElementMain(nums: Array<Int>): Array<Int> {
 }
 
 
-// this approach wil not work with repeating elements at non consecutive(not continuously but with some other elements in between) indexes , then for last index repeating element,
-// if no greater element found, then it will replace greater element of prev repeating element
+// this approach wil not work with repeating elements at non consecutive(not continuously but with some other elements in between) indexes ,
+// then for last index repeating element, if no greater element found, then it will replace greater element of prev repeating element
 // For example check this case: 11, 13, 21, 3, 5, 3
 // Here 3 is repeated at not consecutive indexes(3rd and 5th indexes), So for first 3 at 3rd index, it will put next greater as 5,
-// but for last 3 at 5th index in 2nd while loop it will replace it with -1 becoz after that we dont have greater element, Becoz hashmap cannot have multiple same keys with different values
+// but for last 3 at 5th index in 2nd while loop it will replace it with -1 becoz after that we dont have greater element,
+// Becoz hashmap cannot have multiple same keys with different values
 fun nextGreaterElementUsingHashmap(nums: Array<Int>): Array<Int> {
     val hashMap = mutableMapOf<Int, Int>()
     val stack = Stack<Int>()

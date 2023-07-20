@@ -13,10 +13,39 @@ fun main() {
     //val arr = arrayOf(11,13,4,21,3)
     //val arr = arrayOf(10,1,1,6)
     val arr = arrayOf(10, 1, 1, 6, 5, 3, 7, 9, 1, 3, 4)
-    println(nextSmallerElement2(arr).contentToString())
+    println(nextSmallerElementMainCompacted(arr).contentToString())
     println(nextSmallerElementMain(arr).contentToString())
+    println(nextSmallerElement2(arr).contentToString())
+
 
 }
+
+// More compacted code as compared to other solutions here
+fun nextSmallerElementMainCompacted(nums: Array<Int>): Array<Int> {
+    val finalArray = Array(nums.size) { -1 }
+    val stack = Stack<Int>()
+    var next: Int
+
+    for ((index, element) in nums.withIndex()) {
+
+        // next num
+        next = element
+
+        //use increasing monotonic stack logic for popping, becoz if current(next) element is larger than prev(stack top),
+        // then it does not satisfy our criteria, so push to stack for later adding -1, otherwise pop
+        while (!stack.isEmpty() && nums[stack.peek()] > next) {
+            finalArray[stack.peek()] = next
+            stack.pop()
+        }
+
+        //push index for finding its next smaller, becoz we need index for creating new array
+        stack.push(index)
+
+    }
+
+    return finalArray
+}
+
 
 fun nextSmallerElementMain(nums: Array<Int>): Array<Int> {
     val finalArray = Array(nums.size) { 0 }

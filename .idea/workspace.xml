@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="NextSmallerElement and NextGreaterElement modified">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack/NextGreaterElement2.kt" afterDir="false" />
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="NextSmallerElement2 and NextGreaterElement modified">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/stack/MonotonicStack.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/stack/MonotonicStack.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack/NextGreaterElement.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack/NextGreaterElement.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack/NextGreaterElement2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack/NextGreaterElement2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack/NextSmallerElement.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack/NextSmallerElement.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +86,7 @@
       <recent name="multithreading" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.NextGreaterElementKt">
+  <component name="RunManager" selected="Kotlin.NextSmallerElementKt">
     <configuration name="BinarySearchKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="datastructures.searching.BinarySearchKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
@@ -130,9 +132,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.NextSmallerElementKt" />
         <item itemvalue="Kotlin.NextGreaterElementKt" />
         <item itemvalue="Kotlin.NextGreaterElement2Kt" />
-        <item itemvalue="Kotlin.NextSmallerElementKt" />
         <item itemvalue="Kotlin.MonotonicStackKt" />
         <item itemvalue="Kotlin.BinarySearchKt" />
       </list>
@@ -312,7 +314,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689756600089</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="NextSmallerElement2 and NextGreaterElement modified">
+      <option name="closed" value="true" />
+      <created>1689829219998</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1689829219998</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -345,7 +355,8 @@
     <MESSAGE value="Added .idea to gitignore" />
     <MESSAGE value="NextSmallerElement" />
     <MESSAGE value="NextSmallerElement and NextGreaterElement modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="NextSmallerElement and NextGreaterElement modified" />
+    <MESSAGE value="NextSmallerElement2 and NextGreaterElement modified" />
+    <option name="LAST_COMMIT_MESSAGE" value="NextSmallerElement2 and NextGreaterElement modified" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

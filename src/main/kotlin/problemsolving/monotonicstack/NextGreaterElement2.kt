@@ -2,7 +2,7 @@ package problemsolving.monotonicstack
 
 import java.util.*
 
-// Find next greater element of each element of array after that element, we can search in circular array
+// Find next greater element of each element of array after that element, we can search in circular array as well
 // https://leetcode.com/problems/next-greater-element-ii/
 
 fun main() {
