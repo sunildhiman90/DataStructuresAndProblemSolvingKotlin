@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="NextSmallerElement2 and NextGreaterElement modified">
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Moved some problems from dsa package to problem solving package and Added logic for disconnected Graph inGraphDFS.kt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/graph/GraphBFS.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/graph/GraphBFS.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/graph/GraphDFS.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/graph/GraphDFS.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/PalindromeLinkedList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/PalindromeLinkedList.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/RemoveCycleFromLinkedList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/RemoveCycleFromLinkedList.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/stack/EvaluatePostfixExpression.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/EvaluatePostfixExpression.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/stack/InfixToPostfix.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/InfixToPostfix.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/stack/PushAtTheBottomIterative.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/PushAtTheBottomIterative.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/stack/PushAtTheBottomOfStackRecursive.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/PushAtTheBottomOfStackRecursive.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/stack/ReverseStack.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/ReverseStack.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/stack/ReverseStackIterative.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/ReverseStackIterative.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,16 +87,16 @@
       <recent name="multithreading" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.GraphDFSKt">
-    <configuration name="GraphDFSKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="datastructures.graph.GraphDFSKt" />
+  <component name="RunManager" selected="Kotlin.GraphBFSKt">
+    <configuration name="GraphBFSKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructures.graph.GraphBFSKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MonotonicStackKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="datastructures.stack.MonotonicStackKt" />
+    <configuration name="GraphDFSKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructures.graph.GraphDFSKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -131,19 +124,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Kotlin.GraphBFSKt" />
       <item itemvalue="Kotlin.GraphDFSKt" />
       <item itemvalue="Kotlin.NextGreaterElement2Kt" />
-      <item itemvalue="Kotlin.MonotonicStackKt" />
       <item itemvalue="Kotlin.NextGreaterElementKt" />
       <item itemvalue="Kotlin.NextSmallerElementKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.GraphBFSKt" />
         <item itemvalue="Kotlin.GraphDFSKt" />
         <item itemvalue="Kotlin.NextSmallerElementKt" />
         <item itemvalue="Kotlin.NextGreaterElementKt" />
         <item itemvalue="Kotlin.NextGreaterElement2Kt" />
-        <item itemvalue="Kotlin.MonotonicStackKt" />
       </list>
     </recent_temporary>
   </component>
@@ -337,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689829525253</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Moved some problems from dsa package to problem solving package and Added logic for disconnected Graph inGraphDFS.kt">
+      <option name="closed" value="true" />
+      <created>1689915006659</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1689915006659</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -371,7 +372,8 @@
     <MESSAGE value="NextSmallerElement" />
     <MESSAGE value="NextSmallerElement and NextGreaterElement modified" />
     <MESSAGE value="NextSmallerElement2 and NextGreaterElement modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="NextSmallerElement2 and NextGreaterElement modified" />
+    <MESSAGE value="Moved some problems from dsa package to problem solving package and Added logic for disconnected Graph inGraphDFS.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved some problems from dsa package to problem solving package and Added logic for disconnected Graph inGraphDFS.kt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -523,11 +525,6 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="JetRunConfigurationType">
-        <watch expression="nums[stack.peek()]" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
