@@ -6,10 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="NextSmallerElement2 and NextGreaterElement modified">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/stack/MonotonicStack.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/stack/MonotonicStack.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack/NextGreaterElement.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack/NextGreaterElement.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack/NextGreaterElement2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack/NextGreaterElement2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack/NextSmallerElement.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack/NextSmallerElement.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/graph/GraphDFS.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/graph/GraphDFS.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/PalindromeLinkedList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/PalindromeLinkedList.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/RemoveCycleFromLinkedList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/RemoveCycleFromLinkedList.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/stack/EvaluatePostfixExpression.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/EvaluatePostfixExpression.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/stack/InfixToPostfix.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/InfixToPostfix.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/stack/PushAtTheBottomIterative.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/PushAtTheBottomIterative.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/stack/PushAtTheBottomOfStackRecursive.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/PushAtTheBottomOfStackRecursive.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/stack/ReverseStack.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/ReverseStack.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/stack/ReverseStackIterative.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/ReverseStackIterative.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,15 +87,17 @@
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack" />
+    </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="multithreading" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.NextSmallerElementKt">
-    <configuration name="BinarySearchKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="datastructures.searching.BinarySearchKt" />
+  <component name="RunManager" selected="Kotlin.GraphDFSKt">
+    <configuration name="GraphDFSKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructures.graph.GraphDFSKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
-      <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -124,19 +131,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Kotlin.GraphDFSKt" />
       <item itemvalue="Kotlin.NextGreaterElement2Kt" />
       <item itemvalue="Kotlin.MonotonicStackKt" />
       <item itemvalue="Kotlin.NextGreaterElementKt" />
       <item itemvalue="Kotlin.NextSmallerElementKt" />
-      <item itemvalue="Kotlin.BinarySearchKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.GraphDFSKt" />
         <item itemvalue="Kotlin.NextSmallerElementKt" />
         <item itemvalue="Kotlin.NextGreaterElementKt" />
         <item itemvalue="Kotlin.NextGreaterElement2Kt" />
         <item itemvalue="Kotlin.MonotonicStackKt" />
-        <item itemvalue="Kotlin.BinarySearchKt" />
       </list>
     </recent_temporary>
   </component>
@@ -322,7 +329,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689829219998</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="NextSmallerElement2 and NextGreaterElement modified">
+      <option name="closed" value="true" />
+      <created>1689829525253</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1689829525253</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -475,6 +490,36 @@
           <url>file://$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack/NextGreaterElement2.kt</url>
           <line>81</line>
           <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/datastructures/graph/GraphDFS.kt</url>
+          <line>38</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/datastructures/graph/GraphDFS.kt</url>
+          <line>39</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/datastructures/graph/GraphDFS.kt</url>
+          <line>40</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/datastructures/graph/GraphDFS.kt</url>
+          <line>37</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/datastructures/graph/GraphDFS.kt</url>
+          <line>28</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/datastructures/graph/GraphDFS.kt</url>
+          <line>30</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

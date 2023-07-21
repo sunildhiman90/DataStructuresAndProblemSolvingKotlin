@@ -8,8 +8,8 @@ fun removeCycleNew(node: LinkedList.Node?) {
     if (node?.next == null) return
 
     // incrementing them here, it will cover if 2 elements are in the list and no cycle, otherwise it will return loop even if that is not there
-    var slow: LinkedList.Node? = node?.next?.next
-    var fast: LinkedList.Node? = node?.next
+    var slow: LinkedList.Node? = node.next?.next
+    var fast: LinkedList.Node? = node.next
 
     // Search for loop using slow and fast pointers
     while (fast?.next?.next != null) {
@@ -49,8 +49,8 @@ fun detectCycleStartNode(node: LinkedList.Node?): LinkedList.Node? {
     if (node?.next == null) return null
 
     // incrementing them here, it will cover if 2 elements are in the list and no cycle, otherwise it will return loop even if that is not there
-    var slow: LinkedList.Node? = node?.next?.next
-    var fast: LinkedList.Node? = node?.next
+    var slow: LinkedList.Node? = node.next?.next
+    var fast: LinkedList.Node? = node.next
 
     // Search for loop using slow and fast pointers
     while (fast?.next?.next != null) {

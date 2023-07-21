@@ -1,4 +1,4 @@
-package datastructures.stack
+package problemsolving.stack
 
 import java.util.Stack
 

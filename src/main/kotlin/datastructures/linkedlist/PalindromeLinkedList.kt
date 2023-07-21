@@ -8,6 +8,8 @@ fun isPalindrome(head: LinkedList.Node?): Boolean {
     val middle = findMid(head) //end of 1st half
     var secondHalfStart = reverse(middle?.next) //second list will start from mid+1, so mid.next is used here
     var firstHalfStart = head
+
+    // use secondHalfStart for null checking becoz only it will go until last node but not firstHalfStart
     while (secondHalfStart != null) {
         if (secondHalfStart.data != firstHalfStart?.data) return false
         secondHalfStart = secondHalfStart.next
