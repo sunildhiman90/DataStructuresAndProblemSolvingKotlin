@@ -3,7 +3,7 @@ package datastructures.graph
 import java.util.*
 
 class GraphBFS(
-    var numberOfVertices: Int,
+    private var numberOfVertices: Int,
     private var adjacencyList: Array<LinkedList<Int>> = Array(numberOfVertices) {
         LinkedList()
     }

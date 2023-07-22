@@ -2,21 +2,12 @@ package algorithms.sorting
 
 import utils.measureTimedValueCustom
 
-class InsertionSort {
-
-}
-
-fun main() {
-    println("** Insertion Sort **")
-    println("Enter array elements with comma after each element and then press enter:")
-    val arr = readln().split(",").map { it.toInt() }
-    val (result: List<Int>, duration: Double) = measureTimedValueCustom {
-        arr.insertionSort()
-    }
-    println("Sorter array is : $result")
-    println("Insertion Sort took $duration seconds")
-}
-
+/**
+ *  Two lists -> sorted and unsorted
+ *  1. Insertion means we will require shifting of elements in the array(sorted list) for
+ *  inserting any current(temp) element at its desired position in sorted list
+ *  2. Single element is always sorted, so we will start loop from i=1 for unsorted list
+ */
 fun List<Int>.insertionSort(): List<Int> {
     var list = this.toMutableList()
     for (i in 1 until list.size) { //iteration loop
@@ -30,4 +21,15 @@ fun List<Int>.insertionSort(): List<Int> {
         list[j + 1] = temp
     }
     return list
+}
+
+fun main() {
+    println("** Insertion Sort **")
+    println("Enter array elements with comma after each element and then press enter:")
+    val arr = readln().split(",").map { it.toInt() }
+    val (result: List<Int>, duration: Double) = measureTimedValueCustom {
+        arr.insertionSort()
+    }
+    println("Sorter array is : $result")
+    println("Insertion Sort took $duration seconds")
 }

@@ -2,20 +2,6 @@ package algorithms.sorting
 
 import utils.measureTimedValueCustom
 
-class QuickSort {
-}
-
-fun main() {
-    println("** QuickSort **")
-    println("Enter array elements with comma after each element and then press enter:")
-    val arr = readln().split(",").map { it.toInt() }
-    val (result: List<Int>, duration: Double) = measureTimedValueCustom {
-        quickSort(arr.toMutableList(), 0, arr.size-1)
-    }
-    println("Sorter array is : $result")
-    println("QuickSort took $duration seconds")
-}
-
 //check for elements smaller than pivot, and swap with larger(Mostly it will be so)
 fun quickSort(list: MutableList<Int>, low: Int, high: Int): List<Int> {
     if (low < high) {
@@ -51,5 +37,21 @@ fun partition(list: MutableList<Int>, low: Int, high: Int): Int {
     return i
 }
 
+fun main() {
+    println("** QuickSort **")
+    println("Enter array elements with comma after each element and then press enter:")
+    val arr = readln().split(",").map { it.toInt() }
+    val (result: List<Int>, duration: Double) = measureTimedValueCustom {
+        quickSort(arr.toMutableList(), 0, arr.size-1)
+    }
+    println("Sorter array is : $result")
+    println("QuickSort took $duration seconds")
+}
 
-
+/**
+ * It requires random access for swapping, so better for arrays, because random access is faster in arrays
+ * <p>
+ * Space Complexity -> O(logn) -> for recursive stack calls, on each stage its divided into 2 subarrays
+ * <p>
+ * Time Complexity  -> Worst case(O(n*n)) happens when pivot element is either smallest or largest, it means either array is sorted in assending order or descending
+ */

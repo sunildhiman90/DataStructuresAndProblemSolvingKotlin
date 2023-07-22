@@ -1,27 +1,5 @@
 package algorithms.sorting
 
-class HeapSort {
-}
-
-
-fun maxHeapify(list: MutableList<Int>, n: Int, startIndex: Int) {
-    var largest = startIndex
-    var l = 2 * startIndex + 1 //left child
-    var r = 2 * startIndex + 2 //right child
-
-    if (l <= n-1 && list[l] > list[largest]) largest = l
-    if (r <= n-1 && list[r] > list[largest]) largest = r
-    if(largest != startIndex) {
-        //if largest is changed , swap them
-        var temp = list[largest]
-        list[largest] = list[startIndex]
-        list[startIndex] = temp
-
-        //and now again check for maxHeapify for largest
-        maxHeapify(list, n, largest)
-    }
-}
-
 fun heapSort(list: MutableList<Int>, n: Int) {
 
     //Step1: build heap, starting from (n/2)-1 to 0(start), becoz all leaf nodes start from (n/2) to n-1, so before that we have non leaf nodes
@@ -45,9 +23,26 @@ fun heapSort(list: MutableList<Int>, n: Int) {
     }
 }
 
+fun maxHeapify(list: MutableList<Int>, n: Int, startIndex: Int) {
+    var largest = startIndex
+    var l = 2 * startIndex + 1 //left child
+    var r = 2 * startIndex + 2 //right child
+
+    if (l <= n-1 && list[l] > list[largest]) largest = l
+    if (r <= n-1 && list[r] > list[largest]) largest = r
+    if(largest != startIndex) {
+        //if largest is changed , swap them
+        var temp = list[largest]
+        list[largest] = list[startIndex]
+        list[startIndex] = temp
+
+        //and now again check for maxHeapify for largest
+        maxHeapify(list, n, largest)
+    }
+}
+
 
 fun main() {
-
     println("Enter array elements using comma as separator and then press enter")
     var arr = readln().split(",").map { it.toInt() }
     var mutableList = arr.toMutableList()

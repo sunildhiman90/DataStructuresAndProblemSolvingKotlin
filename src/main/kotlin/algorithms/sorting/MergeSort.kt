@@ -54,6 +54,7 @@ fun main() {
     println("sort array is : $mutableList")
 }
 
+
 /**
  *
  * It does not requires random access it requires sequential access, so better for linked lists

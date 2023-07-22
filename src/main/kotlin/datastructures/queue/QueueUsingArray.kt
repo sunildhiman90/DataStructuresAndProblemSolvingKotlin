@@ -27,7 +27,8 @@ class QueueUsingA(val capacity: Int) {
             "Queue is empty!"
         }
         val element = arr[0]
-        for (i in 0 until capacity - 1) {
+        // only need to traverse till rear
+        for (i in 0 until rear) {
             arr[i] = arr[i + 1]
         }
         rear--
@@ -39,7 +40,7 @@ class QueueUsingA(val capacity: Int) {
             return -1
         }
         val element = arr[0]
-        for (i in 0 until capacity - 1) {
+        for (i in 0 until rear) {
             arr[i] = arr[i + 1]
         }
         rear--
