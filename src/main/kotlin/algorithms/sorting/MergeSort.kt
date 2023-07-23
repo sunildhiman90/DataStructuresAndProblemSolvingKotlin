@@ -6,14 +6,14 @@ fun divide(list: MutableList<Int>, start: Int, end: Int) {
         return
     }
 
-    var mid = start + (end - start) / 2
+    val mid = start + (end - start) / 2
     divide(list, start, mid)
     divide(list, mid + 1, end)
     conquer(list, start, mid, end)
 }
 
 fun conquer(list: MutableList<Int>, start: Int, mid: Int, end: Int) {
-    var mergedList = mutableListOf<Int>()
+    val mergedList = mutableListOf<Int>()
     var k = 0
     var idx1 = start
     var idx2 = mid + 1
@@ -37,6 +37,10 @@ fun conquer(list: MutableList<Int>, start: Int, mid: Int, end: Int) {
         mergedList.add(k++, list[idx2++])
     }
 
+
+    // j will be initialized to startIndex because startIndex will change for each recursive call ,
+    // before that element will be sorted
+    // copy all elements of new merged array to original array from startIndex before which all elements will be already
     var index2 = start
     for (i in 0 until mergedList.size) {
         list[index2++] = mergedList[i]

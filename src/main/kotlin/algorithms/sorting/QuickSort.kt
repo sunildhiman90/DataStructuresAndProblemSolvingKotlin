@@ -2,7 +2,11 @@ package algorithms.sorting
 
 import utils.measureTimedValueCustom
 
-//check for elements smaller than pivot, and swap with larger(Mostly it will be so)
+// check for elements smaller than pivot, and we will store them in sorted order
+// by swapping with current element if current element < pivot element,
+// by this way, elements smaller than pivot will be come together before some index (pivot index)
+// and elements larger than pivot will automatically shifted to positions
+// greater than pivot index (used for keeping track of smaller elements than pivot)
 fun quickSort(list: MutableList<Int>, low: Int, high: Int): List<Int> {
     if (low < high) {
         val pivotIndex = partition(list, low, high)
@@ -53,5 +57,7 @@ fun main() {
  * <p>
  * Space Complexity -> O(logn) -> for recursive stack calls, on each stage its divided into 2 subarrays
  * <p>
- * Time Complexity  -> Worst case(O(n*n)) happens when pivot element is either smallest or largest, it means either array is sorted in assending order or descending
+ * Time Complexity  ->
+ * Best and average case: O(n*logn)
+ * Worst case: (O(n*n)) and It happens when pivot element is either smallest or largest, it means either array is sorted in assending order or descending
  */

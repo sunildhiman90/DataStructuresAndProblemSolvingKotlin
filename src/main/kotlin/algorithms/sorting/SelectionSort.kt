@@ -5,7 +5,7 @@ package algorithms.sorting
  *  for checking smaller than this and then swap if found
  */
 fun List<Int>.selectionSort(): List<Int> {
-    var list = this.toMutableList()
+    val list = this.toMutableList()
     for (i in 0 until list.size) {
         var min = i
         for (j in i+1 until list.size) {

@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Comments added in sorting algos">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/linkedlist/MergeTwoSortedLists.kt" afterDir="false" />
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="MergeTwoSortedLists.kt , linked list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/BubbleSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/BubbleSort.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/HeapSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/HeapSort.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/InsertionSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/InsertionSort.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/MergeSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/MergeSort.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/QuickSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/QuickSort.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/SelectionSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/SelectionSort.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/InfixToPostfix.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/InfixToPostfix.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -356,7 +362,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690003911306</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="MergeTwoSortedLists.kt , linked list">
+      <option name="closed" value="true" />
+      <created>1690004748130</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1690004748130</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -393,7 +407,8 @@
     <MESSAGE value="Moved some problems from dsa package to problem solving package and Added logic for disconnected Graph inGraphDFS.kt" />
     <MESSAGE value="Added logic for disconnected Graph in GraphBFS" />
     <MESSAGE value="Comments added in sorting algos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comments added in sorting algos" />
+    <MESSAGE value="MergeTwoSortedLists.kt , linked list" />
+    <option name="LAST_COMMIT_MESSAGE" value="MergeTwoSortedLists.kt , linked list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -68,10 +68,10 @@ fun evaluateExpression(s: String): Int {
         if(c.isDigit()) {
             stack.push(c.toInt() - '0'.toInt())
         } else {
-            //if operator, take 2 operands and evealuate them, and push result to stack
+            //if operator, take 2 operands and evaluate them, and push result to stack
             if(stack.size >= 2) {
-                val value1 = stack.pop();
-                val value2 = stack.pop();
+                val value1 = stack.pop()
+                val value2 = stack.pop()
                 when(c) {
                     '+' -> stack.push(value2 + value1)
                     '-' -> stack.push(value2 - value1)

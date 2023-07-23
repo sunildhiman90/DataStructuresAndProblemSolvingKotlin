@@ -1,5 +1,17 @@
 package algorithms.sorting
 
+
+/**
+ * Step 1:
+ * build heap from non leaf nodes, starting from (n/2)-1 to 0(start),
+ * becoz all leaf nodes start from (n/2) to n-1, so before that we have non leaf nodes
+ *
+ * Step2: Deletion
+ * for all elements, loop in descending order
+ * and swap first(which is root and  is largest element) and current elements(last element in unsorted list) in each iteration,
+ * so that largest element from root will go to last position in array
+ *
+ */
 fun heapSort(list: MutableList<Int>, n: Int) {
 
     //Step1: build heap, starting from (n/2)-1 to 0(start), becoz all leaf nodes start from (n/2) to n-1, so before that we have non leaf nodes
@@ -10,8 +22,8 @@ fun heapSort(list: MutableList<Int>, n: Int) {
     //Step2: deletion
     for (i in n - 1 downTo 0) {
 
-        //swap first and last elements, so that largest element from root will go to last position in array
-        var temp = list[i]
+        //swap first(that is root that is largest element) and last elements, so that largest element from root will go to last position in array
+        val temp = list[i]
         list[i] = list[0]
         list[0] = temp
 

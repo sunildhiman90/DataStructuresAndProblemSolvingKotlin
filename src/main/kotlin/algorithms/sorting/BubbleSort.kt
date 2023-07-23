@@ -9,7 +9,7 @@ import utils.measureTimedValueCustom
  * And if no swapping is done in first iteration then break the loop becoz it means array is already sorted.
  */
 fun List<Int>.bubbleSort(): List<Int> {
-    var list = this.toMutableList()
+    val list = this.toMutableList()
     for (i in 0 until list.size) { //iteration loop
         var flag = 0
 
@@ -21,8 +21,8 @@ fun List<Int>.bubbleSort(): List<Int> {
                 val temp = list[j]
                 list[j] = list[j + 1]
                 list[j + 1] = temp
+                flag = 1
             }
-            flag = 1
         }
         //If no swapping is done, then list is already sorted, break the outer iteration loop
         if (flag == 0) {
