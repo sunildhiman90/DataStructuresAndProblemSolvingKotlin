@@ -1,4 +1,4 @@
-package problemsolving.jetbrains
+package problemsolving.jetbrains.strings
 
 class NumberOfTensUsingString
 

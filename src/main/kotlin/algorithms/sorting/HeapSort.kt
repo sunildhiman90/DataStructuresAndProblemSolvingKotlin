@@ -37,14 +37,14 @@ fun heapSort(list: MutableList<Int>, n: Int) {
 
 fun maxHeapify(list: MutableList<Int>, n: Int, startIndex: Int) {
     var largest = startIndex
-    var l = 2 * startIndex + 1 //left child
-    var r = 2 * startIndex + 2 //right child
+    val l = 2 * startIndex + 1 //left child
+    val r = 2 * startIndex + 2 //right child
 
     if (l <= n-1 && list[l] > list[largest]) largest = l
     if (r <= n-1 && list[r] > list[largest]) largest = r
     if(largest != startIndex) {
         //if largest is changed , swap them
-        var temp = list[largest]
+        val temp = list[largest]
         list[largest] = list[startIndex]
         list[startIndex] = temp
 

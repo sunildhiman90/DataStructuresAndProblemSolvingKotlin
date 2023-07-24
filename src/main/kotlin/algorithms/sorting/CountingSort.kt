@@ -15,7 +15,7 @@ fun countingSort(a: IntArray, n: Int, k: Int) {
         ++count[a[i]]
     }
 
-    //Step 2. Calculating actual position of elements in count array, start from 1 index, current + prev pos
+    //Step 2. Calculating actual(last position for repeating elements) position of elements in count array, start from 1 index, current + prev pos
     for (i in 1..k) {
         count[i] = count[i] + count[i - 1]
     }
@@ -46,7 +46,7 @@ fun main() {
                 largest = a[i];
             }
         }*/
-    val largest = Arrays.stream(a).max().asInt
+    val largest = a.max()
     countingSort(a, a.size, largest)
     println(a.contentToString())
 }
@@ -72,7 +72,7 @@ Space complexity : O(n+k)  for all cases best average and worst
  *
  * Best case time complexity:- when difference between element is very small
  *
- * The best case time complexity occurs when all elements are of the same range that is when k is equal to 1.
+ * The best case time complexity occurs when all elements are of the same range that is when k is of 1 digit betweeen 0 to 9.
  * In this case, counting the occurrence of each element in the input range takes constant time and then finding the correct index value of
  * each element in the sorted output array takes n time, thus the total time complexity reduces to O(1 + n) i.e O(n) which is linear
  *

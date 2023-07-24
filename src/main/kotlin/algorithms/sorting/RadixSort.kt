@@ -67,7 +67,7 @@ https://www.simplilearn.com/tutorials/data-structure-tutorial/radix-sort#:~:text
 
 Worst-Case Time Complexity -> O(n*n) if d = n
 In radix sort, the worst case is when all elements have the same number of digits except one, which has a significantly large
-number of digits. If the number of digits d in the largest element equals n, the runtime is O. (n*n). => O(d*(n+k)) => O(n*(n+k)),
+number of digits. If the number of digits d in the largest element equals n, the runtime is O(n*n). => O(d*(n+k)) => O(n*(n+k)),
 because k is constant => O(n*n)
 If d is equal to n, then worst case complexity will be O(n*n) , but this will be very rare case, it can happen for
 small number of elements less than 20, because maximum value of long type can be 9,223,372,036,854,775,807,

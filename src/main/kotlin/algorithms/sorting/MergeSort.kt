@@ -51,8 +51,8 @@ fun conquer(list: MutableList<Int>, start: Int, mid: Int, end: Int) {
 fun main() {
 
     println("Enter array elements using comma as separator and then press enter")
-    var arr = readln().split(",").map { it.toInt() }
-    var mutableList = arr.toMutableList()
+    val arr = readln().split(",").map { it.toInt() }
+    val mutableList = arr.toMutableList()
     divide(mutableList, 0, arr.size - 1)
 
     println("sort array is : $mutableList")
