@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Minor comments added">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/jetbrains/strings/LuckyNumber.kt" afterDir="false" />
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Bucket SOrt comments and some problems">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/DoubleEndedQueueUsingArray.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/BucketSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/BucketSort.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/CountingSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/CountingSort.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/HeapSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/HeapSort.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/MergeSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/MergeSort.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/RadixSort.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/algorithms/sorting/RadixSort.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/problemsolving/jetbrains/NumberOfTensUsingString.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/jetbrains/strings/NumberOfTensUsingString.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,19 +62,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sunil/Intellij/DataStructuresAndProblemSolvingKotlin/src/main/kotlin/problemsolving/monotonicstack&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.startup.tasks&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/sunil/Intellij/DataStructuresAndProblemSolvingKotlin/src/main/kotlin/datastructures/queue",
+    "settings.editor.selected.configurable": "preferences.startup.tasks"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/datastructures/queue" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack" />
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
       <recent name="$PROJECT_DIR$" />
@@ -96,7 +91,14 @@
       <recent name="algorithms.sorting" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.QueueUsingArrayKt">
+  <component name="RunManager" selected="Kotlin.DoubleEndedQueueUsingArrayKt">
+    <configuration name="DoubleEndedQueueUsingArrayKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructures.queue.DoubleEndedQueueUsingArrayKt" />
+      <module name="DataStructuresAndProblemSolvingKotlin.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GraphBFSKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="datastructures.graph.GraphBFSKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
@@ -106,13 +108,6 @@
     </configuration>
     <configuration name="GraphDFSKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="datastructures.graph.GraphDFSKt" />
-      <module name="DataStructuresAndProblemSolvingKotlin.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NextGreaterElementKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="problemsolving.monotonicstack.NextGreaterElementKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,19 +128,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Kotlin.DoubleEndedQueueUsingArrayKt" />
       <item itemvalue="Kotlin.QueueUsingArrayKt" />
       <item itemvalue="Kotlin.GraphBFSKt" />
       <item itemvalue="Kotlin.GraphDFSKt" />
-      <item itemvalue="Kotlin.NextGreaterElementKt" />
       <item itemvalue="Kotlin.NextSmallerElementKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.DoubleEndedQueueUsingArrayKt" />
         <item itemvalue="Kotlin.QueueUsingArrayKt" />
         <item itemvalue="Kotlin.GraphBFSKt" />
         <item itemvalue="Kotlin.GraphDFSKt" />
         <item itemvalue="Kotlin.NextSmallerElementKt" />
-        <item itemvalue="Kotlin.NextGreaterElementKt" />
       </list>
     </recent_temporary>
   </component>
@@ -379,7 +374,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690092621900</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Bucket SOrt comments and some problems">
+      <option name="closed" value="true" />
+      <created>1690205539728</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1690205539728</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -418,7 +421,8 @@
     <MESSAGE value="Comments added in sorting algos" />
     <MESSAGE value="MergeTwoSortedLists.kt , linked list" />
     <MESSAGE value="Minor comments added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor comments added" />
+    <MESSAGE value="Bucket SOrt comments and some problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bucket SOrt comments and some problems" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
