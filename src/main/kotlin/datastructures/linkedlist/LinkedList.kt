@@ -4,9 +4,7 @@ class LinkedList {
 
     private var head: Node? = null
 
-    class Node(var data: Int) {
-        var next: Node? = null
-    }
+    class Node(var data: Int, var next: Node? = null)
 
     fun getHead(): Node? {
         return head
@@ -15,6 +13,7 @@ class LinkedList {
     fun setHead(newHead: Node) {
         head = newHead
     }
+
     fun insertAtStart(data: Int) {
         val newNode = Node(data)
         if (head == null) {
@@ -131,7 +130,8 @@ class LinkedList {
     //3 pointer approach
     fun reverse() {
         if (head?.next == null) return
-        var prevNode: Node? = null //set it to null, because we are reversing so next of head will become null, because head wil become last
+        var prevNode: Node? =
+            null //set it to null, because we are reversing so next of head will become null, because head wil become last
         var currNode = head
         while (currNode != null) {
             val nextNode = currNode.next
@@ -214,4 +214,21 @@ fun main() {
  *              and finally it will return to calling method with new head as 4 and linked list as => [4 -> 3 -> 2 -> 1 -> null]
  *
  *
+ */
+
+
+/**
+ * Need Of Linked List
+ *
+ * Have you ever wandered through Instagram feeds? Yeah, one image after another it keeps on scrolling, it’s infinite, it’s almost never-ending!
+ *
+ * But have you ever wondered how it all works? Imagine, if you were the engineer who was asked to develop this feature, how would you have approached this problem?
+ *
+ * How would have you maintained the huge collection of images?
+ *
+ * The first thing that would have crossed your mind is maintaining an array of all images, but what if the number of images is ever increasing?
+ * Soon you’ll realize that arrays are not suited for this job, they don’t go very well with dynamic size data.
+ *
+ * We need something better, we need a data structure that can store a collection of objects just like an array,
+ * but whose size can be manipulated in real-time. This is where the Linked List comes in.
  */

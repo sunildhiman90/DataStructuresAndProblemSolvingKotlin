@@ -4,10 +4,11 @@ class DoublyLinkedList {
 
     private var head: Node? = null
 
-    class Node(var data: Int) {
-        var next: Node? = null
+    class Node(
+        var data: Int,
+        var next: Node? = null,
         var prev: Node? = null
-    }
+    )
 
     fun getHead(): Node? {
         return head
@@ -16,6 +17,7 @@ class DoublyLinkedList {
     fun setHead(newHead: Node) {
         head = newHead
     }
+
     fun insertAtStart(data: Int) {
         val newNode = Node(data)
         if (head == null) {
@@ -187,8 +189,11 @@ fun main() {
  *
  * On the other hand, we can see that with an extra pointer, we can traverse in both the directions, which finds its applications in many systems like:
  *
- * To implement undo and redo operations where all the operations are represented using doubly linked list, an undo can be done by iterating backwards and redo by iterating forward.
- * Browsers like Google Chrome have a “go Forward” and “Go backward” button, to traverse back the visited websites, which are represented using doubly Linked list.
- * It finds its usage in navigation systems which need forward and backward navigation.
+ * 1. To implement undo and redo operations where all the operations are represented using doubly linked list, an undo can be done by iterating backwards and redo by iterating forward.
+ * 2. Browsers like Google Chrome have a “go Forward” and “Go backward” button, to traverse back the visited websites, which are represented using doubly Linked list.
+ * 3. It finds its usage in navigation systems which need forward and backward navigation.
+ * 4. To reversing a list by setting prev node to next and next node to prev of each node
+ *
  * So we can see how doubly linked list is useful in our daily lives and in computer science applications as it comes very handy when transversal in both the directions are required.
+ *
  */
