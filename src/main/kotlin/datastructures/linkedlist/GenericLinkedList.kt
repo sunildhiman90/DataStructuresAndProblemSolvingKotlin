@@ -1,21 +1,20 @@
 package datastructures.linkedlist
 
-class LinkedList {
 
-    private var head: Node? = null
+class GenericLinkedList<T: Any> {
 
-    class Node(var data: Int) {
-        var next: Node? = null
-    }
+    private var head: Node<T>? = null
 
-    fun getHead(): Node? {
+    class Node<T>(var data: T, var next: Node<T>? = null)
+
+    fun getHead(): Node<T>? {
         return head
     }
 
-    fun setHead(newHead: Node) {
+    fun setHead(newHead: Node<T>) {
         head = newHead
     }
-    fun insertAtStart(data: Int) {
+    fun insertAtStart(data: T) {
         val newNode = Node(data)
         if (head == null) {
             head = newNode
@@ -25,7 +24,7 @@ class LinkedList {
         head = newNode
     }
 
-    fun insertAtEnd(data: Int) {
+    fun insertAtEnd(data: T) {
         val newNode = Node(data)
         if (head == null) {
             head = newNode
@@ -38,7 +37,7 @@ class LinkedList {
         temp?.next = newNode
     }
 
-    fun insertAfterTarget(data: Int, after: Int) {
+    fun insertAfterTarget(data: T, after: T) {
         val newNode = Node(data)
         if (head == null) {
             return
@@ -78,7 +77,7 @@ class LinkedList {
         head = head?.next
     }
 
-    fun deleteAtTarget(targetData: Int) {
+    fun deleteAtTarget(targetData: T) {
         var prev = head
         var temp = head
         while (temp?.data != targetData && temp?.next != null) {
@@ -92,12 +91,12 @@ class LinkedList {
         }
     }
 
-    fun removeNthFromEnd(head: Node?, n: Int): Node? {
+    fun removeNthFromEnd(head: Node<T>?, n: Int): Node<T>? {
         if (head?.next == null) return null
 
         //get size
         var size = 0
-        var curr: Node? = head
+        var curr: Node<T>? = head
         while (curr != null) {
             curr = curr.next
             size++
@@ -107,7 +106,7 @@ class LinkedList {
         if (size == n) {
             return head.next
         }
-        var prev: Node? = head
+        var prev: Node<T>? = head
         var index = 1 //take it as 1, because we already have head in prev
         val indexToSearch = size - n // prev node to n'th node from last, n'th node form last is -> size - n + 1
         while (index < indexToSearch) {
@@ -131,7 +130,7 @@ class LinkedList {
     //3 pointer approach
     fun reverse() {
         if (head?.next == null) return
-        var prevNode: Node? = null //set it to null, because we are reversing so next of head will become null, because head wil become last
+        var prevNode: Node<T>? = null //set it to null, because we are reversing so next of head will become null, because head wil become last
         var currNode = head
         while (currNode != null) {
             val nextNode = currNode.next
@@ -144,7 +143,7 @@ class LinkedList {
         head = prevNode //and prevNode will become start head
     }
 
-    fun reverseRecursively(head: Node?): Node? {
+    fun reverseRecursively(head: Node<T>?): Node<T>? {
         //empty node || last node or only one node
         if (head?.next == null) return head //it will return newHead as last element when last element will be passed in this call
 
@@ -159,7 +158,7 @@ class LinkedList {
 }
 
 fun main() {
-    val linkedList = LinkedList()
+    val linkedList = GenericLinkedList<Int>()
     linkedList.insertAtStart(6)
     linkedList.insertAtStart(5)
     linkedList.insertAtStart(4)
@@ -191,27 +190,21 @@ fun main() {
     println("-----After deleting nth node from end where n is $n ----")
     linkedList.removeNthFromEnd(linkedList.getHead(), n)?.let { linkedList.setHead(it) }
     linkedList.display()
+
+    // linkedList for String
+    val linkedListString = GenericLinkedList<String>()
+    linkedListString.insertAtStart("kotlin")
+    linkedListString.insertAtStart("in")
+    linkedListString.insertAtStart("fun")
+    linkedListString.insertAtStart("is")
+    linkedListString.insertAtStart("List")
+    linkedListString.insertAtStart("Linked")
+    linkedListString.display()
+    println("-----String Type Linked List----")
+    linkedListString.insertAtEnd("programming")
+    linkedListString.display()
 }
 
 
-/**
- * reverseRecursively Explanation for example linked list => 1->2->3->4->null
- * 1st call from calling method -> head is 1 -> it will again call with head as head.next => 2
- * 2nd call -> head is 2 -> it will again call with head as head.next => 3
- * 3rd call -> head is 3 -> it will again call with head as head.next => 4 and this call will return with new head as 4,as next of 4 is null
- *
- * Reverse return calls now -> 3rd call will return in 3rd call remaining code where head was 3 && newHead will be 4
- * 3rd call :-  head is 3 -> it will apply -> head.next.next = head, it means => 3 -> 4 -> 3
- *             and it will apply 2nd part also -> head.next = null => 3 -> null, so new list will become now 4 -> 3 -> null
- *             and finally it will return to 2nd call where head is 2
- *
- * 2nd call :-  head is 2 -> it will apply -> head.next.next = head, it means => 2 -> 3 -> 2
- *             and it will apply 2nd part also -> head.next = null => 2 -> null, so new list will become now 4 -> 3 -> 2 -> null
- *             and finally it will return to 1st call where head is 1 && newHead will be 4
- *
- * 1st call :-  head is 1 -> it will apply -> head.next.next = head, it means => 1 -> 2 -> 1
- *              and it will apply 2nd part also -> head.next = null => 1 -> null, so new list will become now 4 -> 3 -> 2 -> 1 -> null
- *              and finally it will return to calling method with new head as 4 and linked list as => [4 -> 3 -> 2 -> 1 -> null]
- *
- *
- */
+
+

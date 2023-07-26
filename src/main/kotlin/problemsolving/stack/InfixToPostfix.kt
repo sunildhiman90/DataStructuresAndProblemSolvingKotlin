@@ -37,7 +37,7 @@ fun infixToPostfix(input: String): String {
 
         } else {
             //operator
-            //pop from stack and add to output if precedence of current char <= stack top
+            //pop(higher precedence operators from top) from stack and add to output if precedence of stack top >= current char
             while (!stack.isEmpty() && stack.peek() !='(' && precedence(c) <= precedence(stack.peek())) {
                 output += stack.peek()
                 stack.pop()

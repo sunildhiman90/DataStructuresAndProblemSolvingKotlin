@@ -13,7 +13,7 @@ fun isPerfectSquare(num: Int): Boolean {
     while (start <= end) {
         val mid = start + (end - start) / 2
         // due to overflow, instead of checking mid * mid <= num, check mid <= num/mid, meaning will be remained same
-        // need to use toDouble here, becoz for num 5 when mid will become 5, then 5/2 will also round to 2, so it will return true(wrong answer), so we need to check here decimal value using toDouble
+        // need to use toDouble here, becoz for num 5 when mid will become 2, then 5/2 will also round to 2, so it will return true(wrong answer), so we need to check here decimal value using toDouble
         if (mid.toDouble() == (num / mid.toDouble())) {
             return true
         } else if (mid > num / mid) {

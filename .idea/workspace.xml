@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Bucket SOrt comments and some problems">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/DoubleEndedQueueUsingArray.kt" afterDir="false" />
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="DoubleEndedQueueUsingArray">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/DoublyLinkedList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/GenericLinkedList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/jetbrains/strings/MoveTheFirstNCharacters.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/LinkedList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/LinkedList.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/SinglyLinkedList.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/PerfectSquare.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/PerfectSquare.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/EvaluatePostfixExpression.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/EvaluatePostfixExpression.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/InfixToPostfix.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/InfixToPostfix.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,12 +76,13 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/sunil/Intellij/DataStructuresAndProblemSolvingKotlin/src/main/kotlin/datastructures/queue",
+    "last_opened_file_path": "/Users/sunil/Intellij/DataStructuresAndProblemSolvingKotlin/src/main/kotlin/datastructures/linkedlist",
     "settings.editor.selected.configurable": "preferences.startup.tasks"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/datastructures/queue" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack" />
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
@@ -91,7 +99,7 @@
       <recent name="algorithms.sorting" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.DoubleEndedQueueUsingArrayKt">
+  <component name="RunManager" selected="Kotlin.GenericLinkedListKt">
     <configuration name="DoubleEndedQueueUsingArrayKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="datastructures.queue.DoubleEndedQueueUsingArrayKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
@@ -99,22 +107,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GraphBFSKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="datastructures.graph.GraphBFSKt" />
+    <configuration name="DoublyLinkedListKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructures.linkedlist.DoublyLinkedListKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GraphDFSKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="datastructures.graph.GraphDFSKt" />
+    <configuration name="GenericLinkedListKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructures.linkedlist.GenericLinkedListKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NextSmallerElementKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="problemsolving.monotonicstack.NextSmallerElementKt" />
+    <configuration name="LinkedListKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructures.linkedlist.LinkedListKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,19 +136,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Kotlin.DoublyLinkedListKt" />
+      <item itemvalue="Kotlin.GenericLinkedListKt" />
+      <item itemvalue="Kotlin.LinkedListKt" />
       <item itemvalue="Kotlin.DoubleEndedQueueUsingArrayKt" />
       <item itemvalue="Kotlin.QueueUsingArrayKt" />
-      <item itemvalue="Kotlin.GraphBFSKt" />
-      <item itemvalue="Kotlin.GraphDFSKt" />
-      <item itemvalue="Kotlin.NextSmallerElementKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.GenericLinkedListKt" />
+        <item itemvalue="Kotlin.LinkedListKt" />
+        <item itemvalue="Kotlin.DoublyLinkedListKt" />
         <item itemvalue="Kotlin.DoubleEndedQueueUsingArrayKt" />
         <item itemvalue="Kotlin.QueueUsingArrayKt" />
-        <item itemvalue="Kotlin.GraphBFSKt" />
-        <item itemvalue="Kotlin.GraphDFSKt" />
-        <item itemvalue="Kotlin.NextSmallerElementKt" />
       </list>
     </recent_temporary>
   </component>
@@ -382,7 +390,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690205539728</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="DoubleEndedQueueUsingArray">
+      <option name="closed" value="true" />
+      <created>1690278909536</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1690278909536</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -397,7 +413,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor changes" />
     <MESSAGE value="Two Problems solved from jetbrains kotlin basics" />
     <MESSAGE value="SUm Of Digits Problems solved from jetbrains kotlin basics" />
     <MESSAGE value="Added 4th way for sun of digits" />
@@ -422,10 +437,22 @@
     <MESSAGE value="MergeTwoSortedLists.kt , linked list" />
     <MESSAGE value="Minor comments added" />
     <MESSAGE value="Bucket SOrt comments and some problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bucket SOrt comments and some problems" />
+    <MESSAGE value="DoubleEndedQueueUsingArray" />
+    <option name="LAST_COMMIT_MESSAGE" value="DoubleEndedQueueUsingArray" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/datastructures/queue/DoubleEndedQueueUsingArray.kt</url>
+          <line>4</line>
+          <properties class="datastructures.queue.DoubleEndedQueueUsingArray" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="dart-exception" />
       </default-breakpoints>
