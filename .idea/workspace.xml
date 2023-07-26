@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="DoubleEndedQueueUsingArray">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/DoublyLinkedList.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/GenericLinkedList.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/jetbrains/strings/MoveTheFirstNCharacters.kt" afterDir="false" />
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="GenericLinkedList and DoublyLinkedList">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/LinkedList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/LinkedList.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/SinglyLinkedList.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/PerfectSquare.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarysearch/PerfectSquare.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/EvaluatePostfixExpression.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/EvaluatePostfixExpression.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/InfixToPostfix.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack/InfixToPostfix.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/DoublyLinkedList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/DoublyLinkedList.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -398,7 +391,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690278909536</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="GenericLinkedList and DoublyLinkedList">
+      <option name="closed" value="true" />
+      <created>1690355460818</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1690355460818</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -413,7 +414,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Two Problems solved from jetbrains kotlin basics" />
     <MESSAGE value="SUm Of Digits Problems solved from jetbrains kotlin basics" />
     <MESSAGE value="Added 4th way for sun of digits" />
     <MESSAGE value="Number of tens using string" />
@@ -438,7 +438,8 @@
     <MESSAGE value="Minor comments added" />
     <MESSAGE value="Bucket SOrt comments and some problems" />
     <MESSAGE value="DoubleEndedQueueUsingArray" />
-    <option name="LAST_COMMIT_MESSAGE" value="DoubleEndedQueueUsingArray" />
+    <MESSAGE value="GenericLinkedList and DoublyLinkedList" />
+    <option name="LAST_COMMIT_MESSAGE" value="GenericLinkedList and DoublyLinkedList" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

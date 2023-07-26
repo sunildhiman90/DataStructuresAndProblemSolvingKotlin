@@ -173,3 +173,22 @@ fun main() {
     linkedList.traverseBackward(givenNode)
 
 }
+
+
+/**
+ * As we have seen, the doubly linked list is a variation of the linked list, where we can traverse in both directions using an extra pointer “previous”.
+ *
+ * Since it as an extra pointer, it has some downsides like:
+ *
+ * It takes extra memory to store this extra pointer, over the Singly Linked list.
+ * Every operation(insert/delete etc.) has an extra overhead of managing the previous pointer as well.
+ *
+ * APPLICATIONS:-
+ *
+ * On the other hand, we can see that with an extra pointer, we can traverse in both the directions, which finds its applications in many systems like:
+ *
+ * To implement undo and redo operations where all the operations are represented using doubly linked list, an undo can be done by iterating backwards and redo by iterating forward.
+ * Browsers like Google Chrome have a “go Forward” and “Go backward” button, to traverse back the visited websites, which are represented using doubly Linked list.
+ * It finds its usage in navigation systems which need forward and backward navigation.
+ * So we can see how doubly linked list is useful in our daily lives and in computer science applications as it comes very handy when transversal in both the directions are required.
+ */
