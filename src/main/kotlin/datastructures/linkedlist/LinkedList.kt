@@ -4,9 +4,7 @@ class LinkedList {
 
     private var head: Node? = null
 
-    class Node(var data: Int) {
-        var next: Node? = null
-    }
+    class Node(var data: Int, var next: Node? = null)
 
     fun getHead(): Node? {
         return head
@@ -15,6 +13,7 @@ class LinkedList {
     fun setHead(newHead: Node) {
         head = newHead
     }
+
     fun insertAtStart(data: Int) {
         val newNode = Node(data)
         if (head == null) {
@@ -131,7 +130,8 @@ class LinkedList {
     //3 pointer approach
     fun reverse() {
         if (head?.next == null) return
-        var prevNode: Node? = null //set it to null, because we are reversing so next of head will become null, because head wil become last
+        var prevNode: Node? =
+            null //set it to null, because we are reversing so next of head will become null, because head wil become last
         var currNode = head
         while (currNode != null) {
             val nextNode = currNode.next

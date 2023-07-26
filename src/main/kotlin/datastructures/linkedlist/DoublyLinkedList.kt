@@ -4,10 +4,11 @@ class DoublyLinkedList {
 
     private var head: Node? = null
 
-    class Node(var data: Int) {
-        var next: Node? = null
+    class Node(
+        var data: Int,
+        var next: Node? = null,
         var prev: Node? = null
-    }
+    )
 
     fun getHead(): Node? {
         return head
@@ -16,6 +17,7 @@ class DoublyLinkedList {
     fun setHead(newHead: Node) {
         head = newHead
     }
+
     fun insertAtStart(data: Int) {
         val newNode = Node(data)
         if (head == null) {
