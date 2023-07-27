@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Minor changes in LinkedList">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/doublylinkedlist/PalindromeDoublyLinkedList.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="PalindromeDoublyLinkedList">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/PriorityQueueUsingArray.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,14 +67,14 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/sunil/Intellij/DataStructuresAndProblemSolvingKotlin",
+    "last_opened_file_path": "/Users/sunil/Intellij/DataStructuresAndProblemSolvingKotlin/src/main/kotlin/datastructures/queue",
     "settings.editor.selected.configurable": "preferences.updates"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/datastructures/queue" />
+      <recent name="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack" />
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
       <recent name="$PROJECT_DIR$" />
@@ -91,14 +90,7 @@
       <recent name="algorithms.sorting" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.PalindromeDoublyLinkedListKt">
-    <configuration name="DoubleEndedQueueUsingArrayKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="datastructures.queue.DoubleEndedQueueUsingArrayKt" />
-      <module name="DataStructuresAndProblemSolvingKotlin.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.PriorityQueueUsingArrayKt">
     <configuration name="DoublyLinkedListKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="datastructures.linkedlist.DoublyLinkedListKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
@@ -127,20 +119,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PriorityQueueUsingArrayKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructures.queue.PriorityQueueUsingArrayKt" />
+      <module name="DataStructuresAndProblemSolvingKotlin.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Kotlin.PalindromeDoublyLinkedListKt" />
+      <item itemvalue="Kotlin.PriorityQueueUsingArrayKt" />
       <item itemvalue="Kotlin.DoublyLinkedListKt" />
       <item itemvalue="Kotlin.GenericLinkedListKt" />
       <item itemvalue="Kotlin.LinkedListKt" />
-      <item itemvalue="Kotlin.DoubleEndedQueueUsingArrayKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.PriorityQueueUsingArrayKt" />
         <item itemvalue="Kotlin.PalindromeDoublyLinkedListKt" />
         <item itemvalue="Kotlin.GenericLinkedListKt" />
         <item itemvalue="Kotlin.LinkedListKt" />
         <item itemvalue="Kotlin.DoublyLinkedListKt" />
-        <item itemvalue="Kotlin.DoubleEndedQueueUsingArrayKt" />
       </list>
     </recent_temporary>
   </component>
@@ -422,7 +421,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690356408166</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="PalindromeDoublyLinkedList">
+      <option name="closed" value="true" />
+      <created>1690441380421</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1690441380421</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -437,7 +444,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Number of tens using string" />
     <MESSAGE value="Kadane algo" />
     <MESSAGE value="Gradle support added" />
     <MESSAGE value="leetcode ReverseWordsInAString solution" />
@@ -462,7 +468,8 @@
     <MESSAGE value="GenericLinkedList and DoublyLinkedList" />
     <MESSAGE value="DoublyLinkedList applications doc comment" />
     <MESSAGE value="Minor changes in LinkedList" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor changes in LinkedList" />
+    <MESSAGE value="PalindromeDoublyLinkedList" />
+    <option name="LAST_COMMIT_MESSAGE" value="PalindromeDoublyLinkedList" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
