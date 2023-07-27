@@ -58,8 +58,8 @@ class PriorityQueueUsingA(val capacity: Int) {
         return element
     }
 
-    //it will return
-    fun getHighestPriorityIndex(): Int {
+    //it will return index of item with highest priority
+    private fun getHighestPriorityIndex(): Int {
 
         var highestPriority = Int.MIN_VALUE //for holding priority value for highestPriorityIdx
         var highestPriorityIdx = -1 //it will hold the index of some other prev equal priority element
