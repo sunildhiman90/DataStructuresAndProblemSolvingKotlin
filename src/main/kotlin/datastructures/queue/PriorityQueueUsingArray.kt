@@ -65,7 +65,7 @@ class PriorityQueueUsingA(val capacity: Int) {
         var highestPriorityIdx = -1 //it will hold the index of some other prev equal priority element
 
         // return highest priority element
-        for (i in 0 .. rear) {
+        for (i in 0..rear) {
 
             //if priority is high, use current item
             if (arr[i].priority > highestPriority) {
@@ -131,7 +131,7 @@ fun main() {
  *   and for that we need to compare both item's values so thats why we are using
  *   highestPriority and highestPriorityIdx variables,
  *
- *  CONDITION Exaplained
+ *  CONDITION Explained
  *  highestPriorityIdx > -1 && arr[i].value > arr[highestPriorityIdx].value => this condition is checking 2 points given below
  *  1. 1if priority is equal it means highestPriorityIdx will be set and greater than -1
  *  2. and if yes highestPriorityIdx > -1, then check their values if current indexed item has greater value then use that -> arr[i].value > arr[highestPriorityIdx].value

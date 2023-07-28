@@ -15,10 +15,10 @@ class DoubleEndedQueueUsingArray(private val capacity: Int) {
             "Queue is already full"
         }
 
-        if(isEmpty()) {
+        if (isEmpty()) {
             front = 0
             rear = 0
-        } else if(front == 0) {
+        } else if (front == 0) {
             // if at first position, then set it to last due to circular concept
             front = capacity - 1
         } else {
@@ -36,10 +36,10 @@ class DoubleEndedQueueUsingArray(private val capacity: Int) {
             "Queue is already full"
         }
 
-        if(isEmpty()) {
+        if (isEmpty()) {
             front = 0
             rear = 0
-        } else if(rear == capacity - 1) {
+        } else if (rear == capacity - 1) {
             // if at last position, then set it to first due to circular concept
             rear = 0
         } else {
@@ -116,7 +116,7 @@ class DoubleEndedQueueUsingArray(private val capacity: Int) {
     }
 
     fun isEmpty(): Boolean {
-        return  (front == -1 && rear == -1)
+        return (front == -1 && rear == -1)
     }
 
     //Normal case || circular queue case
