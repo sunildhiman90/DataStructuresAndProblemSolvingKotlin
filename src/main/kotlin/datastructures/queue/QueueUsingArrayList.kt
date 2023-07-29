@@ -1,5 +1,9 @@
 package datastructures.queue
 
+
+// Edge Cases:
+// add:- check isEmpty and if empty then increase front also
+// remove: shift elements back after deleting front
 class QueueUsingAL {
 
     private val arr = mutableListOf<Int>()
@@ -7,6 +11,7 @@ class QueueUsingAL {
     private var front = -1
     private var rear = -1
 
+    // If front is separate variable then in add method, we need to consider isEmpty case, else not (as in Queue using array)
     fun add(data: Int): Boolean {
         if (isEmpty()) front++
         arr.add(data)

@@ -1,5 +1,9 @@
 package datastructures.queue
 
+
+// Edge Cases:
+// add:- NO edge case
+// remove: shift elements back after deleting front
 class QueueUsingA(val capacity: Int) {
 
     private val arr = Array(capacity) { 0 }

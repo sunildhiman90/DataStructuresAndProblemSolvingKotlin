@@ -7,6 +7,7 @@ class QueueUsingLL {
     private var head: Node? = null // front
     private var tail: Node? = null // rear
 
+    // If front is separate variable(here is head) then in add method, we need to consider isEmpty
     fun add(data: Int): Boolean {
         val node = Node(data)
         //if empty, need to increase tail and head initially
@@ -31,6 +32,7 @@ class QueueUsingLL {
         tail = node
         return true
     }
+
 
     fun remove(): Int? {
         if (isEmpty()) {
