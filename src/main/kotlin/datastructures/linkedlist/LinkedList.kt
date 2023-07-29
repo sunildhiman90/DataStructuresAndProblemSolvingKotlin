@@ -92,7 +92,7 @@ class LinkedList {
     }
 
     fun removeNthFromEnd(head: Node?, n: Int): Node? {
-        if (head?.next == null) return null
+        if (head == null) return null
 
         //get size
         var size = 0
@@ -104,7 +104,8 @@ class LinkedList {
 
         //because in this case,we are deleting (size - n + 1) => 1, 1st node => head, so return head.next here
         if (size == n) {
-            return head.next
+            this.head = head.next
+            return this.head
         }
         var prev: Node? = head
         var index = 1 //take it as 1, because we already have head in prev
