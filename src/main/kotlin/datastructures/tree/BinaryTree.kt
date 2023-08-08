@@ -121,18 +121,18 @@ class BinaryTree {
         prettyDisplayChildren(level, root)
     }
 
+    // it will display 45 degree left rotated(from root) visual of tree
     private fun prettyDisplayChildren(level: Int, node: Node?) {
         if (node == null) {
             return
         }
 
         // traverse till rightmost node
-        var levelLocal = level
-        prettyDisplayChildren(levelLocal + 1, node.right)
+        prettyDisplayChildren(level + 1, node.right)
 
         // print space according to level and finally node data
-        if (levelLocal > 1) {
-            for (i in 1 until levelLocal - 1) {
+        if (level > 1) {
+            for (i in 1 until level - 1) {
                 print("\t")
             }
             println("\t---->${node.data}")
@@ -140,7 +140,9 @@ class BinaryTree {
             //print root and no space
             println(node.data)
         }
-        prettyDisplayChildren(levelLocal + 1, node.left)
+
+        //repeat same for left
+        prettyDisplayChildren(level + 1, node.left)
     }
 
 
