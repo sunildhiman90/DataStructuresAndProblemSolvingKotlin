@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="QueueUsing2Stacks add efficient Queue2">
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Minor comments and other changes">
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/DetectCycleUsingHashSet.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/linked_list_loop_start_node_logic_proof_diagram.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/DoubleEndedQueueUsingLL.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/PriorityQueueUsingLL.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/tree/BinaryTree.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/linkedlist/MergeTwoSortedListsUsingDummyNode.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/graph/GraphBFS.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/graph/GraphBFS.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/RemoveCycleFromLinkedList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/RemoveCycleFromLinkedList.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/DoubleEndedQueueUsingArray.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/DoubleEndedQueueUsingArray.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,9 +104,9 @@
       <recent name="algorithms.sorting" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.StackUsingArrayKt">
-    <configuration name="LinkedListKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="datastructures.linkedlist.LinkedListKt" />
+  <component name="RunManager" selected="Kotlin.BinaryTreeKt">
+    <configuration name="BinaryTreeKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructures.tree.BinaryTreeKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,7 +141,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Kotlin.LinkedListKt" />
+      <item itemvalue="Kotlin.BinaryTreeKt" />
       <item itemvalue="Kotlin.PalindromeDoublyLinkedListKt" />
       <item itemvalue="Kotlin.PriorityQueueUsingArrayKt" />
       <item itemvalue="Kotlin.QueueUsing2StacksKt" />
@@ -152,11 +149,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.BinaryTreeKt" />
         <item itemvalue="Kotlin.StackUsingArrayKt" />
         <item itemvalue="Kotlin.QueueUsing2StacksKt" />
         <item itemvalue="Kotlin.PriorityQueueUsingArrayKt" />
         <item itemvalue="Kotlin.PalindromeDoublyLinkedListKt" />
-        <item itemvalue="Kotlin.LinkedListKt" />
       </list>
     </recent_temporary>
   </component>
@@ -486,7 +483,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690608732940</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Minor comments and other changes">
+      <option name="closed" value="true" />
+      <created>1691472231132</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1691472231132</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -501,7 +506,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="numberOfSetBits implementation" />
     <MESSAGE value="CalculateXPowerNEfficient, PerfectSquare, SquareRootXOptimized Implementations" />
     <MESSAGE value="Merged DSAKotlin and ProblemSolvingKotlin repos in single repo" />
     <MESSAGE value="Renamed project" />
@@ -526,7 +530,8 @@
     <MESSAGE value="Minor comment changes" />
     <MESSAGE value="Minor fix for removeNthFromEnd for single element case" />
     <MESSAGE value="QueueUsing2Stacks add efficient Queue2" />
-    <option name="LAST_COMMIT_MESSAGE" value="QueueUsing2Stacks add efficient Queue2" />
+    <MESSAGE value="Minor comments and other changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor comments and other changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
