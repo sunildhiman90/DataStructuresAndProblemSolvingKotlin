@@ -2,6 +2,7 @@ package datastructures.queue
 
 
 // Using Circular Array
+// In add: first check for empty, then check for circular conditions front == 0 for addFirst and rear = capacity - 1 for addLast
 class DoubleEndedQueueUsingArray(private val capacity: Int) {
 
     private val arr = Array(capacity) { 0 }

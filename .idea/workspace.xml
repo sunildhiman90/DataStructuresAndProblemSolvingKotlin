@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="QueueUsing2Stacks add efficient Queue2">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/DetectCycleUsingHashSet.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/linked_list_loop_start_node_logic_proof_diagram.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/DoubleEndedQueueUsingLL.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/PriorityQueueUsingLL.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/linkedlist/MergeTwoSortedListsUsingDummyNode.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/CircularQueueUsingArray.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/CircularQueueUsingArray.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/QueueUsing2Stacks.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/QueueUsing2Stacks.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/QueueUsingArray.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/QueueUsingArray.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/QueueUsingArrayList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/QueueUsingArrayList.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/QueueUsingLinkedList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/QueueUsingLinkedList.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/graph/GraphBFS.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/graph/GraphBFS.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/RemoveCycleFromLinkedList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/RemoveCycleFromLinkedList.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/DoubleEndedQueueUsingArray.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/DoubleEndedQueueUsingArray.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +58,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KotlinCodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -79,19 +83,20 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sunil/Intellij/DataStructuresAndProblemSolvingKotlin/src/main/kotlin/datastructures/queue&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;
+    &quot;last_opened_file_path&quot;: &quot;/Users/sunil/Intellij/DataStructuresAndProblemSolvingKotlin/src/main/kotlin/algorithms&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/kotlin/datastructures/queue" />
+      <recent name="$PROJECT_DIR$/src/main/kotlin/algorithms" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist" />
+      <recent name="$PROJECT_DIR$/src/main/kotlin/problemsolving/linkedlist" />
+      <recent name="$PROJECT_DIR$/src/main/kotlin/datastructures/queue" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack" />
-      <recent name="$PROJECT_DIR$/src/main/kotlin" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/problemsolving/jetbrains/strings" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/problemsolving/stack" />
     </key>
@@ -139,19 +144,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Kotlin.QueueUsing2StacksKt" />
-      <item itemvalue="Kotlin.StackUsingArrayKt" />
+      <item itemvalue="Kotlin.LinkedListKt" />
       <item itemvalue="Kotlin.PalindromeDoublyLinkedListKt" />
       <item itemvalue="Kotlin.PriorityQueueUsingArrayKt" />
-      <item itemvalue="Kotlin.LinkedListKt" />
+      <item itemvalue="Kotlin.QueueUsing2StacksKt" />
+      <item itemvalue="Kotlin.StackUsingArrayKt" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.StackUsingArrayKt" />
         <item itemvalue="Kotlin.QueueUsing2StacksKt" />
-        <item itemvalue="Kotlin.LinkedListKt" />
         <item itemvalue="Kotlin.PriorityQueueUsingArrayKt" />
         <item itemvalue="Kotlin.PalindromeDoublyLinkedListKt" />
+        <item itemvalue="Kotlin.LinkedListKt" />
       </list>
     </recent_temporary>
   </component>
@@ -473,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690605577800</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="QueueUsing2Stacks add efficient Queue2">
+      <option name="closed" value="true" />
+      <created>1690608732940</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1690608732940</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -520,7 +533,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/main/kotlin/datastructures/queue/DoubleEndedQueueUsingArray.kt</url>
-          <line>4</line>
+          <line>5</line>
           <properties class="datastructures.queue.DoubleEndedQueueUsingArray" method="&lt;init&gt;">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

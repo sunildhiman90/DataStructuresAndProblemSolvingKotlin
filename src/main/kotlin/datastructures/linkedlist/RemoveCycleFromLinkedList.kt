@@ -1,5 +1,6 @@
 package datastructures.linkedlist
 
+
 class RemoveCycleFromLinkedList {
 }
 
@@ -24,7 +25,7 @@ fun removeCycleNew(node: LinkedList.Node?) {
     if (slow === fast) {
         slow = node //start slow from start
         if (slow !== fast) {
-            //move both of them single steps, and loop until they both meet again,
+            //move both of them single steps, and loop until they both meet again, scientific proof is given at bottom of the file
             //IMP: we are cheking here for next of slow and fast, so that we will have fast or slow as prev node to loop starting node
             while (slow?.next !== fast?.next) {
                 slow = slow?.next
@@ -145,3 +146,48 @@ fun removeCycle(head: LinkedList.Node?): LinkedList.Node? {
     return null
 }
 
+
+/**
+ *
+ * We do not need to count the number of nodes in Loop.
+ * After detecting the loop, if we start the slow pointer from the head
+ * and move both slow and fast pointers at the same speed until fast don’t meet,
+ * they would meet at the beginning of the loop.
+ *
+ * How does this work?
+ * Let slow and fast meet at some point after Floyd’s Cycle finding algorithm.
+ * The below diagram shows the situation when the cycle is found.
+ *
+ * [src/main/kotlin/datastructures/linkedlist/linked_list_loop_start_node_logic_proof_diagram.jpg]
+ *
+ * Situation when cycle is found
+ *
+ * We can conclude below from the above diagram
+ *
+ * Distance traveled by fast pointer = 2 * (Distance traveled
+ *                                          by slow pointer)
+ *
+ * (m + n*x + k) = 2*(m + n*y + k)
+ *
+ * Note that before meeting the point shown above, fast
+ * was moving at twice speed.
+ *
+ * x -->  Number of complete cyclic rounds made by
+ *        fast pointer before they meet first time
+ *
+ * y -->  Number of complete cyclic rounds made by
+ *        slow pointer before they meet first time
+ * From the above equation, we can conclude below
+ *
+ *     m + k = (x-2y)*n
+ *
+ * Which means m+k is a multiple of n.
+ * Thus we can write, m + k = i*n or m = i*n - k.
+ * Hence, distance moved by slow pointer: m, is equal to distance moved by fast pointer:
+ * i*n - k or (i-1)*n + n - k (cover the loop completely i-1 times and start from n-k).
+ * So if we start moving both pointers again at same speed such that one pointer (say slow) begins from head node of linked list and other pointer (say fast) begins from meeting point.
+ * When the slow pointer reaches the beginning of the loop (has made m steps),
+ * the fast pointer would have made also moved m steps as they are now moving at the same pace.
+ * Since m+k is a multiple of n and fast starts from k, they would meet at the beginning.
+ * Can they meet before also? No because slow pointer enters the cycle first time after m steps.
+ */
