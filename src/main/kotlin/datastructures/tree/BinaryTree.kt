@@ -143,31 +143,6 @@ class BinaryTree {
                 }
             }
         }
-
-    }
-
-    fun countNodes(node: Node? = root): Int {
-        if (node == null) {
-            return 0
-        }
-
-        val leftSubtreeCount = countNodes(node.left)
-        val rightSubtreeCount = countNodes(node.right)
-
-        // we are adding one for current node, becoz each subtree has 3 nodes:  root, left & right
-        return leftSubtreeCount + rightSubtreeCount + 1
-    }
-
-    fun sumOfNodes(node: Node? = root): Int {
-        if (node == null) {
-            return 0
-        }
-
-        val leftSubtreeSum = sumOfNodes(node.left)
-        val rightSubtreeSum = sumOfNodes(node.right)
-
-        // Add data of current node as well, becoz each subtree has 3 nodes:  root, left & right
-        return leftSubtreeSum + rightSubtreeSum + node.data
     }
 
     fun display() {
@@ -214,6 +189,46 @@ class BinaryTree {
         prettyDisplayChildren(level + 1, node.left)
     }
 
+    // Binary Tree Problem 1: O(n)
+    fun countNodes(node: Node? = root): Int {
+        if (node == null) {
+            return 0
+        }
+
+        val leftSubtreeCount = countNodes(node.left)
+        val rightSubtreeCount = countNodes(node.right)
+
+        // we are adding one for current node, becoz each subtree has 3 nodes:  root, left & right
+        return leftSubtreeCount + rightSubtreeCount + 1
+    }
+
+    // Binary Tree Problem 2: O(n)
+    fun sumOfNodes(node: Node? = root): Int {
+        if (node == null) {
+            return 0
+        }
+
+        val leftSubtreeSum = sumOfNodes(node.left)
+        val rightSubtreeSum = sumOfNodes(node.right)
+
+        // Add data of current node as well, becoz each subtree has 3 nodes:  root, left & right
+        return leftSubtreeSum + rightSubtreeSum + node.data
+    }
+
+    // Binary Tree Problem 3: O(n)
+    // This is based on if height of single root node is considered 1
+    fun heightOfTree(node: Node? = root): Int {
+        if (node == null) {
+            return 0
+        }
+
+        val leftSubtreeHeight = heightOfTree(node.left)
+        val rightSubtreeHeight = heightOfTree(node.right)
+
+        // we are adding one for current node, becoz each subtree has 3 nodes:  root, left & right and at each level change , height increases by 1
+        return Math.max(leftSubtreeHeight, rightSubtreeHeight) + 1
+        //return leftSubtreeHeight.coerceAtLeast(rightSubtreeHeight) + 1 //alternative
+    }
 }
 
 fun main() {
@@ -246,6 +261,10 @@ fun main() {
     println()
     val sum = binaryTree2.sumOfNodes()
     println("Total sum of data of all nodes in tree : $sum")
+
+    println()
+    val height = binaryTree2.heightOfTree()
+    println("Total height of tree: $height")
 
     // inorder traversal
     val arr2 = intArrayOf(-1, 4, -1, 2, -1, 1, -1, 5, -1, 3, -1, 6, -1)
