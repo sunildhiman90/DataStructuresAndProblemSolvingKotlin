@@ -1,10 +1,21 @@
 package datastructures.tree
 
+import java.util.*
+
+/**
+ * Tips for Most of Tree Problems:
+ * 1. Mostly we will use recursion, Solve the problem for left subtree by going to null of last left and then it will go to base condition.
+ * 3. Repeat  Step 1 for right subtree as well, by going to null of last right and then it will go to base condition
+ * 2. And finally Add base condition if node == null , then either perform some calculations there, or apply your terminating condition
+ *
+ */
+
 class BinaryTree {
 
     class Node(val data: Int, var left: Node? = null, var right: Node? = null)
 
-    private var root: Node? = null
+    var root: Node? = null
+        private set
 
     fun buildTree() {
         println("Enter the root Node: ")
@@ -35,11 +46,10 @@ class BinaryTree {
 
     }
 
-
     var index = -1
 
     //This method will build tree from Preorder traversal NLR ->(NODE LEFT RIGHT)
-    fun buildTreeFromArray(nodes: IntArray): Node? {
+    fun buildTreeFromPreorderArray(nodes: IntArray): Node? {
         index++
         if (nodes[index] == -1) {
             return null
@@ -48,20 +58,19 @@ class BinaryTree {
         val node = Node(nodes[index])
 
         //repeat same for left and right subtree
-        node.left = buildTreeFromArray(nodes)
-        node.right = buildTreeFromArray(nodes)
+        node.left = buildTreeFromPreorderArray(nodes)
+        node.right = buildTreeFromPreorderArray(nodes)
         root = node
         return root
 
     }
-
 
     fun preorderTraversal() {
         println("---PreOrder Traversal---")
         preorderTraversal(root)
     }
 
-    // NLR
+    // DFS -> NLR
     private fun preorderTraversal(node: Node?) {
         if (node == null) {
             return
@@ -76,7 +85,7 @@ class BinaryTree {
         inorderTraversal(root)
     }
 
-    // LNR
+    // DFS -> LNR
     private fun inorderTraversal(node: Node?) {
         if (node == null) {
             return
@@ -91,7 +100,7 @@ class BinaryTree {
         postorderTraversal(root)
     }
 
-    // LNR
+    // DFS -> LNR
     private fun postorderTraversal(node: Node?) {
         if (node == null) {
             return
@@ -99,6 +108,66 @@ class BinaryTree {
         postorderTraversal(node.left)
         postorderTraversal(node.right)
         print("${node.data}\t")
+    }
+
+
+    // BFS
+    fun levelOrderTraversal(start: Node? = root) {
+        println("---Level Order Traversal---")
+        if (root == null) return
+        val queue: Queue<Node?> = LinkedList()
+
+        // Mark visited and add to queue for printing and then checking its left and right child
+        queue.add(start)
+        queue.add(null) // for next level
+
+        while (!queue.isEmpty()) {
+
+            //poll and print
+            val currentNode = queue.poll()
+            //If case is just for printing new line for next level
+            if (currentNode == null) {
+                println()
+                // just print new line and add null for next level if queue is not empty
+                if (queue.isEmpty()) {
+                    break
+                } else queue.add(null) // for next level
+            } else {
+                print("${currentNode.data}\t")
+                //check for its neighbours
+                if (currentNode.left != null) {
+                    queue.add(currentNode.left)
+                }
+                if (currentNode.right != null) {
+                    queue.add(currentNode.right)
+                }
+            }
+        }
+
+    }
+
+    fun countNodes(node: Node? = root): Int {
+        if (node == null) {
+            return 0
+        }
+
+        val leftSubtreeCount = countNodes(node.left)
+        val rightSubtreeCount = countNodes(node.right)
+
+        // we are adding one for current node, becoz each subtree has 3 nodes:  root, left & right
+        return leftSubtreeCount + rightSubtreeCount + 1
+    }
+
+    fun sumOfNodes(node: Node? = root): Int {
+        if (node == null) {
+            return 0
+        }
+
+        val leftSubtreeSum = sumOfNodes(node.left)
+        val rightSubtreeSum = sumOfNodes(node.right)
+
+        // Add data of current node as well, becoz each subtree has 3 nodes:  root, left & right
+        return leftSubtreeSum + rightSubtreeSum + node.data
     }
 
     fun display() {
@@ -145,7 +214,6 @@ class BinaryTree {
         prettyDisplayChildren(level + 1, node.left)
     }
 
-
 }
 
 fun main() {
@@ -162,7 +230,7 @@ fun main() {
     // Preorder traversal of above tree
     val arr = intArrayOf(1, 2, 4, -1, -1, -1, 3, 5, -1, -1, 6, -1, -1)
     val binaryTree2 = BinaryTree()
-    binaryTree2.buildTreeFromArray(arr)
+    binaryTree2.buildTreeFromPreorderArray(arr)
     binaryTree2.prettyDisplay() //it will display 45 degree left rotated visual of tree
     println()
     binaryTree2.preorderTraversal()
@@ -170,5 +238,26 @@ fun main() {
     binaryTree2.inorderTraversal()
     println()
     binaryTree2.postorderTraversal()
+    println()
+    binaryTree2.levelOrderTraversal()
+    println()
+    val count = binaryTree2.countNodes()
+    println("Total no of nodes in tree : $count")
+    println()
+    val sum = binaryTree2.sumOfNodes()
+    println("Total sum of data of all nodes in tree : $sum")
+
+    // inorder traversal
+    val arr2 = intArrayOf(-1, 4, -1, 2, -1, 1, -1, 5, -1, 3, -1, 6, -1)
+
+    // Random array
+    val arr3 = intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
+
 
 }
+
+/**
+ * DFS -> Depth First Traversals include PreOrder, InOrder and PostOrder Traversals
+ * BFS -> Level Order Traversal
+ *
+ */

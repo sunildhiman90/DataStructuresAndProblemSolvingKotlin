@@ -72,7 +72,7 @@ class GraphBFS(
         val queue: LinkedList<Int> = LinkedList()
 
         // mark visited and add to queue for printing and then checking its neighbors
-        // TODO, this logic for levels will work only if we are traversing from start node, need to implement for if we start from some other nodes
+        // TODO, this logic for levels will work only if we are traversing from start node, need to implement for the case when we start from some other nodes
         visited[startVertex] = true
         levels[startVertex] = 0
         queue.add(startVertex)
