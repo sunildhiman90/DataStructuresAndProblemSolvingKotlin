@@ -229,6 +229,43 @@ class BinaryTree {
         return Math.max(leftSubtreeHeight, rightSubtreeHeight) + 1
         //return leftSubtreeHeight.coerceAtLeast(rightSubtreeHeight) + 1 //alternative
     }
+
+    // Binary Tree Problem 4: O(n*n)
+    fun diameterOfTree(node: Node? = root): Int {
+        if (node == null) {
+            return 0
+        }
+
+        val leftSubtreeDiameter = diameterOfTree(node.left)
+        val rightSubtreeDiameter = diameterOfTree(node.right)
+        val rootDiameter = heightOfTree(node.left) + heightOfTree(node.right)
+
+        return Math.max(rootDiameter, Math.max(leftSubtreeDiameter, rightSubtreeDiameter))
+        //return rootDiameter.coerceAtLeast(leftSubtreeDiameter.coerceAtLeast(rightSubtreeDiameter))
+    }
+
+    // Binary Tree Problem 4 with Efficient Approach: O(n)
+    // Calculate height along with diameter, But in prev approach we were not reusing the height for each subtree, every time we were calculating it again
+    fun diameterOfTree2(node: Node? = root): NodeInfo {
+        if (node == null) {
+            return NodeInfo(0, 0)
+        }
+
+        val nodeLeftSubtreeInfo = diameterOfTree2(node.left)
+        val nodeRightSubtreeInfo = diameterOfTree2(node.right)
+
+        // calculations
+        val treeHeight = Math.max(nodeLeftSubtreeInfo.height, nodeRightSubtreeInfo.height) + 1
+
+        val nodeLeftSubtreeDiam = nodeLeftSubtreeInfo.diameter
+        val nodeRightSubtreeDiam = nodeLeftSubtreeInfo.diameter
+        val nodeDiam = nodeLeftSubtreeInfo.height + nodeRightSubtreeInfo.height
+
+        val treeDiam = Math.max(nodeDiam, Math.max(nodeLeftSubtreeDiam, nodeRightSubtreeDiam))
+        return NodeInfo(treeHeight, treeDiam)
+    }
+
+    class NodeInfo(val height: Int, val diameter: Int)
 }
 
 fun main() {
@@ -258,6 +295,7 @@ fun main() {
     println()
     val count = binaryTree2.countNodes()
     println("Total no of nodes in tree : $count")
+
     println()
     val sum = binaryTree2.sumOfNodes()
     println("Total sum of data of all nodes in tree : $sum")
@@ -265,6 +303,14 @@ fun main() {
     println()
     val height = binaryTree2.heightOfTree()
     println("Total height of tree: $height")
+
+    println()
+    val diam = binaryTree2.diameterOfTree()
+    println("Diameter of tree : $diam")
+
+    println()
+    val diam2 = binaryTree2.diameterOfTree2()
+    println("Diameter of tree : ${diam2.diameter}")
 
     // inorder traversal
     val arr2 = intArrayOf(-1, 4, -1, 2, -1, 1, -1, 5, -1, 3, -1, 6, -1)
