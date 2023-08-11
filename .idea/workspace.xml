@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;src/main/kotlin/datastructures/tree/BinaryTree.kt">
+    <list default="true" id="29c763b5-ffb1-4cb0-8387-7e1ed14072a9" name="Changes" comment="Tree Problems: CountNodes, SumOfNodes, HeightOfTree and DiameterOfTree">
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist/DetectCycleUsingHashSet.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/queue/DoubleEndedQueueUsingLL.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarytree/CountNodes.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarytree/DiameterOfTree.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarytree/DiameterOfTreeEfficientApproach.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarytree/HeightOfTree.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarytree/SumOfNodes.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/tree/BinaryTreeWithProblemSolutions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarytree/DepthOfNode.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarytree/DepthOfTree.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarytree/HeightDepthOfNodeUsingLevelOrderTraversal.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarytree/HeightOfNode.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/problemsolving/linkedlist/MergeTwoSortedListsUsingDummyNode.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/datastructures/tree/BinaryTree.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/datastructures/tree/BinaryTree.kt" afterDir="false" />
@@ -77,24 +77,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sunil/Intellij/DataStructuresAndProblemSolvingKotlin/src/main/kotlin/algorithms&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/sunil/Intellij/DataStructuresAndProblemSolvingKotlin/src/main/kotlin/datastructures/tree",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/datastructures/tree" />
+      <recent name="$PROJECT_DIR$/src/main/kotlin/problemsolving/binarytree" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/algorithms" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/problemsolving/linkedlist" />
-      <recent name="$PROJECT_DIR$/src/main/kotlin/datastructures/queue" />
-      <recent name="$PROJECT_DIR$/src/main/kotlin/problemsolving/monotonicstack" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/kotlin/datastructures/linkedlist" />
@@ -108,7 +108,7 @@
       <recent name="algorithms.sorting" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.DiameterOfTreeKt">
+  <component name="RunManager" selected="Kotlin.HeightDepthOfNodeUsingLevelOrderTraversalKt">
     <configuration name="BinaryTreeKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="datastructures.tree.BinaryTreeKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
@@ -116,48 +116,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CountNodesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="problemsolving.binarytree.CountNodesKt" />
+    <configuration name="DepthOfNodeKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="problemsolving.binarytree.DepthOfNodeKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiameterOfTreeEfficientApproachKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="problemsolving.binarytree.DiameterOfTreeEfficientApproachKt" />
+    <configuration name="DepthOfTreeKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="problemsolving.binarytree.DepthOfTreeKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiameterOfTreeKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="problemsolving.binarytree.DiameterOfTreeKt" />
+    <configuration name="HeightDepthOfNodeUsingLevelOrderTraversalKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="problemsolving.binarytree.HeightDepthOfNodeUsingLevelOrderTraversalKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HeightOfTreeKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="problemsolving.binarytree.HeightOfTreeKt" />
+    <configuration name="HeightOfNodeKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="problemsolving.binarytree.HeightOfNodeKt" />
       <module name="DataStructuresAndProblemSolvingKotlin.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Kotlin.CountNodesKt" />
-      <item itemvalue="Kotlin.DiameterOfTreeEfficientApproachKt" />
-      <item itemvalue="Kotlin.DiameterOfTreeKt" />
-      <item itemvalue="Kotlin.HeightOfTreeKt" />
+      <item itemvalue="Kotlin.DepthOfNodeKt" />
+      <item itemvalue="Kotlin.DepthOfTreeKt" />
+      <item itemvalue="Kotlin.HeightDepthOfNodeUsingLevelOrderTraversalKt" />
+      <item itemvalue="Kotlin.HeightOfNodeKt" />
       <item itemvalue="Kotlin.BinaryTreeKt" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.DiameterOfTreeKt" />
-        <item itemvalue="Kotlin.DiameterOfTreeEfficientApproachKt" />
-        <item itemvalue="Kotlin.HeightOfTreeKt" />
+        <item itemvalue="Kotlin.HeightDepthOfNodeUsingLevelOrderTraversalKt" />
         <item itemvalue="Kotlin.BinaryTreeKt" />
-        <item itemvalue="Kotlin.CountNodesKt" />
+        <item itemvalue="Kotlin.HeightOfNodeKt" />
+        <item itemvalue="Kotlin.DepthOfNodeKt" />
+        <item itemvalue="Kotlin.DepthOfTreeKt" />
       </list>
     </recent_temporary>
   </component>
@@ -246,14 +246,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1688111956639</updated>
-    </task>
-    <task id="LOCAL-00013" summary="CalculateXPowerNEfficient, PerfectSquare, SquareRootXOptimized Implementations">
-      <option name="closed" value="true" />
-      <created>1689664377267</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1689664377267</updated>
     </task>
     <task id="LOCAL-00014" summary="Merged DSAKotlin and ProblemSolvingKotlin repos in single repo">
       <option name="closed" value="true" />
@@ -551,7 +543,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691569815274</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Tree Problems: CountNodes, SumOfNodes, HeightOfTree and DiameterOfTree">
+      <option name="closed" value="true" />
+      <created>1691654687706</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1691654687706</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -566,7 +566,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Some refactoring" />
     <MESSAGE value="Added .idea to gitignore" />
     <MESSAGE value="NextSmallerElement" />
     <MESSAGE value="NextSmallerElement and NextGreaterElement modified" />
@@ -591,7 +590,8 @@
     <MESSAGE value="Level Order Traversal, Count Nodes and Sum of Nodes" />
     <MESSAGE value="Height of tree" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;src/main/kotlin/datastructures/tree/BinaryTree.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;src/main/kotlin/datastructures/tree/BinaryTree.kt" />
+    <MESSAGE value="Tree Problems: CountNodes, SumOfNodes, HeightOfTree and DiameterOfTree" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tree Problems: CountNodes, SumOfNodes, HeightOfTree and DiameterOfTree" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -10,7 +10,7 @@ import java.util.*
  *
  */
 
-class BinaryTree {
+class BinaryTreeWithProblemSolutions {
 
     class Node(val data: Int, var left: Node? = null, var right: Node? = null)
 
@@ -149,6 +149,78 @@ class BinaryTree {
         }
     }
 
+    //It will return list at each level
+    fun levelOrderTraversal2(start: Node? = root): List<List<Int>> {
+        println("---Level Order Traversal2---")
+        if (start == null) return emptyList()
+        val queue: Queue<Node?> = LinkedList()
+        val finalList = mutableListOf<List<Int>>()
+
+        var level = 0
+        // Mark visited and add to queue for printing and then checking its left and right child
+        queue.add(start)
+        queue.add(null) // for next level
+        finalList.add(start?.data?.let { listOf(it) } ?: emptyList())
+        level++
+
+        while (!queue.isEmpty()) {
+
+            //poll and print
+            val currentNode = queue.poll()
+            //If case is just for printing new line for next level
+            if (currentNode == null) {
+                println()
+                // just print new line and add null for next level if queue is not empty
+                if (queue.isEmpty()) {
+                    break
+                } else {
+                    // for next level
+                    queue.add(null)
+                    level++
+                }
+            } else {
+                print("${currentNode.data}\t")
+                //check for its neighbours
+
+                val list = if (finalList.size - 1 >= level) {
+                    //if list already exist for this level, use that
+                    finalList[level].toMutableList()
+                } else {
+                    // else new mutableList
+                    mutableListOf()
+                }
+                if (currentNode.left != null) {
+                    queue.add(currentNode.left)
+                    currentNode.left?.data?.let { list.add(it) }
+                }
+                if (currentNode.right != null) {
+                    queue.add(currentNode.right)
+                    currentNode.right?.data?.let { list.add(it) }
+                }
+
+                if (list.isNotEmpty()) {
+                    if (finalList.size - 1 >= level) {
+                        // update existing list at that level
+                        finalList[level] = list
+                    } else {
+                        // add new list
+                        finalList.add(list)
+                    }
+                }
+            }
+        }
+        return finalList
+    }
+
+    // This will search node with given nodeDataToFind, if found it wil return node else null
+    fun searchNode(root: Node?, nodeDataToFind: Int): Node? {
+
+        if (root == null) return null
+
+        if (root.data == nodeDataToFind) return root
+
+        return searchNode(root.left, nodeDataToFind) ?: searchNode(root.right, nodeDataToFind)
+    }
 
     fun display() {
         println(root?.data)
@@ -194,11 +266,88 @@ class BinaryTree {
         prettyDisplayChildren(level + 1, node.left)
     }
 
+    // Binary Tree Problem 1: O(n)
+    fun countNodes(node: Node? = root): Int {
+        if (node == null) {
+            return 0
+        }
+
+        val leftSubtreeCount = countNodes(node.left)
+        val rightSubtreeCount = countNodes(node.right)
+
+        // we are adding one for current node, becoz each subtree has 3 nodes:  root, left & right
+        return leftSubtreeCount + rightSubtreeCount + 1
+    }
+
+    // Binary Tree Problem 2: O(n)
+    fun sumOfNodes(node: Node? = root): Int {
+        if (node == null) {
+            return 0
+        }
+
+        val leftSubtreeSum = sumOfNodes(node.left)
+        val rightSubtreeSum = sumOfNodes(node.right)
+
+        // Add data of current node as well, becoz each subtree has 3 nodes:  root, left & right
+        return leftSubtreeSum + rightSubtreeSum + node.data
+    }
+
+    // Binary Tree Problem 3: O(n)
+    // This is based on if height of single root node is considered 1
+    fun heightOfTree(node: Node? = root): Int {
+        if (node == null) {
+            return 0
+        }
+
+        val leftSubtreeHeight = heightOfTree(node.left)
+        val rightSubtreeHeight = heightOfTree(node.right)
+
+        // we are adding one for current node, becoz each subtree has 3 nodes:  root, left & right and at each level change , height increases by 1
+        return Math.max(leftSubtreeHeight, rightSubtreeHeight) + 1
+        //return leftSubtreeHeight.coerceAtLeast(rightSubtreeHeight) + 1 //alternative
+    }
+
+    // Binary Tree Problem 4: O(n*n)
+    fun diameterOfTree(node: Node? = root): Int {
+        if (node == null) {
+            return 0
+        }
+
+        val leftSubtreeDiameter = diameterOfTree(node.left)
+        val rightSubtreeDiameter = diameterOfTree(node.right)
+        val rootDiameter = heightOfTree(node.left) + heightOfTree(node.right)
+
+        return Math.max(rootDiameter, Math.max(leftSubtreeDiameter, rightSubtreeDiameter))
+        //return rootDiameter.coerceAtLeast(leftSubtreeDiameter.coerceAtLeast(rightSubtreeDiameter))
+    }
+
+    // Binary Tree Problem 4 with Efficient Approach: O(n)
+    // Calculate height along with diameter, But in prev approach we were not reusing the height for each subtree, every time we were calculating it again
+    fun diameterOfTree2(node: Node? = root): NodeInfo {
+        if (node == null) {
+            return NodeInfo(0, 0)
+        }
+
+        val nodeLeftSubtreeInfo = diameterOfTree2(node.left)
+        val nodeRightSubtreeInfo = diameterOfTree2(node.right)
+
+        // calculations
+        val treeHeight = Math.max(nodeLeftSubtreeInfo.height, nodeRightSubtreeInfo.height) + 1
+
+        val nodeLeftSubtreeDiam = nodeLeftSubtreeInfo.diameter
+        val nodeRightSubtreeDiam = nodeLeftSubtreeInfo.diameter
+        val nodeDiam = nodeLeftSubtreeInfo.height + nodeRightSubtreeInfo.height
+
+        val treeDiam = Math.max(nodeDiam, Math.max(nodeLeftSubtreeDiam, nodeRightSubtreeDiam))
+        return NodeInfo(treeHeight, treeDiam)
+    }
+
+    class NodeInfo(val height: Int, val diameter: Int)
 }
 
 fun main() {
     // Uncomment this to test this way of building tree with prompting user
-    /*val binaryTree = BinaryTree()
+    /*val binaryTree = BinaryTreeWithProblemSolutions()
     binaryTree.buildTree()
     binaryTree.display()*/
 
@@ -209,7 +358,7 @@ fun main() {
 
     // Preorder traversal of above tree
     val arr = intArrayOf(1, 2, 4, -1, -1, -1, 3, 5, -1, -1, 6, -1, -1)
-    val binaryTree2 = BinaryTree()
+    val binaryTree2 = BinaryTreeWithProblemSolutions()
     binaryTree2.buildTreeFromPreorderArray(arr)
     binaryTree2.prettyDisplay() //it will display 45 degree left rotated visual of tree
     println()
@@ -220,6 +369,35 @@ fun main() {
     binaryTree2.postorderTraversal()
     println()
     binaryTree2.levelOrderTraversal()
+    println()
+    val count = binaryTree2.countNodes()
+    println("Total no of nodes in tree : $count")
+
+    println()
+    val sum = binaryTree2.sumOfNodes()
+    println("Total sum of data of all nodes in tree : $sum")
+
+    println()
+    val height = binaryTree2.heightOfTree()
+    println("Total height of tree: $height")
+
+    println()
+    val diam = binaryTree2.diameterOfTree()
+    println("Diameter of tree : $diam")
+
+    println()
+    val diam2 = binaryTree2.diameterOfTree2()
+    println("Diameter of tree : ${diam2.diameter}")
+
+    println()
+    val finalListByLevel = binaryTree2.levelOrderTraversal2()
+    println("List of data by levels of tree : $finalListByLevel")
+
+
+    println()
+    val nodeToFindHeight = 5
+    val foundNode = binaryTree2.searchNode(binaryTree2.root, nodeToFindHeight)
+    println("Node with data $nodeToFindHeight found : ${foundNode != null}")
 
     // inorder traversal
     val arr2 = intArrayOf(-1, 4, -1, 2, -1, 1, -1, 5, -1, 3, -1, 6, -1)
