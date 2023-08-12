@@ -14,21 +14,118 @@ class GraphBFS(
         adjacencyList[to].add(from)
     }
 
-    fun bfsTraversal(startVertex: Int) {
+    // MAIN APPROACH
+    fun bfsTraversalMain(startVertex: Int) {
         val visited: Array<Boolean> =
             Array(numberOfVertices) { false } //instead of Boolean array, we can use Set as well
-        bfsHelper(startVertex, visited)
+        bfsHelperMain(startVertex, visited)
 
         // for disconnected graph
         // check if still some vertex is still unvisited
         for (i in visited.indices) {
             if (!visited[i]) {
-                bfsHelper(i, visited)
+                bfsHelperMain(i, visited)
             }
         }
     }
 
-    private fun bfsHelper(startVertex: Int, visited: Array<Boolean>) {
+    private fun bfsHelperMain(startVertex: Int, visited: Array<Boolean>) {
+        val queue: LinkedList<Int> = LinkedList()
+
+        // mark visited and add to queue for printing and then checking its neighbors
+        visited[startVertex] = true
+        queue.add(startVertex)
+
+        while (!queue.isEmpty()) {
+
+            val n = queue.size
+            //pick all elements at current level and add their neighbours for next level
+            for (i in 0 until n) {
+                //poll and print
+                val currentVertex = queue.poll()
+                print("$currentVertex \t")
+
+                //check for its neighbours
+                for (element in adjacencyList[currentVertex]) {
+                    if (!visited[element]) {
+                        visited[element] = true
+                        queue.add(element)
+                    }
+                }
+            }
+            println()
+        }
+
+    }
+
+
+    // MAIN APPROACH with level
+    fun bfsTraversalMainWithLevel(startVertex: Int) {
+        val visited: Array<Boolean> =
+            Array(numberOfVertices) { false } //instead of Boolean array, we can use Set as well
+
+        bfsHelperMainWithLevel(startVertex, visited)
+
+        // for disconnected graph
+        // check if still some vertex is still unvisited
+        for (i in visited.indices) {
+            if (!visited[i]) {
+                bfsHelperMainWithLevel(i, visited)
+            }
+        }
+    }
+
+    private fun bfsHelperMainWithLevel(startVertex: Int, visited: Array<Boolean>) {
+        val queue: LinkedList<Int> = LinkedList()
+
+        // mark visited and add to queue for printing and then checking its neighbors
+        visited[startVertex] = true
+        queue.add(startVertex)
+        var level = 0
+
+        while (!queue.isEmpty()) {
+
+            print("Level: $level --> \t")
+
+            val n = queue.size
+            //pick all elements at current level and add their neighbours for next level
+            for (i in 0 until n) {
+                //poll and print
+                val currentVertex = queue.poll()
+                print("$currentVertex \t")
+
+                //check for its neighbours
+                for (element in adjacencyList[currentVertex]) {
+                    if (!visited[element]) {
+                        visited[element] = true
+                        queue.add(element)
+                    }
+                }
+            }
+            println()
+            level++
+
+        }
+
+    }
+
+
+    // Alternative approach
+    fun bfsTraversalAlt(startVertex: Int) {
+        val visited: Array<Boolean> =
+            Array(numberOfVertices) { false } //instead of Boolean array, we can use Set as well
+        bfsHelperAlt(startVertex, visited)
+
+        // for disconnected graph
+        // check if still some vertex is still unvisited
+        for (i in visited.indices) {
+            if (!visited[i]) {
+                bfsHelperAlt(i, visited)
+            }
+        }
+    }
+
+    private fun bfsHelperAlt(startVertex: Int, visited: Array<Boolean>) {
         val queue: LinkedList<Int> = LinkedList()
 
         // mark visited and add to queue for printing and then checking its neighbors
@@ -52,23 +149,26 @@ class GraphBFS(
 
     }
 
-    fun bfsTraversalWithLevel(startVertex: Int) {
+
+    // Alternative approach with level
+    fun bfsTraversalAltWithLevel(startVertex: Int) {
         val visited: Array<Boolean> =
             Array(numberOfVertices) { false } //instead of Boolean array, we can use Set as well
         val levels: Array<Int> = Array(numberOfVertices) { 0 }
 
-        bfsHelperWithLevel(startVertex, visited, levels)
+        bfsHelperAltWithLevel(startVertex, visited, levels)
 
         // for disconnected graph
         // check if still some vertex is still unvisited
         for (i in visited.indices) {
             if (!visited[i]) {
-                bfsHelperWithLevel(i, visited, levels)
+                bfsHelperAltWithLevel(i, visited, levels)
             }
         }
     }
 
-    private fun bfsHelperWithLevel(startVertex: Int, visited: Array<Boolean>, levels: Array<Int>) {
+    // logic for levels will work only if we are traversing from start node
+    private fun bfsHelperAltWithLevel(startVertex: Int, visited: Array<Boolean>, levels: Array<Int>) {
         val queue: LinkedList<Int> = LinkedList()
 
         // mark visited and add to queue for printing and then checking its neighbors
@@ -107,8 +207,8 @@ fun main() {
     graph.addEdge(1, 3)
     graph.addEdge(2, 4)
 
-    graph.bfsTraversal(0) //0,1,2,5,3,4
-    graph.bfsTraversalWithLevel(0) //0,1,2,5,3,4
+    graph.bfsTraversalMain(0) //0,1,2,5,3,4
+    graph.bfsTraversalAltWithLevel(0) //0,1,2,5,3,4
 
 
     println("---Disconnected graph--- ")
@@ -120,7 +220,8 @@ fun main() {
     disconnectedGraph.addEdge(1, 3)
     disconnectedGraph.addEdge(2, 4)
     disconnectedGraph.addEdge(6, 7)
-    disconnectedGraph.bfsTraversal(0) //0,1,2,5,3,4,6,7
+    disconnectedGraph.bfsTraversalMain(0) //0,1,2,5,3,4,6,7
+    disconnectedGraph.bfsTraversalMainWithLevel(0) //0,1,2,5,3,4,6,7
 }
 
 /**

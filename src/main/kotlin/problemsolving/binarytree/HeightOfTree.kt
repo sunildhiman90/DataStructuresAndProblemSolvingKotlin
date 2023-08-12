@@ -3,7 +3,7 @@ package problemsolving.binarytree
 import datastructures.tree.BinaryTree
 
 
-// This is based on if height of single root node is considered 1
+// This is based on if height of single root node is considered 1, if we are counting no of nodes in height, but not edges
 fun heightOfTree(node: BinaryTree.Node?): Int {
     if (node == null) {
         return 0

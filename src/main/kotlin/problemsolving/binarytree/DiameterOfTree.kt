@@ -11,11 +11,11 @@ fun diameterOfTree(node: BinaryTree.Node?): Int {
 
     val leftSubtreeDiameter = diameterOfTree(node.left)
     val rightSubtreeDiameter = diameterOfTree(node.right)
-    val rootDiameter =
+    val rootTreeDiameter =
         heightOfTree(node.left) + heightOfTree(node.right) // dont add +1 for current node, if we want to calculate path (no of edges) Becoz edges = nodes-1
     //val rootDiameter = heightOfTree(node.left) + heightOfTree(node.right) + 1 //add 1 if we need to count no of nodes
 
-    return Math.max(rootDiameter, Math.max(leftSubtreeDiameter, rightSubtreeDiameter))
+    return Math.max(rootTreeDiameter, Math.max(leftSubtreeDiameter, rightSubtreeDiameter))
     //return rootDiameter.coerceAtLeast(leftSubtreeDiameter.coerceAtLeast(rightSubtreeDiameter))
 
 }

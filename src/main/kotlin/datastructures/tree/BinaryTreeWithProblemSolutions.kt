@@ -111,8 +111,66 @@ class BinaryTreeWithProblemSolutions {
     }
 
 
-    // BFS
-    fun levelOrderTraversal(start: Node? = root) {
+    // MAIN APPROACH: using the approach of [HeightDepthOfNodeUsingLevelOrderTraversal] without using null
+    fun levelOrderTraversalMain(start: Node? = root) {
+        println("---Level Order Traversal 3---")
+        var level = 0
+        val queue: Queue<Node> = LinkedList()
+        queue.add(start)
+
+        while (!queue.isEmpty()) {
+            print("Level: $level --> \t")
+
+            val n = queue.size
+            //Pick all elements at currently in the queue, at level : level, BEcoz everytime we are printing node, we are adding its left and right as, that is actually next level
+            for (i in 0 until n) {
+                val currentNode = queue.poll()
+                print("${currentNode.data}  ")
+                if (currentNode.left != null) {
+                    queue.add(currentNode.left) //for next level
+                }
+                if (currentNode.right != null) {
+                    queue.add(currentNode.right)  //for next level
+                }
+            }
+            println()
+            level++
+        }
+    }
+
+    // MAIN APPROACH: using the approach of [HeightDepthOfNodeUsingLevelOrderTraversal] without using null
+    fun levelOrderTraversalMainReturningList(start: Node? = root): List<List<Int>> {
+        if (start == null) return emptyList()
+        var level = 0
+        val finalList = mutableListOf<List<Int>>()
+        val queue: Queue<Node> = LinkedList()
+        queue.add(start)
+
+        while (!queue.isEmpty()) {
+            print("Level: $level --> \t")
+            val listByLevel = mutableListOf<Int>()
+            val n = queue.size
+            // Pick all elements at currently in the queue, at level : $level, BEcoz everytime we are printing node, we are adding its left and right as, that is actually next level
+            // this loop will run for all elements for level: $level
+            for (i in 0 until n) {
+                val currentNode = queue.poll()
+                currentNode?.data?.let { listByLevel.add(it) }
+                if (currentNode.left != null) {
+                    queue.add(currentNode.left) //for next level
+                }
+                if (currentNode.right != null) {
+                    queue.add(currentNode.right)  //for next level
+                }
+            }
+            println()
+            finalList.add(listByLevel)
+            level++
+        }
+        return finalList
+    }
+
+    // BFS, ALTERNATIVE APPROACH:  Using null for printing nextline for level
+    fun levelOrderTraversalAlt(start: Node? = root) {
         println("---Level Order Traversal---")
         if (root == null) return
         val queue: Queue<Node?> = LinkedList()
@@ -150,7 +208,7 @@ class BinaryTreeWithProblemSolutions {
     }
 
     //It will return list at each level
-    fun levelOrderTraversal2(start: Node? = root): List<List<Int>> {
+    fun levelOrderTraversalAltReturningList(start: Node? = root): List<List<Int>> {
         println("---Level Order Traversal2---")
         if (start == null) return emptyList()
         val queue: Queue<Node?> = LinkedList()
@@ -210,11 +268,6 @@ class BinaryTreeWithProblemSolutions {
             }
         }
         return finalList
-    }
-
-    // TODO, calculate using the approach of [HeightDepthOfNodeUsingLevelOrderTraversal]
-    fun levelOrderTraversal3(start: Node? = root): List<List<Int>> {
-        TODO("")
     }
 
     // This will search node with given nodeDataToFind, if found it wil return node else null
@@ -373,7 +426,7 @@ fun main() {
     println()
     binaryTree2.postorderTraversal()
     println()
-    binaryTree2.levelOrderTraversal()
+    binaryTree2.levelOrderTraversalAlt()
     println()
     val count = binaryTree2.countNodes()
     println("Total no of nodes in tree : $count")
@@ -395,8 +448,15 @@ fun main() {
     println("Diameter of tree : ${diam2.diameter}")
 
     println()
-    val finalListByLevel = binaryTree2.levelOrderTraversal2()
+    val finalListByLevel = binaryTree2.levelOrderTraversalAltReturningList()
     println("List of data by levels of tree : $finalListByLevel")
+
+    println()
+    binaryTree2.levelOrderTraversalMain()
+
+    println()
+    val listByLevels = binaryTree2.levelOrderTraversalMainReturningList()
+    println(listByLevels)
 
 
     println()

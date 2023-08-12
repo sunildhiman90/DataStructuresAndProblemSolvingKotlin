@@ -9,15 +9,16 @@ import datastructures.tree.BinaryTree
  * 2. Simply find height for tree with that found node as root: just call  heightOfTree method for that node
  */
 
-fun heightOfNode(node: BinaryTree.Node?): Int {
-    if (node == null) {
-        return 0
-    }
+fun heightOfNode(root: BinaryTree.Node?, nodeToFindHeight: Int): Int {
 
-    // else return height of this subtree starting from node of which we are finding height
+    //search node
+    val node = searchNode(root, nodeToFindHeight)
+
+    // return height of this subtree starting from node of which we are finding height
     return heightOfTree(node)
 }
 
+// O(n) , we are traversing in almost all nodes, But in case of BST, it will be logn
 fun searchNode(root: BinaryTree.Node?, nodeDataToFind: Int): BinaryTree.Node? {
 
     if (root == null) return null
@@ -42,7 +43,19 @@ fun main() {
 
     println()
     val nodeToFindHeight = 5
-    val height = heightOfNode(node = searchNode(binaryTree.root, nodeToFindHeight))
+    val height = heightOfNode(root = binaryTree.root, nodeToFindHeight)
     println("Height of node with data $nodeToFindHeight : $height")
+
+
+    // Single node case
+//    val arr2 = intArrayOf(1, -1, -1)
+//    val binaryTree2 = BinaryTree()
+//    binaryTree2.buildTreeFromPreorderArray(arr2)
+//    binaryTree2.prettyDisplay()
+//
+//    println()
+//    val nodeToFindHeight2 = 1
+//    val height2 = heightOfNode(root = binaryTree2.root, nodeToFindHeight2)
+//    println("Height of node with data $nodeToFindHeight2 : $height2")
 
 }
