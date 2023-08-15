@@ -9,7 +9,7 @@ class NextGreaterElement
 fun main() {
 
     val arr = arrayOf(11, 13, 21, 3, 5, 3)
-    println(nextGreaterElementMainCompacted(arr).contentToString())
+    println(nextGreaterElementMainCompacted(arr).contentToString()) // 13, 21, -1, 5, -1, -1
     println(nextGreaterElementMain(arr).contentToString())
     println(nextGreaterElementUsingHashmap(arr).contentToString())
 
@@ -29,7 +29,8 @@ fun nextGreaterElementMainCompacted(nums: Array<Int>): Array<Int> {
         // next num
         next = element
 
-        // Find all elements for which next is greater..
+        // Find all elements for which next is greater. Means we will remove from stack all elements for which next is greater
+        // and then set in finalArray
         // thats why use decreasing monotonic stack logic for popping, becoz if current(next) element is smaller than prev(stack top),
         // then it does not satisfy our criteria, so push to stack for later adding -1 so stack will contain elements which does not satisfy our criteria ,
         // otherwise pop from stack becoz our criteria is satisfied

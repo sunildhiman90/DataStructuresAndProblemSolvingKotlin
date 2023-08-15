@@ -162,7 +162,6 @@ class BinaryTreeWithProblemSolutions {
                     queue.add(currentNode.right)  //for next level
                 }
             }
-            println()
             finalList.add(listByLevel)
             level++
         }

@@ -16,7 +16,7 @@ fun heapSort(list: MutableList<Int>, n: Int) {
 
     //Step1: build heap, starting from (n/2)-1 to 0(start), becoz all leaf nodes start from (n/2) to n-1, so before that we have non leaf nodes
     for (i in (n / 2) - 1 downTo 0) {
-        maxHeapify(list, n, i) //from i to n
+        maxHeapify(list, n = n, startIndex = i) //from i to n
     }
 
     //Step2: deletion
@@ -40,9 +40,9 @@ fun maxHeapify(list: MutableList<Int>, n: Int, startIndex: Int) {
     val l = 2 * startIndex + 1 //left child
     val r = 2 * startIndex + 2 //right child
 
-    if (l <= n-1 && list[l] > list[largest]) largest = l
-    if (r <= n-1 && list[r] > list[largest]) largest = r
-    if(largest != startIndex) {
+    if (l <= n - 1 && list[l] > list[largest]) largest = l
+    if (r <= n - 1 && list[r] > list[largest]) largest = r
+    if (largest != startIndex) {
         //if largest is changed , swap them
         val temp = list[largest]
         list[largest] = list[startIndex]
@@ -61,7 +61,6 @@ fun main() {
     heapSort(mutableList, arr.size)
     println("sorted array is : $mutableList")
 }
-
 
 
 /**

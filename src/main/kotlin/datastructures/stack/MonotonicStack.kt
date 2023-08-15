@@ -6,8 +6,8 @@ fun main() {
 
     //val arr = arrayOf(11,13,21,3)
     val arr = arrayOf(1, 4, 5, 3, 12, 10)
-    println(increasingMonotonicStack(arr))
-    println(decreasingMonotonicStack(arr))
+    println(increasingMonotonicStack(arr)) // 1,3,10
+    println(decreasingMonotonicStack(arr))// 12, 10
 
 }
 
