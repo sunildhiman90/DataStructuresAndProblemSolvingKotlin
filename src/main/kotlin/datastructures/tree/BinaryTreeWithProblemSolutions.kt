@@ -269,7 +269,7 @@ class BinaryTreeWithProblemSolutions {
         return finalList
     }
 
-    // This will search node with given nodeDataToFind, if found it wil return node else null
+    // O(n): This will search node with given nodeDataToFind, if found it wil return node else null
     fun searchNode(root: Node?, nodeDataToFind: Int): Node? {
 
         if (root == null) return null
@@ -279,10 +279,13 @@ class BinaryTreeWithProblemSolutions {
         return searchNode(root.left, nodeDataToFind) ?: searchNode(root.right, nodeDataToFind)
     }
 
+    // TODO
+    fun IsBalanced() {
+
+    }
+
     fun display() {
-        println(root?.data)
-        displayChildren(root?.left)
-        displayChildren(root?.right)
+        displayChildren(root)
     }
 
     private fun displayChildren(node: Node?) {
@@ -295,11 +298,11 @@ class BinaryTreeWithProblemSolutions {
     }
 
     fun prettyDisplay() {
-        val level = 1
+        val level = 0
         prettyDisplayChildren(level, root)
     }
 
-    // it will display 45 degree left rotated(from root) visual of tree
+    // it will display 90 degree left rotated(from root) visual of tree
     private fun prettyDisplayChildren(level: Int, node: Node?) {
         if (node == null) {
             return
@@ -309,8 +312,8 @@ class BinaryTreeWithProblemSolutions {
         prettyDisplayChildren(level + 1, node.right)
 
         // print space according to level and finally node data
-        if (level > 1) {
-            for (i in 1 until level - 1) {
+        if (level > 0) {
+            for (i in 0 until level - 1) {
                 print("\t")
             }
             println("\t---->${node.data}")
@@ -417,7 +420,7 @@ fun main() {
     val arr = intArrayOf(1, 2, 4, -1, -1, -1, 3, 5, -1, -1, 6, -1, -1)
     val binaryTree2 = BinaryTreeWithProblemSolutions()
     binaryTree2.buildTreeFromPreorderArray(arr)
-    binaryTree2.prettyDisplay() //it will display 45 degree left rotated visual of tree
+    binaryTree2.prettyDisplay() //it will display 90 degree left rotated visual of tree
     println()
     binaryTree2.preorderTraversal()
     println()
