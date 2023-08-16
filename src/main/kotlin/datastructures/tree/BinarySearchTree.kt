@@ -141,11 +141,11 @@ class BinarySearchTree {
 }
 
 fun main() {
-    // build From Preorder Traversal, we will use -1 for null, as it is int array we cant directly add null in array
+    // build BST From below given array
     //              4
     //         2        6
     //      1    3    5    7
-
+    //                        9
     val arr = intArrayOf(4, 2, 1, 6, 3, 5, 7, 9) //first element will become root
     //val arr2 = intArrayOf(7, 4, 2, 1, 6, 3, 5) //first element will become root
     val binarySearchTree = BinarySearchTree()
