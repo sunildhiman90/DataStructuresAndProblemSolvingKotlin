@@ -72,8 +72,10 @@ fun main() {
 /**
  *
  * WHy we are passing new list for both left and right subtree?
- * Becoz when left part will return from leaf node , then if we pass same old list for paths
- * then it will become [4,2,1] and then for 2's right subtree call,  it will pass that list and add the new node to that list,
+ * Suppose for example of when  2 will be current call root:- Suppose we passed same list paths-> [4,2] to left subtree
+ * Then when left part will return from leaf node(1), then if we pass same old list for paths
+ * then for 2 as root,  it will become [4,2,1] after returning from left subtree(1) call
+ * and then for 2's right subtree(3) call,  it will pass that list and add the new node to that list,
  * then it wil become [4,2,1,3], it will add right of 2 that is 3, to the same list, But we dont want that, Otherwise it will return wrong paths
  * as given below :
  * [[4, 2, 1, 3, 6, 5, 7, 9], [4, 2, 1, 3, 6, 5, 7, 9], [4, 2, 1, 3, 6, 5, 7, 9], [4, 2, 1, 3, 6, 5, 7, 9]]
