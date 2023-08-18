@@ -180,7 +180,7 @@ class BinaryTree {
         // print space according to level and finally node data
         if (level > 0) {
             for (i in 0 until level - 1) {
-                print("\t")
+                print("\t\t")
             }
             println("\t---->${node.data}")
         } else {
