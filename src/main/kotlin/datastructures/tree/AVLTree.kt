@@ -138,7 +138,56 @@ class AVLTree {
         return heightOfTree(node)
     }
 
-    //TODO, delete
+
+    //Deletion will be same as BST, but after deleting node, we need to balance tree again with that node and then return node
+    fun deleteNode(root: Node?, nodeDataToDelete: Int): Node? {
+        //println("-----AVL Tree before deletion of $nodeDataToDelete-----")
+        //prettyDisplay()
+
+        if (root == null) return null
+
+        if (root.data == nodeDataToDelete) {
+
+            //Delete Case 1: (No Child), both left and right are null
+            if (root.left == null && root.right == null) {
+                return null
+            }
+
+            //Delete Case 2: (One Child)
+            if (root.left == null) {
+                return root.right
+            } else if (root.right == null) {
+                return root.left
+            }
+
+            // Delete Case 3: (Two Children)
+            val inorderSuccessor = findInorderSuccessor(root.right!!) // find inorder successor in right subtree
+            root.data = inorderSuccessor.data //replace node data with inorder successor
+            root.right = deleteNode(
+                root.right,
+                nodeDataToDelete = inorderSuccessor.data
+            ) //delete inorderSuccessor and update right subtree
+
+        } else if (nodeDataToDelete < root.data) {
+            root.left = deleteNode(root.left, nodeDataToDelete)
+        } else {
+            root.right = deleteNode(root.right, nodeDataToDelete)
+        }
+
+        this.root = rotate(root) //update tree root here, becoz root may be updated due to re balancing after deletion
+        return this.root
+    }
+
+
+    private fun findInorderSuccessor(node: Node): Node {
+        // left most node
+        var node: Node = node
+        while (node.left != null) {
+            node =
+                node.left!! // we know it will not be null, so applying not null assertion, otherwise we should not use not null assertion !! operator
+        }
+        return node
+    }
 
     fun display() {
         displayChildren(root)
@@ -191,18 +240,39 @@ fun main() {
     //                         9
     //                           11
 
-    // And Following AVL will be built From below given array:
-    // It includes 3 rotations, run the code and check in console before each case We have printed tree, We will understand better
+    // And Following AVL Tree will be built From below given array:
+    // It includes 3 rotations, run the code and check in console, before each case We have printed tree, We will understand better
     // After every insertion, it checks from that node going upwards for each node if unbalanced or not
     //              4
     //         2         6
     //      1    3    5     9
     //                    7   11
     val arr = intArrayOf(4, 2, 1, 6, 3, 5, 7, 9, 11) //first element will become root,
-    //val arr2 = intArrayOf(7, 4, 2, 1, 6, 3, 5) //first element will become root
+
+
+    // We can use this array after uncommenting this one and commenting above arr for deletion testing,
+    // where re balancing will happen after deleting 2,
+    // Following AVL Tree will be built From below given array:
+    // It includes 3 rotations, run the code and check in console, before each case We have printed tree, We will understand better
+    // After every insertion, it checks from that node going upwards for each node if unbalanced or not
+    //              4
+    //         2         6
+    //           3    5     9
+    //                    7   11
+    //val arr = intArrayOf(4, 2, 6, 3, 5, 7, 9, 11)
     val avlTree = AVLTree()
     avlTree.populate(arr)
     avlTree.prettyDisplay() //it will display 90 degree left rotated visual of tree
+
+    val nodeData1 = 1
+    val nodeData2 = 2
+    //val root = avlTree.deleteNode(root = avlTree.root, nodeData1)
+    //println("-----AVL Tree after deletion of $nodeData1-----")
+    //avlTree.prettyDisplay()
+
+    avlTree.deleteNode(root = avlTree.root, nodeData2)
+    println("-----AVL Tree after deletion of $nodeData2-----")
+    avlTree.prettyDisplay()
 
 }
 
