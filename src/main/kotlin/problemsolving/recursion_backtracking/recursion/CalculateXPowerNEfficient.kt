@@ -1,4 +1,4 @@
-package problemsolving.recursion
+package problemsolving.recursion_backtracking.recursion
 
 class CalculateXPowerNEfficient {
 }
@@ -33,5 +33,5 @@ fun myPow(x: Double, n: Int): Double {
 }
 
 fun main() {
-    println(myPow(2.0,-4))
+    println(myPow(2.0, -4))
 }
