@@ -1,9 +1,7 @@
 package problemsolving.recursion_backtracking.backtracking
 
 // Given an array of positive integers arr[] and an integer target,
-// The task is to find all unique combinations in arr[] where the sum is equal to target.
-class CombinationSum {
-}
+// The task is to find all unique combinations in arr[] where the sum is equal to target. same element can be repeated.
 
 
 fun combinationSum(list: List<Int>, target: Int): MutableList<List<Int>> {
@@ -41,25 +39,221 @@ fun helper(
     //Inclusion:
     currentSum += inputList[i]
     currentList.add(inputList[i])
-    helper(inputList, target, output, currentList, currentSum, i) //check for this element i
+    helper(
+        inputList,
+        target,
+        output,
+        currentList,
+        currentSum,
+        i
+    ) //check current element with this element i again, becoz same element can be repeated
 
     //Exclusion: We are Backtracked here if currentSum >= b and now exclude current solution and try for next iteration i
     currentSum -= inputList[i]
     currentList.remove(inputList[i])
 
     //Next Solution:
-    helper(inputList, target, output, currentList, currentSum, i + 1)
+    helper(
+        inputList,
+        target,
+        output,
+        currentList,
+        currentSum,
+        i + 1
+    ) //after backtracking, check prev list(currentList-current element) combination with next element
+
+}
+
+fun combinationSumAlt1(list: List<Int>, target: Int): MutableList<List<Int>> {
+    val output = mutableListOf<List<Int>>()
+
+    helperAlt1(inputList = list, target = target, output = output, currentList = mutableListOf(), i = 0)
+
+    return output
+}
+
+// Without using extra parameter for currentSum, instead we will manipulate target itself
+fun helperAlt1(
+    inputList: List<Int>,
+    target: Int,
+    output: MutableList<List<Int>>,
+    currentList: MutableList<Int>,
+    i: Int,
+) {
+
+    if (target == 0) {
+        output.add(currentList.toList())
+        return
+    } else if (target < 0 || i == inputList.size) {
+        return
+    } else {
+        //Inclusion:
+        currentList.add(inputList[i])
+        helperAlt1(
+            inputList,
+            target - inputList[i],
+            output,
+            currentList,
+            i
+        ) //check current element with this element i again, becoz same element can be repeated
+
+        //Exclusion: We are Backtracked here if target == b and now exclude current solution and try for next iteration i
+        currentList.remove(inputList[i])
+
+        //Next Solution: after backtracking, check prev list(currentList-current element) combination with next element
+        helperAlt1(inputList, target, output, currentList, i + 1)
+    }
+
+}
+
+
+fun combinationSumAlt2(list: List<Int>, target: Int): MutableList<List<Int>> {
+    val output = mutableListOf<List<Int>>()
+
+    helperAlt2(inputList = list, target = target, output = output, currentList = mutableListOf(), ind = 0)
+
+    return output
+}
+
+fun helperAlt2(
+    inputList: List<Int>,
+    target: Int,
+    output: MutableList<List<Int>>,
+    currentList: MutableList<Int>,
+    ind: Int,
+) {
+
+    if (target == 0) {
+        output.add(currentList.toList())
+        return // backtrack and check for next
+    }
+
+    for (i in ind until inputList.size) {
+
+        if (target < 0) {
+            break
+        } else {
+            //Inclusion:
+            currentList.add(inputList[i])
+            helperAlt2(
+                inputList,
+                target - inputList[i],
+                output,
+                currentList,
+                i
+            ) //check current element with this element i again, becoz same element can be repeated
+
+            //Exclusion: We are Backtracked here if target == b and now exclude current solution and try for next iteration i
+            currentList.remove(inputList[i])
+        }
+
+    }
+
+}
+
+
+fun combinationSumAlt1_2(list: List<Int>, target: Int): MutableList<List<Int>> {
+    val output = mutableListOf<List<Int>>()
+
+    helperAlt1_2(inputList = list, target = target, output = output, currentList = mutableListOf(), i = 0)
+
+    return output
+}
+
+// Same combinationSumAlt1 can be done as this way also
+fun helperAlt1_2(
+    inputList: List<Int>,
+    target: Int,
+    output: MutableList<List<Int>>,
+    currentList: MutableList<Int>,
+    i: Int,
+) {
+
+    if (target <= 0 || i == inputList.size) {
+        if (target == 0) {
+            output.add(currentList.toList())
+        }
+        return
+    }
+
+    //Inclusion:
+    currentList.add(inputList[i])
+    helperAlt1_2(
+        inputList,
+        target - inputList[i],
+        output,
+        currentList,
+        i
+    ) //check current element with this element i again, becoz same element can be repeated
+
+    //Exclusion: We are Backtracked here if target == b and now exclude current solution and try for next iteration i
+    currentList.remove(inputList[i])
+
+    //Next Solution: after backtracking, check prev list(currentList-current element) combination with next element
+    helperAlt1_2(inputList, target, output, currentList, i + 1)
+
+}
+
+
+fun combinationSumAlt2_2(list: List<Int>, target: Int): MutableList<List<Int>> {
+    val output = mutableListOf<List<Int>>()
+
+    helperAlt2_2(inputList = list, target = target, output = output, currentList = mutableListOf(), ind = 0)
+
+    return output
+}
+
+// combinationSumAlt2 can be done as this way also
+fun helperAlt2_2(
+    inputList: List<Int>,
+    target: Int,
+    output: MutableList<List<Int>>,
+    currentList: MutableList<Int>,
+    ind: Int,
+) {
+
+    if (target == 0) {
+        output.add(currentList.toList())
+        return //backtrack and check for next
+    }
+
+    for (i in ind until inputList.size) {
+
+        if (target < 0) {
+            break
+        } else {
+            //Inclusion:
+            currentList.add(inputList[i])
+            helperAlt2_2(
+                inputList,
+                target - inputList[i],
+                output,
+                currentList,
+                i
+            ) //check current element with this element i again, becoz same element can be repeated
+
+            //Exclusion: We are Backtracked here if target == b and now exclude current solution and try for next iteration i
+            currentList.remove(inputList[i])
+        }
+
+    }
 
 }
 
 fun main() {
     println(combinationSum(mutableListOf(2, 4, 6, 8), 8))
+    println(combinationSumAlt1(mutableListOf(2, 4, 6, 8), 8))
+    println(combinationSumAlt1_2(mutableListOf(2, 4, 6, 8), 8))
+    println(combinationSumAlt2(mutableListOf(2, 4, 6, 8), 8))
+    println(combinationSumAlt2_2(mutableListOf(2, 4, 6, 8), 8))
     //println(combinationSum(mutableListOf(2), 1))
     //println(combinationSum(mutableListOf(7, 2, 6, 5), 16))
 }
 
 
 /**
+ *  EXPLANATION for combinationSum:-
+ *
  *  Lets say for 2,4,6,8,
  *
  *  STEP 1
