@@ -72,48 +72,6 @@ package problemsolving.recursion_backtracking.backtracking
 //}
 
 
-fun combinationSum2Alt1(list: List<Int>, target: Int): MutableList<List<Int>> {
-    val output = mutableListOf<List<Int>>()
-
-    helperAlt1Com2(inputList = list, target = target, output = output, currentList = mutableListOf(), i = 0)
-
-    return output
-}
-
-fun helperAlt1Com2(
-    inputList: List<Int>,
-    target: Int,
-    output: MutableList<List<Int>>,
-    currentList: MutableList<Int>,
-    i: Int,
-) {
-
-    if (target == 0) {
-        output.add(currentList.toList())
-        return
-    } else if (target < 0 || i == inputList.size) {
-        return
-    } else {
-        //Inclusion:
-        currentList.add(inputList[i])
-        helperAlt1Com2(
-            inputList,
-            target - inputList[i],
-            output,
-            currentList,
-            i + 1
-        ) //check current element with next element here becoz same element can not be repeated, so we dont need to repeat for same
-
-        //Exclusion: We are Backtracked here if target == b and now exclude current solution and try for next iteration i
-        currentList.remove(inputList[i])
-
-        //Next Solution: after backtracking, check prev list[list-current element] combination with next element
-        helperAlt1Com2(inputList, target, output, currentList, i + 1)
-    }
-
-}
-
-
 fun combinationSum2Alt1_2(list: List<Int>, target: Int): MutableList<List<Int>> {
     val output = mutableListOf<List<Int>>()
 
@@ -168,7 +126,7 @@ fun helperAlt1Com2_1(
         ) //check for this element i again, becoz same element can be repeated
 
         //Exclusion: We are Backtracked here if target == b and now exclude current solution and try for next iteration i
-        currentList.remove(inputList[i])
+        currentList.removeAt(currentList.size - 1)
 
     }
 
@@ -176,7 +134,6 @@ fun helperAlt1Com2_1(
 
 
 fun main() {
-    //println(combinationSum2(mutableListOf(2, 4, 6, 8), 8))
     println(combinationSum2Alt1_2(mutableListOf(10, 1, 2, 7, 6, 1, 5), 8))
     //println(combinationSum2Alt1(mutableListOf(2, 4, 6, 8), 8))
     //println(combinationSum2Alt1_2(mutableListOf(2, 4, 6, 8), 8))

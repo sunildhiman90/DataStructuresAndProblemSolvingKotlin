@@ -49,8 +49,8 @@ fun helper(
     ) //check current element with this element i again, becoz same element can be repeated
 
     //Exclusion: We are Backtracked here if currentSum >= b and now exclude current solution and try for next iteration i
-    currentSum -= inputList[i]
-    currentList.remove(inputList[i])
+    currentSum -= currentList[currentList.size - 1]
+    currentList.removeAt(currentList.size - 1)
 
     //Next Solution:
     helper(
@@ -98,7 +98,7 @@ fun helperAlt1(
         ) //check current element with this element i again, becoz same element can be repeated
 
         //Exclusion: We are Backtracked here if target == b and now exclude current solution and try for next iteration i
-        currentList.remove(inputList[i])
+        currentList.removeAt(currentList.size - 1)
 
         //Next Solution: after backtracking, check prev list(currentList-current element) combination with next element
         helperAlt1(inputList, target, output, currentList, i + 1)
@@ -144,7 +144,7 @@ fun helperAlt2(
             ) //check current element with this element i again, becoz same element can be repeated
 
             //Exclusion: We are Backtracked here if target == b and now exclude current solution and try for next iteration i
-            currentList.remove(inputList[i])
+            currentList.removeAt(currentList.size - 1)
         }
 
     }
@@ -187,7 +187,7 @@ fun helperAlt1_2(
     ) //check current element with this element i again, becoz same element can be repeated
 
     //Exclusion: We are Backtracked here if target == b and now exclude current solution and try for next iteration i
-    currentList.remove(inputList[i])
+    currentList.removeAt(currentList.size - 1)
 
     //Next Solution: after backtracking, check prev list(currentList-current element) combination with next element
     helperAlt1_2(inputList, target, output, currentList, i + 1)
@@ -233,7 +233,7 @@ fun helperAlt2_2(
             ) //check current element with this element i again, becoz same element can be repeated
 
             //Exclusion: We are Backtracked here if target == b and now exclude current solution and try for next iteration i
-            currentList.remove(inputList[i])
+            currentList.removeAt(currentList.size - 1)
         }
 
     }
