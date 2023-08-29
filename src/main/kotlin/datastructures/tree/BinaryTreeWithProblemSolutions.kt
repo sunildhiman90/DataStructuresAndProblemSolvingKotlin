@@ -279,9 +279,9 @@ class BinaryTreeWithProblemSolutions {
         return searchNode(root.left, nodeDataToFind) ?: searchNode(root.right, nodeDataToFind)
     }
 
-    // TODO
-    fun IsBalanced() {
-
+    fun isBalanced(node: Node?): Boolean {
+        val balanceFactor = heightOfTree(node?.left) - heightOfTree(node?.right)
+        return balanceFactor == -1 || balanceFactor == 0 || balanceFactor == 1
     }
 
     fun display() {

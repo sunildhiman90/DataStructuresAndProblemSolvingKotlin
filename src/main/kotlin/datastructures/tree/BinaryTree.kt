@@ -1,5 +1,6 @@
 package datastructures.tree
 
+import problemsolving.binarytree.heightOfTree
 import java.util.*
 
 /**
@@ -149,6 +150,11 @@ class BinaryTree {
         }
     }
 
+
+    fun isBalanced(node: Node?): Boolean {
+        val balanceFactor = heightOfTree(node?.left) - heightOfTree(node?.right)
+        return balanceFactor == -1 || balanceFactor == 0 || balanceFactor == 1
+    }
 
     fun display() {
         displayChildren(root)

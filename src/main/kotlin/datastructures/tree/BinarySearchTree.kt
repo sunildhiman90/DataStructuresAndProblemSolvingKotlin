@@ -69,7 +69,7 @@ class BinarySearchTree {
                 return root.left
             }
 
-            // Delete Case 3: (Two Children)
+            // Delete Case 3: (Two Children), replace with inorder successor and delete inorder successor
             val inorderSuccessor = findInorderSuccessor(root.right!!) // find inorder successor in right subtree
             root.data = inorderSuccessor.data //replace node data with inorder successor
             root.right = deleteNode(
