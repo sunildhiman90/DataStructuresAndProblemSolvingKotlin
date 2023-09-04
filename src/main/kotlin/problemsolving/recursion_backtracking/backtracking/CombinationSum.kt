@@ -107,6 +107,8 @@ fun helperAlt1(
 }
 
 
+//MAIN APPROACH
+
 fun combinationSumAlt2(list: List<Int>, target: Int): MutableList<List<Int>> {
     val output = mutableListOf<List<Int>>()
 

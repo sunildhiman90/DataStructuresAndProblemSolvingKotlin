@@ -33,7 +33,7 @@ fun helperPermutations(
             currentList.add(inputList[i])
             helperPermutations(inputList, output, selected, currentList, ind + 1)
             selected[i] = false
-            currentList.remove(inputList[i])
+            currentList.removeAt(currentList.size - 1)
         }
     }
 
