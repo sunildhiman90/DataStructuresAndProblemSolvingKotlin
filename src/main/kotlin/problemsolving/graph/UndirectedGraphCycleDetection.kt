@@ -1,50 +1,47 @@
 package problemsolving.graph
 
 
-fun detectCycleInDirectedGraph(graph: Array<IntArray>): Boolean {
+fun detectCycleInUndirectedGraph(graph: Array<IntArray>): Boolean {
 
     if (graph.isEmpty()) return false
 
     val visited = BooleanArray(graph.size) { false }
-    val recursionStack = BooleanArray(graph.size) { false }
 
     //in case if its disconnected component, check for all vertices which are not visited
     for (i in visited.indices) {
         if (!visited[i]) {
-            val isCycle = helper(ind = i, graph, visited, recursionStack)
+            val isCycle = helperUndirected(ind = i, graph, visited, -1)
             if (isCycle) {
                 return true //break and return true
             }
         }
     }
 
+    //helperUndirected(ind = i, graph, visited, -1)
+
     return false
 }
 
-fun helper(
+fun helperUndirected(
     ind: Int,
     graph: Array<IntArray>,
     visited: BooleanArray,
-    recursionStack: BooleanArray
+    parent: Int
 ): Boolean {
 
     visited[ind] = true
-    recursionStack[ind] = true
 
     // check neighbors of ind
     for (i in graph[ind].indices) {
         val currentNeighbor = graph[ind][i]
 
-        if (recursionStack[currentNeighbor]) {
+        if (visited[currentNeighbor] && currentNeighbor != parent) {
             return true //cycle exists
         } else if (!visited[currentNeighbor]) {
             //try with current neighbor's neighbors
-            return helper(currentNeighbor, graph, visited, recursionStack)
+            return helperUndirected(currentNeighbor, graph, visited, ind)
         }
     }
-
-    //here recursive stack of ind will be done, so undo here, it means no cycle in its neighbors
-    recursionStack[ind] = false
 
     return false
 
@@ -52,29 +49,27 @@ fun helper(
 
 fun main() {
 
-    //it has cycle:  1->3->2->1
+    //it has cycle:  0->1->3->2->0
 
     val graph = arrayOf(
-        intArrayOf(1, 2), //0
-        intArrayOf(3), //1
-        intArrayOf(3, 1), //2
-        intArrayOf(2) //3
+        intArrayOf(1), //0
+        intArrayOf(0, 3), //1
+        intArrayOf(1, 3), //2
+        intArrayOf(1, 2) //3
     )
 
 
-    //it does not have cycle
+    //it does not have cycle: 0->1, 1->3, 1->0, 2->3, 3->1,2
 
     val graph2 = arrayOf(
-        intArrayOf(1, 2), //0
-        intArrayOf(3), //1
+        intArrayOf(1), //0
+        intArrayOf(0, 3), //1
         intArrayOf(3), //2
-        intArrayOf() //3
+        intArrayOf(1, 2)
     )
 
-
-
-    println(detectCycleInDirectedGraph(graph))
-    println(detectCycleInDirectedGraph(graph2))
+    println(detectCycleInUndirectedGraph(graph))
+    println(detectCycleInUndirectedGraph(graph2))
 
 
 }
