@@ -17,8 +17,6 @@ fun detectCycleInUndirectedGraph(graph: Array<IntArray>): Boolean {
         }
     }
 
-    //helperUndirected(ind = i, graph, visited, -1)
-
     return false
 }
 

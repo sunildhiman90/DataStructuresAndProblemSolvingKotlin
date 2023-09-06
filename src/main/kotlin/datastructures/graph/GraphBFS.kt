@@ -2,16 +2,18 @@ package datastructures.graph
 
 import java.util.*
 
-class GraphBFS(
-    private var numberOfVertices: Int,
-    private var adjacencyList: Array<LinkedList<Int>> = Array(numberOfVertices) {
+
+class Edge(val src: Int, val dest: Int, val weight: Int)
+
+class Graph(
+    var numberOfVertices: Int,
+    var adjacencyList: Array<LinkedList<Edge>> = Array(numberOfVertices) {
         LinkedList()
     }
 ) {
 
-    fun addEdge(from: Int, to: Int) {
-        adjacencyList[from].add(to)
-        adjacencyList[to].add(from)
+    fun addEdge(from: Int, to: Int, weight: Int) {
+        adjacencyList[from].add(Edge(from, to, weight))
     }
 
     // MAIN APPROACH
@@ -47,9 +49,9 @@ class GraphBFS(
 
                 //check for its neighbours
                 for (element in adjacencyList[currentVertex]) {
-                    if (!visited[element]) {
-                        visited[element] = true
-                        queue.add(element)
+                    if (!visited[element.dest]) {
+                        visited[element.dest] = true
+                        queue.add(element.dest)
                     }
                 }
             }
@@ -96,9 +98,9 @@ class GraphBFS(
 
                 //check for its neighbours
                 for (element in adjacencyList[currentVertex]) {
-                    if (!visited[element]) {
-                        visited[element] = true
-                        queue.add(element)
+                    if (!visited[element.dest]) {
+                        visited[element.dest] = true
+                        queue.add(element.dest)
                     }
                 }
             }
@@ -140,9 +142,9 @@ class GraphBFS(
 
             //check for its neighbours
             for (element in adjacencyList[currentVertex]) {
-                if (!visited[element]) {
-                    visited[element] = true
-                    queue.add(element)
+                if (!visited[element.dest]) {
+                    visited[element.dest] = true
+                    queue.add(element.dest)
                 }
             }
         }
@@ -185,10 +187,10 @@ class GraphBFS(
 
             //check for its neighbours
             for (element in adjacencyList[currentVertex]) {
-                if (!visited[element]) {
-                    visited[element] = true
-                    levels[element] = levels[currentVertex] + 1 //get level of parent and increase it
-                    queue.add(element)
+                if (!visited[element.dest]) {
+                    visited[element.dest] = true
+                    levels[element.dest] = levels[currentVertex] + 1 //get level of parent and increase it
+                    queue.add(element.dest)
                 }
             }
         }
@@ -196,30 +198,40 @@ class GraphBFS(
     }
 }
 
+fun createConnectedGraphForTesting(): Graph {
+    val graph = Graph(6)
+    graph.addEdge(0, 1, 0)
+    graph.addEdge(0, 2, 0)
+    graph.addEdge(0, 5, 0)
+    graph.addEdge(1, 3, 0)
+    graph.addEdge(2, 4, 0)
+    return graph
+}
+
+fun createDisonnectedGraphForTesting(): Graph {
+    val disconnectedGraph = Graph(8)
+    disconnectedGraph.addEdge(0, 1, 0)
+    disconnectedGraph.addEdge(0, 2, 0)
+    disconnectedGraph.addEdge(0, 5, 0)
+    disconnectedGraph.addEdge(1, 3, 0)
+    disconnectedGraph.addEdge(2, 4, 0)
+    disconnectedGraph.addEdge(6, 7, 0)
+    return disconnectedGraph
+}
+
 fun main() {
 
     println("---Connected graph--- ")
 
-    val graph = GraphBFS(6)
-    graph.addEdge(0, 1)
-    graph.addEdge(0, 2)
-    graph.addEdge(0, 5)
-    graph.addEdge(1, 3)
-    graph.addEdge(2, 4)
+    val graph = createConnectedGraphForTesting()
 
     graph.bfsTraversalMain(0) //0,1,2,5,3,4
     graph.bfsTraversalAltWithLevel(0) //0,1,2,5,3,4
 
 
     println("---Disconnected graph--- ")
+    val disconnectedGraph = createDisonnectedGraphForTesting()
 
-    val disconnectedGraph = GraphBFS(8)
-    disconnectedGraph.addEdge(0, 1)
-    disconnectedGraph.addEdge(0, 2)
-    disconnectedGraph.addEdge(0, 5)
-    disconnectedGraph.addEdge(1, 3)
-    disconnectedGraph.addEdge(2, 4)
-    disconnectedGraph.addEdge(6, 7)
     disconnectedGraph.bfsTraversalMain(0) //0,1,2,5,3,4,6,7
     disconnectedGraph.bfsTraversalMainWithLevel(0) //0,1,2,5,3,4,6,7
 }

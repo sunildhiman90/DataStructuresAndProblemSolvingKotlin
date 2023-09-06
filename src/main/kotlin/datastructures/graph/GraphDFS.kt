@@ -1,71 +1,57 @@
 package datastructures.graph
 
-import java.util.*
 
-class GraphDFS(
-    private var numberOfVertices: Int,
-    private var adjacencyList: Array<LinkedList<Int>> = Array(numberOfVertices) {
-        LinkedList()
-    }
-) {
+// handle disconnected graph case as well, in that case all nodes will not be traversed using current algo
+fun Graph.dfsTraversal(startVertex: Int) {
+    val visited: Array<Boolean> = Array(numberOfVertices) { false }
+    dfsHelper(startVertex, visited)
+}
 
-    fun addEdge(from: Int, to: Int) {
-        adjacencyList[from].add(to)
-        adjacencyList[to].add(from)
-    }
+// For disconnected graph support
+fun Graph.dfsTraversal2(startVertex: Int) {
+    val visited: Array<Boolean> = Array(numberOfVertices) { false }
+    dfsHelper(startVertex, visited)
 
-    // handle disconnected graph case as well, in that case all nodes will not be traversed using current algo
-    fun dfsTraversal(startVertex: Int) {
-        val visited: Array<Boolean> = Array(numberOfVertices) { false }
-        dfsHelper(startVertex, visited)
-    }
-
-    // For disconnected graph support
-    fun dfsTraversal2(startVertex: Int) {
-        val visited: Array<Boolean> = Array(numberOfVertices) { false }
-        dfsHelper(startVertex, visited)
-
-        //check if still some vertex is remaining
-        for (i in visited.indices) {
-            if (!visited[i]) {
-                dfsHelper(i, visited)
-            }
-        }
-    }
-
-    private fun dfsHelper(currentVertex: Int, visited: Array<Boolean>) {
-        visited[currentVertex] = true
-        println(currentVertex)
-        for (element in adjacencyList[currentVertex]) {
-            if (!visited[element]) {
-                dfsHelper(element, visited)
-            } //else part is recursion base condition here if adjacencyList has some elements
+    //check if still some vertex is remaining
+    for (i in visited.indices) {
+        if (!visited[i]) {
+            dfsHelper(i, visited)
         }
     }
 }
+
+private fun Graph.dfsHelper(currentVertex: Int, visited: Array<Boolean>) {
+    visited[currentVertex] = true
+    println(currentVertex)
+    for (element in adjacencyList[currentVertex]) {
+        if (!visited[element.dest]) {
+            dfsHelper(element.dest, visited)
+        } //else part is recursion base condition here if adjacencyList has some elements
+    }
+}
+
 
 fun main() {
 
     println("---Connected graph--- ")
     //connected graph
-    val graph = GraphDFS(6)
-    graph.addEdge(0, 1)
-    graph.addEdge(0, 2)
-    graph.addEdge(0, 5)
-    graph.addEdge(1, 3)
-    graph.addEdge(2, 4)
+    val graph = Graph(6)
+    graph.addEdge(0, 1, 0)
+    graph.addEdge(0, 2, 0)
+    graph.addEdge(0, 5, 0)
+    graph.addEdge(1, 3, 0)
+    graph.addEdge(2, 4, 0)
     graph.dfsTraversal(0) //0,1,3,2,4,5
-
 
     println("---Disconnected graph--- ")
 
-    val disconnectedGraph = GraphDFS(8)
-    disconnectedGraph.addEdge(0, 1)
-    disconnectedGraph.addEdge(0, 2)
-    disconnectedGraph.addEdge(0, 5)
-    disconnectedGraph.addEdge(1, 3)
-    disconnectedGraph.addEdge(2, 4)
-    disconnectedGraph.addEdge(6, 7) //disconnected part
+    val disconnectedGraph = Graph(8)
+    disconnectedGraph.addEdge(0, 1, 0)
+    disconnectedGraph.addEdge(0, 2, 0)
+    disconnectedGraph.addEdge(0, 5, 0)
+    disconnectedGraph.addEdge(1, 3, 0)
+    disconnectedGraph.addEdge(2, 4, 0)
+    disconnectedGraph.addEdge(6, 7, 0) //disconnected part
     disconnectedGraph.dfsTraversal2(0) //0,1,3,2,4,5,6,7
 }
 
