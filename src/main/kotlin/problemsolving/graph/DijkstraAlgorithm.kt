@@ -17,12 +17,12 @@ class DijPair(val node: Int, private val dist: Int) : Comparable<DijPair> {
 }
 
 
-// O(E + E.log(V)):- E.log(v) is becoz of Priority Queue sorting
+// O(E.log(V)):- E.log(v) is becoz of Priority Queue sorting while adding
 fun dijkstraAlgo(graph: Graph, src: Int, n: Int): IntArray {
     val pq = PriorityQueue<DijPair>()
-    pq.add(DijPair(0, 0))
+    pq.add(DijPair(src, src))
 
-    //except source src, use max for all vertices
+    //except source src, use max for all vertices, It is distance of current node from src
     val dist = IntArray(n) {
         if (it == src) src else Int.MAX_VALUE
     }
@@ -32,7 +32,8 @@ fun dijkstraAlgo(graph: Graph, src: Int, n: Int): IntArray {
     }
 
     while (!pq.isEmpty()) {
-
+        // we need to check node which has shortest distance and unvisited,
+        // thats why using priority queue, it will give us shortest distance node when calling remove
         val curr = pq.remove()
         if (!visited[curr.node]) {
             visited[curr.node] = true
@@ -80,3 +81,41 @@ fun main() {
     val result = dijkstraAlgo(graph, 0, graph.numberOfVertices)
     println(result.contentToString())
 }
+
+/**
+ * Time Complexity Analysis
+ *
+ * We know from past lectures that the time complexity of Dijkstra’s Algorithm is O(E*logV) where E= number of edges and V= number of nodes.
+ *
+ * Now, we will see how can we reach this particular time complexity with the help of a simple derivation:
+ *
+ * Pseudocode of Priority Queue :
+ * while loop -> V times
+ * remove method in while loop -> log(heapsize)
+ * innner for loop -> edges times -> V-1 for worst case if every node is connected to every other node
+ *
+ * Derivation:
+ *
+ * O( V * ( pop vertex from min heap + no. of edges on each vertex * push in PQ ))
+ *
+ * O( V * ( log(heapSize) + no. of edges * log(heapSize))
+ *
+ * O( V * (log(heapSize) + V-1 * log(heapSize))    { one vertex can have V-1 edges }
+ *
+ * O( V * (log(heapSize) * (V-1+1))
+ *
+ * O( V * V * log(heapSize))
+ *
+ * Now, at the worst case the heapSize will be equivalent to v² as if we consider pushing adjacent elements of a node, at the worst case each element will have V-1 nodes and they will be pushed onto the queue.
+ *
+ * O( V * V * log(v²))
+ *
+ * O ( v² * 2 log (V))
+ *
+ * O ( E * 2 log(V))  { E= v², total number of edges}
+ *
+ * O ( E * log(V))  Worst case Time Complexity of Dijkstra’s Algorithm.
+ *
+ *
+ *
+ */
