@@ -30,7 +30,7 @@ fun primsAlgo(graph: Graph, src: Int, n: Int): List<Int> {
     }
 
     while (!pq.isEmpty()) {
-        // we need to check node which has shortest distance adn unvisited,
+        // we need to check node which has shortest distance and unvisited,
         // thats why using priority queue, it will give us shortest distance node when calling remove
         val curr = pq.remove()
         if (!visited[curr.node]) {

@@ -3,7 +3,7 @@ package datastructures.graph
 import java.util.*
 
 
-class Edge(val src: Int, val dest: Int, val weight: Int)
+class Edge(val src: Int, val dest: Int, val weight: Int = 0)
 
 class Graph(
     var numberOfVertices: Int,
@@ -12,7 +12,7 @@ class Graph(
     }
 ) {
 
-    fun addEdge(from: Int, to: Int, weight: Int) {
+    fun addEdge(from: Int, to: Int, weight: Int = 0) {
         adjacencyList[from].add(Edge(from, to, weight))
     }
 
@@ -200,22 +200,22 @@ class Graph(
 
 fun createConnectedGraphForTesting(): Graph {
     val graph = Graph(6)
-    graph.addEdge(0, 1, 0)
-    graph.addEdge(0, 2, 0)
-    graph.addEdge(0, 5, 0)
-    graph.addEdge(1, 3, 0)
-    graph.addEdge(2, 4, 0)
+    graph.addEdge(0, 1)
+    graph.addEdge(0, 2)
+    graph.addEdge(0, 5)
+    graph.addEdge(1, 3)
+    graph.addEdge(2, 4)
     return graph
 }
 
 fun createDisonnectedGraphForTesting(): Graph {
     val disconnectedGraph = Graph(8)
-    disconnectedGraph.addEdge(0, 1, 0)
-    disconnectedGraph.addEdge(0, 2, 0)
-    disconnectedGraph.addEdge(0, 5, 0)
-    disconnectedGraph.addEdge(1, 3, 0)
-    disconnectedGraph.addEdge(2, 4, 0)
-    disconnectedGraph.addEdge(6, 7, 0)
+    disconnectedGraph.addEdge(0, 1)
+    disconnectedGraph.addEdge(0, 2)
+    disconnectedGraph.addEdge(0, 5)
+    disconnectedGraph.addEdge(1, 3)
+    disconnectedGraph.addEdge(2, 4)
+    disconnectedGraph.addEdge(6, 7)
     return disconnectedGraph
 }
 

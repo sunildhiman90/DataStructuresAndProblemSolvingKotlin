@@ -2,30 +2,35 @@ package datastructures.graph
 
 
 // handle disconnected graph case as well, in that case all nodes will not be traversed using current algo
-fun Graph.dfsTraversal(startVertex: Int) {
+fun Graph.dfsTraversal(startVertex: Int): List<Int> {
+    val output = mutableListOf<Int>()
     val visited: Array<Boolean> = Array(numberOfVertices) { false }
-    dfsHelper(startVertex, visited)
+    dfsHelper(startVertex, visited, output)
+    return output
 }
 
 // For disconnected graph support
-fun Graph.dfsTraversal2(startVertex: Int) {
+fun Graph.dfsTraversal2(startVertex: Int): List<Int> {
+    val output = mutableListOf<Int>()
     val visited: Array<Boolean> = Array(numberOfVertices) { false }
-    dfsHelper(startVertex, visited)
+    dfsHelper(startVertex, visited, output)
 
     //check if still some vertex is remaining
     for (i in visited.indices) {
         if (!visited[i]) {
-            dfsHelper(i, visited)
+            dfsHelper(i, visited, output)
         }
     }
+    return output
 }
 
-private fun Graph.dfsHelper(currentVertex: Int, visited: Array<Boolean>) {
+fun Graph.dfsHelper(currentVertex: Int, visited: Array<Boolean>, output: MutableList<Int>) {
     visited[currentVertex] = true
-    println(currentVertex)
-    for (element in adjacencyList[currentVertex]) {
-        if (!visited[element.dest]) {
-            dfsHelper(element.dest, visited)
+    print("$currentVertex ")
+    output.add(currentVertex)
+    for (edge in adjacencyList[currentVertex]) {
+        if (!visited[edge.dest]) {
+            dfsHelper(edge.dest, visited, output)
         } //else part is recursion base condition here if adjacencyList has some elements
     }
 }

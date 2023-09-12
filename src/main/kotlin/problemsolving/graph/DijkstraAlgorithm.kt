@@ -47,7 +47,6 @@ fun dijkstraAlgo(graph: Graph, src: Int, n: Int): IntArray {
                 if (dist[u] + edge.weight < dist[v]) {
                     dist[v] = dist[u] + edge.weight
                     pq.add(DijPair(v, dist[v]))
-
                 }
             }
         }
