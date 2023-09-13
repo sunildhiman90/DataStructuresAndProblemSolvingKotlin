@@ -11,7 +11,7 @@ class DijkstraAlgorithm {
 // for using in PQ-> node and its distance, make it comparable so that  PQ will be able to compare it by dist
 // node:- current node
 // dist:- current node distance from source
-class DijPair(val node: Int, private val dist: Int) : Comparable<DijPair> {
+class DijPair(val node: Int, val dist: Int) : Comparable<DijPair> {
     override fun compareTo(other: DijPair) = this.dist - other.dist
 
 }
@@ -19,6 +19,10 @@ class DijPair(val node: Int, private val dist: Int) : Comparable<DijPair> {
 
 // O(E.log(V)):- E.log(v) is becoz of Priority Queue sorting while adding
 fun dijkstraAlgo(graph: Graph, src: Int, n: Int): IntArray {
+    //alternative, if we dont implement Comparable for DijPair, then we can directly pass comparator in pq constructor
+    /* val pq = PriorityQueue<DijPair> { pair1, pair2 ->
+         pair1.dist - pair2.dist
+     }*/
     val pq = PriorityQueue<DijPair>()
     pq.add(DijPair(src, src))
 
@@ -36,6 +40,9 @@ fun dijkstraAlgo(graph: Graph, src: Int, n: Int): IntArray {
         // thats why using priority queue, it will give us shortest distance node when calling remove
         val curr = pq.remove()
         if (!visited[curr.node]) {
+
+            // WE are not setting it visited outside while loop like bfs,
+            // becoz in bfs, we are making them visited inside neighbors loop, but here we are not, thats why
             visited[curr.node] = true
 
             //traverse all neighbors of curr and calculate shortest distance from curr

@@ -49,6 +49,7 @@ fun helperTopo(
     // from stack, for that element all its neighbors will be below that
     // stack top will be that element, to which no directional path will exist
     stack.push(ind)
+    // we will reach here when we reach to a node from which we cant traverse ahead.
 
 }
 

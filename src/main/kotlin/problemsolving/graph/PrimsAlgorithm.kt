@@ -8,8 +8,8 @@ import java.util.*
 // for using in PQ-> node and its distance, make it comparable so that  PQ will be able to compare it by dist
 // node:- current node
 // dist:- current node distance from source
-class PrimPair(val node: Int, private val dist: Int) : Comparable<PrimPair> {
-    override fun compareTo(other: PrimPair) = this.dist - other.dist
+class PrimPair(val node: Int, private val weight: Int) : Comparable<PrimPair> {
+    override fun compareTo(other: PrimPair) = this.weight - other.weight
 
 }
 
@@ -22,7 +22,7 @@ fun primsAlgo(graph: Graph, src: Int, n: Int): List<Int> {
     pq.add(DijPair(src, src))
 
     // for minimum spanning tree nodes
-    val mst = mutableListOf<Int>()
+    val output = mutableListOf<Int>()
 
     /// Non MST set
     val visited = BooleanArray(n) {
@@ -34,17 +34,20 @@ fun primsAlgo(graph: Graph, src: Int, n: Int): List<Int> {
         // thats why using priority queue, it will give us shortest distance node when calling remove
         val curr = pq.remove()
         if (!visited[curr.node]) {
-            visited[curr.node] = true
-            mst.add(curr.node)
 
-            //traverse all neighbors of curr and calculate shortest distance from curr
+            // WE are not setting it visited outside while loop like bfs,
+            // becoz in bfs, we are making them visited inside neighbors loop, but here we are not, thats why
+            visited[curr.node] = true
+            output.add(curr.node)
+
+            //traverse all neighbors of curr and add them with there weight or cost to mst set pq
             for (edge in graph.adjacencyList[curr.node]) {
                 val u = edge.src
                 val v = edge.dest
 
-                //main step, if node is not visited, add it to mst set pq
+                //main step, if node is not visited, add it with its weight or cost to mst set pq
                 if (!visited[v]) {
-                    mst.add(curr.node)
+                    pq.add(DijPair(v, edge.weight))
                 }
 
             }
@@ -52,7 +55,7 @@ fun primsAlgo(graph: Graph, src: Int, n: Int): List<Int> {
 
     }
 
-    return mst
+    return output
 
 }
 
