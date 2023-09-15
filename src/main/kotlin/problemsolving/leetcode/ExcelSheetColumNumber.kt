@@ -1,17 +1,17 @@
 package problemsolving.leetcode
 
-class ExcelSheetColumNumber {
-}
+// https://leetcode.com/problems/excel-sheet-column-number/
 
 fun excelSheetColumNumber(columnTitle: String): Int {
-    var finalNum = 0
+    var result = 0
 
     for (char in columnTitle) {
-        val intVal = char.toInt() - 64
-        finalNum = finalNum * 26 + intVal
+        result *= 26
+        val current = char - 'A' + 1
+        result += current
     }
 
-    return finalNum
+    return result
 
 }
 
