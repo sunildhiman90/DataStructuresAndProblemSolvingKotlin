@@ -31,7 +31,9 @@ fun helperDfs(graph: Array<LinkedList<Int>>, source: Int, destination: Int, visi
     for (neighbor in graph[source]) {
 
         if (!visited[neighbor] && helperDfs(graph, neighbor, destination, visited)) {
-            return true
+            if (helperDfs(graph, neighbor, destination, visited)) {
+                return true
+            }
         }
 
         // IF we use this approach, then it will not work becoz then if suppose one node has multiple childrens,
