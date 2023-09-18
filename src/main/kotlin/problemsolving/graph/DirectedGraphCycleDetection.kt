@@ -1,6 +1,8 @@
 package problemsolving.graph
 
 
+//We cannot use same approach of checking visited and currNeighbor != parent here as we used in undirected graph
+// becoz check reason here: https://stackoverflow.com/questions/10972028/finding-a-cycle-in-an-undirected-graph-vs-finding-one-in-a-directed-graph
 fun detectCycleInDirectedGraph(graph: Array<IntArray>): Boolean {
 
     if (graph.isEmpty()) return false

@@ -4,7 +4,7 @@ import datastructures.graph.Edge
 import datastructures.graph.Graph
 import java.util.*
 
-// Find strongly connected components in directed graph only
+// Find strongly connected components in directed graph only, Uses reverse graph dfs
 // O(V+E)
 fun kosarajuAlgo(graph: Graph, n: Int): List<List<Int>> {
 

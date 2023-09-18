@@ -42,7 +42,9 @@ fun dijkstraAlgo(graph: Graph, src: Int, n: Int): IntArray {
         if (!visited[curr.node]) {
 
             // WE are not setting it visited outside while loop like bfs,
-            // becoz in bfs, we are making them visited inside neighbors loop, but here we are not, thats why
+            // becoz in bfs, we are making them visited inside neighbors loop as we just need to traverse them,
+            // but here we are not, becoz we will mark them visited according to logic only when all its neighbors shortest distances are calculated
+            // thats why
             visited[curr.node] = true
 
             //traverse all neighbors of curr and calculate shortest distance from curr
@@ -50,7 +52,7 @@ fun dijkstraAlgo(graph: Graph, src: Int, n: Int): IntArray {
                 val u = edge.src
                 val v = edge.dest
 
-                //relaxation step
+                //relaxation step, it means path from source to v via u is smaller than already traversed path from source to v
                 if (dist[u] + edge.weight < dist[v]) {
                     dist[v] = dist[u] + edge.weight
                     pq.add(DijPair(v, dist[v]))

@@ -18,7 +18,7 @@ fun allPathsSourceTarget(graph: Array<IntArray>, source: Int, target: Int): List
     val visited = BooleanArray(graph.size) { false }
     val currentList = mutableListOf<Int>()
 
-    // add source , we will start from it
+    //IMP POINT:- add source in visited , we will start from it
     currentList.add(source)
     visited[source] = true
 
