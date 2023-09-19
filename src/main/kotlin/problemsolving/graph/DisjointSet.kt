@@ -9,6 +9,7 @@ class DisjointSet(n: Int) {
     private val size = mutableListOf<Int>()
 
     init {
+        //becoz 0 based indexing, need to loop from 0 to n
         for (i in 0..n) {
             rank.add(0)
             parent.add(i)
@@ -19,8 +20,8 @@ class DisjointSet(n: Int) {
     fun findPar(node: Int): Int {
         if (parent[node] == node) return node
 
-        val ulp = findPar(parent[node])
-        parent[node] = ulp
+        val ulp = findPar(parent[node]) //ultimate parent
+        parent[node] = ulp //update parent -> path compression
         return parent[node]
     }
 
@@ -31,13 +32,13 @@ class DisjointSet(n: Int) {
         //already in the same component
         if (ulpU == ulpV) return
 
-        //if not in the same component, compare ranks
+        //if not in the same component, compare ranks, smaller component will be added to large and there will be no change in rank
         if (rank[ulpU] < rank[ulpV]) {
             parent[ulpU] = ulpV
         } else if (rank[ulpV] < rank[ulpU]) {
             parent[ulpV] = ulpU
         } else {
-            //same rank
+            //same rank, update any one as parent and increase rank for parent
             parent[ulpV] = ulpU
             rank[ulpU]++
         }
@@ -56,7 +57,7 @@ class DisjointSet(n: Int) {
             parent[ulpU] = ulpV
             size[ulpV] += size[ulpU]
         } else {
-            //same size
+            //greater than equal to
             parent[ulpV] = ulpU
             size[ulpU] += size[ulpV]
         }

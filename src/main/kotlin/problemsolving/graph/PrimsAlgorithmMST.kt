@@ -1,28 +1,30 @@
 package problemsolving.graph
 
+import datastructures.graph.Edge
 import datastructures.graph.Graph
 import java.util.*
 
 
 // We are using PQ, becoz its first element always become smallest after we add any node , so for smallest edge distacne we are using this
 // for using in PQ-> node and its distance, make it comparable so that  PQ will be able to compare it by dist
+// src:- source node
 // node:- current node
-// dist:- current node distance from source
-class PrimPair(val node: Int, private val weight: Int) : Comparable<PrimPair> {
+// dist:- distance from src to node
+class PrimPair(val src: Int, val node: Int, val weight: Int) : Comparable<PrimPair> {
     override fun compareTo(other: PrimPair) = this.weight - other.weight
 
 }
 
 
 // O(E.log(E)):- E.log(E) is becoz of Priority Queue sorting while adding
-fun primsAlgo(graph: Graph, src: Int, n: Int): List<Int> {
+fun primsAlgo(graph: Graph, src: Int, n: Int): List<Edge> {
 
     // MST set
-    val pq = PriorityQueue<DijPair>()
-    pq.add(DijPair(src, src))
+    val pq = PriorityQueue<PrimPair>()
+    pq.add(PrimPair(src, src, 0))
 
-    // for minimum spanning tree nodes
-    val output = mutableListOf<Int>()
+    // for minimum spanning tree edges with costs
+    val output = mutableListOf<Edge>()
 
     /// Non MST set
     val visited = BooleanArray(n) {
@@ -38,7 +40,7 @@ fun primsAlgo(graph: Graph, src: Int, n: Int): List<Int> {
             // WE are not setting it visited outside while loop like bfs,
             // becoz in bfs, we are making them visited inside neighbors loop, but here we are not, thats why
             visited[curr.node] = true
-            output.add(curr.node)
+            output.add(Edge(curr.src, curr.node, curr.weight))
 
             //traverse all neighbors of curr and add them with there weight or cost to mst set pq
             for (edge in graph.adjacencyList[curr.node]) {
@@ -47,7 +49,7 @@ fun primsAlgo(graph: Graph, src: Int, n: Int): List<Int> {
 
                 //main step, if node is not visited, add it with its weight or cost to mst set pq
                 if (!visited[v]) {
-                    pq.add(DijPair(v, edge.weight))
+                    pq.add(PrimPair(u, v, edge.weight))
                 }
 
             }
@@ -62,12 +64,36 @@ fun primsAlgo(graph: Graph, src: Int, n: Int): List<Int> {
 
 fun main() {
 
-    println("---Connected graph--- ")
 
-    val graph = createConnGraphForTestingWithWeight()
+    val graph = createUndirectedGraphForTestingMST()
 
-    val result = dijkstraAlgo(graph, 0, graph.numberOfVertices)
-    println(result.contentToString())
+    val result = primsAlgo(graph, 0, graph.numberOfVertices)
+    println("---MST edges After using Prims Algo--- ")
+    result.forEach {
+        println("${it.src} --> ${it.dest}: ${it.weight}")
+    }
+
+    println("Total MST cost: ${result.sumOf { it.weight }}")
+}
+
+fun createUndirectedGraphForTestingMST(): Graph {
+    val graph = Graph(6)
+    graph.addEdge(0, 1, 10)
+    graph.addEdge(1, 0, 10)
+
+    graph.addEdge(1, 3, 40)
+    graph.addEdge(3, 1, 40)
+
+    graph.addEdge(0, 3, 30)
+    graph.addEdge(3, 0, 30)
+
+    graph.addEdge(0, 2, 15)
+    graph.addEdge(2, 0, 15)
+
+    graph.addEdge(2, 3, 50)
+    graph.addEdge(3, 2, 50)
+
+    return graph
 }
 
 /**

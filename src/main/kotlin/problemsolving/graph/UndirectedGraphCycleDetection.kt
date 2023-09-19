@@ -33,6 +33,8 @@ fun helperUndirected(
     for (i in graph[ind].indices) {
         val currentNeighbor = graph[ind][i]
 
+        // if my current neighbor is visited , but i am not its parent, then it means its visited from some other node(my ancestors)
+        // and it has connection from me also, so cycle exists
         if (visited[currentNeighbor] && currentNeighbor != parent) {
             return true //cycle exists
         } else if (!visited[currentNeighbor]) {
