@@ -66,6 +66,7 @@ fun dfsForArticuPoints(
                 output.add(curr)
             }
 
+
             children++
 
         } else {
@@ -155,7 +156,7 @@ fun main() {
  * (ii) Second Condition is there is some cycle from u -> v :-
  *    dt(u) == lowest(v) means u and its neighbors will update their lowest with dt(u) due to visited node condition
  *    when last node will visit u again due to cycle, it will update its lowest with dt(u) and then its parent and so on
- *    till all neighbor backtrack again to u
+ *    till all neighbor backtrack again to u. Try it practically with dry run
  *
  *
  */

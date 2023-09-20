@@ -59,7 +59,10 @@ fun dfsForBridges(
             // update its lowestDt, to the lowest from all its neighbors
             lowestDt[curr] = Math.min(lowestDt[curr], lowestDt[edge.dest])
 
-            //check for bridge
+            // check for bridge, It means, edge.dest and its neighbors are not traversed yet from any of neighbors of curr
+            // and edge.dest can be traversed from only curr with single path.
+            // Means for traversing either edge.dest or any of its neighbors , only single path exists that is only from curr then its bridge
+            // IN other words:  curr should be visited before edge.dest and all its neighbors
             if (dt[curr] < lowestDt[edge.dest]) {
                 //add bridge to list
                 output.add(edge)
@@ -132,3 +135,22 @@ fun main() {
 
 
 }
+
+
+/**
+ *
+ * Check for bridge Logic
+ *
+ * First understand the Tarjan’s Algo, and then apply logic given below
+ *
+ * Suppose there is an edge between 2 nodes u and v in graph,
+ * then there will be bridge only if u should be visited before v and all its neighbors =>  dt[u] < lowestDt[v]
+ * HEre dt[u] means, when u was visited..
+ * and lowestDt[v] means lowest discovery time from v and all its neighbors
+ *
+ * Suppose we are traversing u to v currently, it means v and its neighbors are not traversed yet from any of neighbors of u
+ * and v can be traversed from only u with single path.
+ *
+ * Means for traversing either v or any of its neighbors , only single path exists that is only from u then its bridge
+ *
+ */
