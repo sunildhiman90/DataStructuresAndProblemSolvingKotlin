@@ -80,6 +80,7 @@ class AVLTree {
         return child
     }
 
+    //Undo the right rotate
     private fun leftRotate(child: Node?): Node? {
         val parent = child?.right // only these 2 child.right & child.right.left nodes will be changed
         val tree = parent?.left

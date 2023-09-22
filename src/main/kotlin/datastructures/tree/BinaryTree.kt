@@ -101,7 +101,7 @@ class BinaryTree {
         postorderTraversal(root)
     }
 
-    // DFS -> LNR
+    // DFS -> LRN
     private fun postorderTraversal(node: Node?) {
         if (node == null) {
             return

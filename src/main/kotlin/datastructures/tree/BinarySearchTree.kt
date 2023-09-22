@@ -9,20 +9,20 @@ class BinarySearchTree {
     var root: Node? = null
         private set
 
-    private fun insert(node: Node?, dataToInsert: Int): Node {
-        var node = node //becoz function variables are of type val, we need to create new var to update it
-        if (node == null) {
-            node = Node(dataToInsert) //create new node
-            return node
+    private fun insert(root: Node?, dataToInsert: Int): Node {
+        var root = root //becoz function variables are of type val, we need to create new var to update it
+        if (root == null) {
+            root = Node(dataToInsert) //create new node
+            return root
         }
 
-        if (dataToInsert < node.data) {
-            node.left = insert(node.left, dataToInsert)
+        if (dataToInsert < root.data) {
+            root.left = insert(root.left, dataToInsert)
         } else {
-            node.right = insert(node.right, dataToInsert)
+            root.right = insert(root.right, dataToInsert)
         }
 
-        return node //we are returning the same node here if its not null, for every num, in the last call it will return root, becoz we are starting from root
+        return root //we are returning the same node here if its not null, for every num, in the last call it will return root, becoz we are starting from root
     }
 
     fun populate(nums: IntArray) {
@@ -70,12 +70,13 @@ class BinarySearchTree {
             }
 
             // Delete Case 3: (Two Children), replace with inorder successor and delete inorder successor
-            val inorderSuccessor = findInorderSuccessor(root.right!!) // find inorder successor in right subtree
+            val inorderSuccessor =
+                findInorderSuccessor(root.right!!) //safe to use !! becoz we know right is not null here,  find inorder successor in right subtree
             root.data = inorderSuccessor.data //replace node data with inorder successor
             root.right = deleteNode(
                 root.right,
                 nodeDataToDelete = inorderSuccessor.data
-            ) //delete inorderSuccessor and update right subtree
+            ) //delete inorderSuccessor from right subtree and update right subtree
         }
 
         if (nodeDataToDelete < root.data) {
@@ -87,6 +88,7 @@ class BinarySearchTree {
         return root
     }
 
+    // left most node in the right subtree
     private fun findInorderSuccessor(node: Node): Node {
         // left most node
         var node: Node = node

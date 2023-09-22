@@ -25,12 +25,12 @@ fun helper(root: BinarySearchTree.Node?, key: Int) {
     }
 
     if (key < root.data) {
-        //set suc as this node, in case if its not found in left subtree
+        //set suc as this node, in case if its not found in left subtree or this is only single node in left subtree
         suc = root
         //also find in left subtree
         helper(root.left, key)
     } else {
-        //set pre as this node, in case if its not found in right subtree
+        //set pre as this node, in case if its not found in right subtree or this is only single node in right subtree
         pre = root
         //also find in right subtree
         helper(root.right, key)

@@ -18,6 +18,7 @@ fun findHeightDepth(node: BinaryTree.Node?, nodeToFindData: Int) {
             if (currentNode.data == nodeToFindData) {
                 depth =
                     level + 1 // we can remove adding of 1 if depth of root is considered as 0, otherwise we can keep adding of 1 if depth of root is considered as 1
+                // WE Can not break here, becoz we need to calculate no of levels as well
             }
             if (currentNode.left != null) {
                 queue.add(currentNode.left)
