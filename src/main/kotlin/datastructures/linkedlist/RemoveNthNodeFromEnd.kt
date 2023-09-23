@@ -4,6 +4,7 @@ class RemoveNthNodeFromEnd
 
 //Remove (size - n + 1)th node from start, it will be nth from end
 fun removeNthFromEnd(head: LinkedList.Node?, n: Int): LinkedList.Node? {
+    var head = head
     if (head == null) return null
 
     //get size
@@ -16,7 +17,10 @@ fun removeNthFromEnd(head: LinkedList.Node?, n: Int): LinkedList.Node? {
     }
 
     //because in this case,we are deleting (size - n + 1) => 1, 1st node => head, so return head.next here
-    if (size == n) return head.next
+    if (size == n) {
+        head = head.next
+        return head
+    }
     var prev: LinkedList.Node? = head
     var index = 1 //take it as 1, because we already have head in prev
     val indexToSearch = size - n // prev node to n'th node from last, n'th node form last is -> size - n + 1

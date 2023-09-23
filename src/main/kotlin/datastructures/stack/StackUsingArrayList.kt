@@ -16,7 +16,7 @@ class StackUsingAL {
     }
 
     fun pop(): Int {
-        if(empty()) {
+        if (empty()) {
             throw RuntimeException("Oops, Stack is already empty!")
         }
         val pop = mList[top--]
@@ -41,18 +41,18 @@ fun main() {
     stack.push(3)
     stack.push(4)
     stack.push(5)
-    println("Is Empty before traversal and popping = "+stack.empty())
-    while(!stack.empty()) {
+    println("Is Empty before traversal and popping = " + stack.empty())
+    while (!stack.empty()) {
         println(stack.peek())
         stack.pop()
     }
-    println("Is Empty after traversal and popping = "+stack.empty())
+    println("Is Empty after traversal and popping = " + stack.empty())
 }
 
 /**
  * Time Complexity:
  * push -> O(1)
- * pop -> O(1)
+ * pop -> O(n) => due to list.remove
  * peek -> O(1)
  *
  * Stack is a very useful data structure with many uses. It is an essential part of every program as all the programming

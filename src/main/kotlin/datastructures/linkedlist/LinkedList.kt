@@ -153,7 +153,8 @@ class LinkedList {
         val newHead = reverseRecursively(head.next)
 
         //work done
-        head.next?.next = head //reverse point here,
+        head.next?.next =
+            head //reverse point here, instead of using newHead.next here, use head.next.next, otherwise if we use newHead.next, then newHEad will update in every call, and logic will not work
         head.next = null //finally set next of head null
         return newHead //it will be last element, it will remain same in all calls
     }

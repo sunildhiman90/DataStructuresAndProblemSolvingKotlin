@@ -13,9 +13,10 @@ class Stack {
         return head == null
     }
 
+    //insert before head(at start) -> To make it top, Head will be top
     fun push(data: Int) {
-        var newNode = Node(data)
-        if(empty()) {
+        val newNode = Node(data)
+        if (empty()) {
             head = newNode
             return
         }
@@ -23,8 +24,9 @@ class Stack {
         head = newNode
     }
 
+    //delete from head -> To delete from top, Head is top
     fun pop(): Int? {
-        if(empty()) {
+        if (empty()) {
             return -1
         }
         val pop = head?.data
@@ -33,7 +35,7 @@ class Stack {
     }
 
     fun peek(): Int? {
-        if(empty()) {
+        if (empty()) {
             return -1
         }
         return head?.data

@@ -12,12 +12,12 @@ class ConsistentHashing(
     numOfReplicas: Int
 ) : Router {
 
-    //it will only maintain all positions by nodes
+    //it will only maintain all positions or replicas by nodes
     private val nodePositions: MutableMap<Node, MutableList<Long>>
 
     //it will act as circular ring of nodes, using ConcurrentSkipListMap here becoz it is better for large records and non null values and for multithreaded environment
     private val nodeMappings: ConcurrentSkipListMap<Long, Node>
-    private val hashFunction: (String) -> Long
+    private val hashFunction: (String) -> Long // Java alternative :- Function<String, Long> hashFunction; where String is input type, and Long is return type
     private val numOfReplicas: Int
 
     init {
