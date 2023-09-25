@@ -6,7 +6,7 @@ package datastructures.queue
 // remove: shift elements back after deleting front
 class QueueUsingA(val capacity: Int) {
 
-    private val arr = Array(capacity) { 0 }
+    private val arr = IntArray(capacity)
 
     private var rear = -1
 

@@ -46,7 +46,7 @@ class ConsistentHashing(
     }
 
     override fun getAssignedNode(request: Request): Node {
-        val key: Long = hashFunction.invoke(request.id)
+        val key: Long = hashFunction.invoke(request.id) //use same hash function which was used to server id hashing
 
         //First check node at same hash, else check for next immediate node
         val entry: Map.Entry<Long, Node>? = nodeMappings.entries.find { it.key == key } ?: nodeMappings.higherEntry(key)

@@ -7,7 +7,7 @@ class CircularQueueUsingArray {
 // Edge Cases:
 // add:- check isEmpty and if empty then increase front also
 // remove: check single element, if true, then set both front and rear -1
-// while incrementing rear and front, use module like (rear + 1) % capacity
+// while incrementing rear and front, use modulo like (rear + 1) % capacity
 class CircularQueueA(private val capacity: Int) {
 
     private val arr = Array(capacity) {
