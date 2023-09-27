@@ -92,7 +92,7 @@ fun frogJumpsTabulation(n: Int, heights: IntArray): Int {
 }
 
 
-// IF there are index-1 and index-1, we can always do space optimization as well in Tabulation
+// IF there are index-1 and index-2, we can always do space optimization as well in Tabulation
 // SPACE OPTIMIZATION USING TABULATION:- CONVERTED FROM TABULATION
 //TC: O(n)
 // SC: O(1) => becoz no dp arrays used now
