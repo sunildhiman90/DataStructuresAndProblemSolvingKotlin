@@ -1,4 +1,4 @@
-package problemsolving.dp
+package problemsolving.dp.oneDimnesional
 
 // https://leetcode.com/problems/climbing-stairs/
 

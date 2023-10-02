@@ -1,4 +1,4 @@
-package problemsolving.dp
+package problemsolving.dp.oneDimnesional
 
 import kotlin.math.abs
 

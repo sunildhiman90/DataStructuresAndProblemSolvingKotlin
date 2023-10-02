@@ -1,4 +1,4 @@
-package problemsolving.dp
+package problemsolving.dp.oneDimnesional
 
 // Without recursion by Tabulation
 // TC: O(n)

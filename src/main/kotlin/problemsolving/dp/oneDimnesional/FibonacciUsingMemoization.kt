@@ -1,4 +1,4 @@
-package problemsolving.dp
+package problemsolving.dp.oneDimnesional
 
 // Simple recursion has 2 pow(n) => 2 raised to power n
 // With Recursion by Memorization
