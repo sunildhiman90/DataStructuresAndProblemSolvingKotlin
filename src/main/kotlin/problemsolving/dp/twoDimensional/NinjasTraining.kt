@@ -123,10 +123,12 @@ fun maxMeritTabulation(days: Int, tasks: Int, points: Array<IntArray>): Int {
 }
 
 
+// TC: O(n * 4 * 3)
+// SC: O(4)
 fun maxMeritTabuSpaceOptimization(days: Int, tasks: Int, points: Array<IntArray>): Int {
 
     //dp array of [n][4], becoz we need to take into count 3 as well other than 0,1,2
-    //now, just store tasks for prev day, for all task, so use one dimensional array, dp[days-1] => day can be replaced by index of tasks array prev, so that dp[day-1][task] becomes => prev[task]
+    //now, just store tasks for prev day, for all tasks, so use one dimensional array, (dp[day index] => day) can be replaced by index of tasks array prev, so that dp[day-1][task] becomes => prev[task]
     // so store only tasks result
     var prev = Array(tasks + 1) {
         -1
