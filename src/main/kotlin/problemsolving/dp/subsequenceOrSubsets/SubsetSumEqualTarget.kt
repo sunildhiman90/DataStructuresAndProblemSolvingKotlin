@@ -105,7 +105,7 @@ fun subsetSumTabuSpaceOpt(k: Int, array: IntArray): Boolean {
     val n = array.size
 
     //use array indexes for index and values just for target match
-    var prev = BooleanArray(n + 1) {
+    var prev = BooleanArray(k + 1) {
         false
     }
 
@@ -119,15 +119,15 @@ fun subsetSumTabuSpaceOpt(k: Int, array: IntArray): Boolean {
     //base case 2, It means ind can be 0 and target can be any other from target, target-1... to 0, but we need to return only for array[0]
     //if (ind == 0) return array[ind] == target
     //dp[0][array[0]] = true
-    prev[array[0]] = true
+    if (array[0] <= k) prev[array[0]] = true
 
     for (ind in 1 until n) {
 
-        val curr = BooleanArray(n + 1) {
+        val curr = BooleanArray(k + 1) {
             false
         }
         curr[0] = true //for some value target has to be true
-        
+
         for (target in 1..k) {
 
             //not take
