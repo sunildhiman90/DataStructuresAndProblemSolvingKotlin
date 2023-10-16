@@ -3,7 +3,7 @@ package problemsolving.graph
 import datastructures.graph.Edge
 import datastructures.graph.Graph
 
-// applies to undirected graphs as well
+// applies to undirected graphs
 fun bridgesInGraphTarjansAlgo(graph: Graph, n: Int): List<Edge> {
     //discovery time
     val dt = IntArray(n)

@@ -47,7 +47,9 @@ fun primsAlgo(graph: Graph, src: Int, n: Int): List<Edge> {
                 val u = edge.src
                 val v = edge.dest
 
-                //main step, if node is not visited, add it with its weight or cost to mst set pq
+                //main step, if node is not visited, add it with its weight or cost to mst set pq,
+                // becoz for single node we can have multiple weights added from different neighbors,
+                // and after picking first minimum edge, then that will be marked visited, so for next remaining edges in pq, it will not run
                 if (!visited[v]) {
                     pq.add(PrimPair(u, v, edge.weight))
                 }

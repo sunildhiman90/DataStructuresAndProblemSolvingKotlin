@@ -3,11 +3,13 @@ package problemsolving.graph
 import datastructures.graph.Graph
 import java.util.*
 
+
+//Modified BFS based
 class DijkstraAlgorithm {
 }
 
 
-// We are using PQ, becoz its first element always become smallest after we add any node , so for smallest distacne we are using this
+// We are using PQ, becoz its first element always become smallest after we add any node , so for smallest distance we are using this
 // for using in PQ-> node and its distance, make it comparable so that  PQ will be able to compare it by dist
 // node:- current node
 // dist:- current node distance from source
