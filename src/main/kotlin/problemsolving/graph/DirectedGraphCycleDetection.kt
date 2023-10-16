@@ -40,8 +40,8 @@ fun helper(
         if (recursionStack[currentNeighbor]) {
             return true //cycle exists
         } else if (!visited[currentNeighbor]) {
-            //try with current neighbor's neighbors
-            return helper(currentNeighbor, graph, visited, recursionStack)
+            //try with current neighbor's neighbors, only return if true, otherwise we need to check for other neighbors if false
+            if (helper(currentNeighbor, graph, visited, recursionStack)) return true
         }
     }
 

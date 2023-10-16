@@ -38,8 +38,8 @@ fun helperUndirected(
         if (visited[currentNeighbor] && currentNeighbor != parent) {
             return true //cycle exists
         } else if (!visited[currentNeighbor]) {
-            //try with current neighbor's neighbors
-            return helperUndirected(currentNeighbor, graph, visited, ind)
+            //try with current neighbor's neighbors, only return if true, otherwise we need to check for other neighbors if false
+            if (helperUndirected(currentNeighbor, graph, visited, ind)) return true
         }
     }
 
