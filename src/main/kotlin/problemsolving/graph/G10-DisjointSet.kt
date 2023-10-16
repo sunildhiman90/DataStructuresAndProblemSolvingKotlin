@@ -1,6 +1,7 @@
 package problemsolving.graph
 
 
+// Used to find if 2 vertices belong to same component, Becoz for that DFS and BFS takes O(N*E) time, but this approach takes almost constant time
 // Time Complexity :- O(4 * alpha) ~= O(1),   Almost equal to constant time
 class DisjointSet(n: Int) {
 
@@ -90,3 +91,4 @@ fun main() {
 
 
 }
+
