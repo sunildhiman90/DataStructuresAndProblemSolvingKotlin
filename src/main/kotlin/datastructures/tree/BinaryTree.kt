@@ -112,44 +112,32 @@ class BinaryTree {
     }
 
 
-    // BFS
+    ///BFS
     fun levelOrderTraversal(start: Node? = root) {
-        println("---Level Order Traversal---")
-        if (root == null) return
-        val queue: Queue<Node?> = LinkedList()
-
-        // Mark visited and add to queue for printing and then checking its left and right child
+        println("---Level Order Traversal 3---")
+        var level = 0
+        val queue: Queue<Node> = LinkedList()
         queue.add(start)
-        queue.add(null) // for next level
 
         while (!queue.isEmpty()) {
+            print("Level: $level --> \t")
 
-            //poll and print
-            val currentNode = queue.poll()
-            //If case is just for printing new line for next level
-            if (currentNode == null) {
-                println()
-                // just print new line and add null for next level if queue is not empty
-                if (queue.isEmpty()) {
-                    break
-                } else queue.add(null) // for next level
-            } else {
-                //WHen we are picking up current element from queue, we are adding nodes of next level for that node
-                print("${currentNode.data}\t")
-                //check for its neighbours
+            val n = queue.size
+            //Pick all elements at currently in the queue, at level : level, BEcoz everytime we are printing node, we are adding its left and right as, that is actually next level
+            for (i in 0 until n) {
+                val currentNode = queue.poll()
+                print("${currentNode.data}  ")
                 if (currentNode.left != null) {
-                    queue.add(currentNode.left)
+                    queue.add(currentNode.left) //for next level
                 }
                 if (currentNode.right != null) {
-                    queue.add(currentNode.right)
+                    queue.add(currentNode.right)  //for next level
                 }
-                // instead of adding null here, we will add it when removing null,
-                // it means all the left and right subtrees will be added by that time of each node of same level,
-                // otherwise it wil add null after each ( left and right ), SO null means start of next level
             }
+            println()
+            level++
         }
     }
-
 
     fun isBalanced(node: Node?): Boolean {
         val balanceFactor = heightOfTree(node?.left) - heightOfTree(node?.right)
