@@ -1,7 +1,6 @@
 package problemsolving.multithreading
 
-import java.util.LinkedList
-
+import java.util.*
 
 
 /**
@@ -17,29 +16,29 @@ object ProducerConsumer4 {
     @JvmStatic
     fun main(args: Array<String>) {
 
-            val pc = PC()
-            val producer = Thread {
-                try {
-                    pc.produce()
-                } catch (e: InterruptedException) {
-                    e.printStackTrace()
-                }
+        val pc = PC()
+        val producer = Thread {
+            try {
+                pc.produce()
+            } catch (e: InterruptedException) {
+                e.printStackTrace()
             }
-
-            val consumer = Thread {
-                try {
-                    pc.consume()
-                } catch (e: InterruptedException) {
-                    e.printStackTrace()
-                }
-            }
-            producer.start()
-            consumer.start()
-
-            producer.join()
-            consumer.join()
         }
-    
+
+        val consumer = Thread {
+            try {
+                pc.consume()
+            } catch (e: InterruptedException) {
+                e.printStackTrace()
+            }
+        }
+        producer.start()
+        consumer.start()
+
+        producer.join()
+        consumer.join()
+    }
+
     class PC {
         private var buffer = LinkedList<String>()
         var capacity = 5
@@ -54,7 +53,7 @@ object ProducerConsumer4 {
                 //println("buffer.size=${buffer.size}") //using it here was causing the invalid flow, try uncommenting it and check yourself, producer will nto produce all items before consumer start consuming
                 synchronized(lock) {
                     //if buffer is full, wait
-                    if(buffer.size == capacity) lock.wait()
+                    if (buffer.size == capacity) lock.wait()
 
                     //produce
                     var item = "$data $index"
@@ -77,7 +76,7 @@ object ProducerConsumer4 {
             while (true) {
                 synchronized(lock) {
                     //if buffer is empty, wait
-                    if(buffer.size == 0) lock.wait()
+                    if (buffer.size == 0) lock.wait()
 
                     println("consumed data: ${buffer.poll()}") //consume
 
@@ -91,7 +90,6 @@ object ProducerConsumer4 {
         }
 
     }
-
 
 
 }

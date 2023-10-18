@@ -1,6 +1,6 @@
 package problemsolving.multithreading
 
-import java.util.LinkedList
+import java.util.*
 import kotlin.concurrent.thread
 
 //TODO need to find out what is the issue with [thread] function
@@ -26,7 +26,7 @@ class ProducerConsumerMultipleItemsAtOnce {
             var index = 1
             while (true) {
                 synchronized(lock) {
-                    if(buffer.size == capacity) lock.wait()
+                    if (buffer.size == capacity) lock.wait()
 
                     var item = "$data $index"
                     buffer.add(item)
@@ -45,7 +45,7 @@ class ProducerConsumerMultipleItemsAtOnce {
         private var consumer = Thread {
             while (true) {
                 synchronized(lock) {
-                    if(buffer.size == 0) lock.wait()
+                    if (buffer.size == 0) lock.wait()
 
                     println("consumed data: ${buffer.poll()}") //consume
                     lock.notify()

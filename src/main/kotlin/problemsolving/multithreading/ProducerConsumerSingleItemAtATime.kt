@@ -1,8 +1,7 @@
 package problemsolving.multithreading
 
-import java.util.LinkedList
+import java.util.*
 import kotlin.concurrent.thread
-import kotlin.jvm.Throws
 
 //produce single item and then consume that item, then produce next item then consume and so on..
 //In this case we dont need capacity,
@@ -23,7 +22,7 @@ class ProducerConsumerSingleItemAtATime {
             var index = 0
             while (true) {
                 synchronized(lock) {
-                    if(buffer.size < capacity) {
+                    if (buffer.size < capacity) {
                         var item = "$data $index"
                         buffer.add(item)
                         index++
@@ -41,7 +40,7 @@ class ProducerConsumerSingleItemAtATime {
         private var consumer = thread(start = false) {
             while (true) {
                 synchronized(lock) {
-                    if(buffer.isNotEmpty()) {
+                    if (buffer.isNotEmpty()) {
                         println("consumed data: ${buffer.poll()}") //consume item
                         lock.notify() //notify producer
 

@@ -23,8 +23,8 @@ fun maxSlidingWindow(arr: IntArray, k: Int): IntArray {
     runningList.add(arr[currentWindowQueue.peekFirst()])
     for (i in k until arr.size) {
 
-        //we need to maintain only window size in queue
-        if (currentWindowQueue.size == k) {
+        //we need to maintain only indexes equal to window size in queue, so check for first index if it becomes outside k
+        if (currentWindowQueue.peekFirst() + k == i) {
             currentWindowQueue.removeFirst()
         }
 

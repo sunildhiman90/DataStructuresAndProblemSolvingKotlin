@@ -1,6 +1,6 @@
 package problemsolving.multithreading
 
-import java.util.LinkedList
+import java.util.*
 import kotlin.concurrent.thread
 
 //using thread function from kotlin, does not work properly in everycase, sometimes not producing all items even before consumer start consumig
@@ -25,7 +25,7 @@ class ProducerConsumer2 {
             var index = 0
             while (true) {
                 synchronized(lock) {
-                    while(buffer.size == capacity) lock.wait()
+                    while (buffer.size == capacity) lock.wait()
 
                     var item = "$data $index"
                     buffer.add(item)
@@ -42,7 +42,7 @@ class ProducerConsumer2 {
         private var consumer = thread(start = false) {
             while (true) {
                 synchronized(lock) {
-                    while(buffer.size == 0) lock.wait()
+                    while (buffer.size == 0) lock.wait()
 
                     println("consumed data: ${buffer.poll()}") //consume
                     lock.notify()
