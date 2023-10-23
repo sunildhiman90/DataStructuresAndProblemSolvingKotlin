@@ -69,7 +69,7 @@ fun subsetSumTabulation(k: Int, array: IntArray): Boolean {
 
     val n = array.size
     val dp = Array(n + 1) {
-        BooleanArray(n + 1) {
+        BooleanArray(k + 1) {
             false
         }
     }
@@ -80,7 +80,7 @@ fun subsetSumTabulation(k: Int, array: IntArray): Boolean {
 
     //base case 2, It means ind can be 0 and target can be any other from target, target-1... to 0, but we need to return only for array[0]
     //if (ind == 0) return array[ind] == target
-    dp[0][array[0]] = true
+    if (array[0] <= k) dp[0][array[0]] = true
 
     for (ind in 1 until n) {
         for (target in 1..k) {
