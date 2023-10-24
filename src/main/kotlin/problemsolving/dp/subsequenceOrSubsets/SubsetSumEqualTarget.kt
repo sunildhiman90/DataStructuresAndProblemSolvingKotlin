@@ -53,12 +53,12 @@ fun subsetSumMemoHelper(ind: Int, target: Int, array: IntArray, dp: Array<Boolea
     if (dp[ind][target]) return true
 
     //not take
-    val notTake = subsetSumHelper(ind - 1, target, array)
+    val notTake = subsetSumMemoHelper(ind - 1, target, array, dp)
 
     //take
     var take = false
     if (array[ind] <= target)
-        take = subsetSumHelper(ind - 1, target - array[ind], array)
+        take = subsetSumMemoHelper(ind - 1, target - array[ind], array, dp)
 
     dp[ind][target] = take || notTake
     return dp[ind][target]
