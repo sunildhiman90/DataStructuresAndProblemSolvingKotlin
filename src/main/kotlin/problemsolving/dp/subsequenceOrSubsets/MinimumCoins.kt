@@ -5,7 +5,10 @@ package problemsolving.dp.subsequenceOrSubsets
 val largeNumber = Math.pow(10.toDouble(), 9.toDouble()).toInt()
 fun minimumCoins(ind: Int, target: Int, coins: IntArray): Int {
 
-    return minimumCoinsHelper(ind, target, coins)
+
+    var ans = minimumCoinsHelper(ind, target, coins)
+    if (ans >= largeNumber) ans = -1
+    return ans
 }
 
 fun minimumCoinsHelper(ind: Int, target: Int, coins: IntArray): Int {
@@ -38,7 +41,9 @@ fun minimumCoinsMemo(ind: Int, target: Int, coins: IntArray): Int {
         }
     }
 
-    return minimumCoinsMemoHelper(ind, target, coins, dp)
+    var ans = minimumCoinsMemoHelper(ind, target, coins, dp)
+    if (ans >= largeNumber) ans = -1
+    return ans
 }
 
 fun minimumCoinsMemoHelper(ind: Int, target: Int, coins: IntArray, dp: Array<IntArray>): Int {
@@ -92,7 +97,9 @@ fun minimumCoinsTabu(targetMax: Int, coins: IntArray): Int {
         }
     }
 
-    return dp[n - 1][targetMax]
+    var ans = dp[n - 1][targetMax]
+    if (ans >= largeNumber) ans = -1
+    return ans
 
 }
 
@@ -128,7 +135,9 @@ fun minimumCoinsTabuSpaceOpt(targetMax: Int, coins: IntArray): Int {
         prev = curr
     }
 
-    return prev[targetMax]
+    var ans = prev[targetMax]
+    if (ans >= largeNumber) ans = -1
+    return ans
 
 }
 
