@@ -23,6 +23,21 @@ fun List<Int>.insertionSort(): List<Int> {
     return list
 }
 
+fun List<Int>.insertionSortAlt(): List<Int> {
+    val list = this.toMutableList()
+    for (i in 0 until list.size) { //iteration loop
+        var j = i
+        //do swapping with prev element until its > 0
+        while (j > 0 && list[j - 1] > list[j]) {
+            val temp = list[j - 1]
+            list[j - 1] = list[j]
+            list[j] = temp
+            j--
+        }
+    }
+    return list
+}
+
 fun main() {
     println("** Insertion Sort **")
     println("Enter array elements with comma after each element and then press enter:")
@@ -33,7 +48,6 @@ fun main() {
     println("Sorter array is : $result")
     println("Insertion Sort took $duration seconds")
 }
-
 
 
 /**

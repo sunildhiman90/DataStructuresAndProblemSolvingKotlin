@@ -6,17 +6,18 @@ package algorithms.sorting
  */
 fun List<Int>.selectionSort(): List<Int> {
     val list = this.toMutableList()
-    for (i in 0 until list.size) {
+    val n = list.size
+    for (i in 0 until n - 1) {
         var min = i
-        for (j in i+1 until list.size) {
-            if(list[j] < list[min]) {
+        for (j in i + 1 until n) {
+            if (list[j] < list[min]) {
                 min = j
             }
         }
         //Only do swapping if min has changed,
         // for example if array is already sorted in asc order,
         // then min will not change
-        if(min != i) {
+        if (min != i) {
             val temp = list[i]
             list[i] = list[min]
             list[min] = temp
@@ -27,8 +28,10 @@ fun List<Int>.selectionSort(): List<Int> {
 
 fun main() {
     println("** Selection Sort **")
-    println("Enter array elements with comma after each element " +
-            "and then press enter:")
+    println(
+        "Enter array elements with comma after each element " +
+                "and then press enter:"
+    )
     val arr = readLine()!!.split(",").map { it.toInt() }
     val result = arr.selectionSort()
     println("Sorter array is : $result")
