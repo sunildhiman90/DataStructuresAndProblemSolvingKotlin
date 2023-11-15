@@ -39,9 +39,6 @@ fun List<Int>.bubbleSortAlt(): List<Int> {
     for (i in n - 1 downTo 0) { //iteration loop
         var flag = 0
 
-        // run inner loop for i-1 because,
-        // -1 is for handling the last case for comparison arr[j]>arr[j+1] so that no IndexOutOfBoundException occurs
-        // and -i is because with each iteration, last i elements will be already in sorted order
         for (j in 0 until i) { //comparison loop
             if (list[j] > list[j + 1]) {
                 val temp = list[j]

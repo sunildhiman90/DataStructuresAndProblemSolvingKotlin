@@ -66,6 +66,6 @@ fun main() {
  * Space Complexity ->
  * O(n) -> for 1 extra array of size n for n elements
  * +
- * O(logn) -> for recursive stack calls, on each stage its divided into 2 subarrays
- * => so O(n) + O(logn) => it will be O(n) because O(logn) is being added so it would not make any difference
+ * O(n*logn) -> for recursive stack calls, on each stage its divided into 2 subarrays =>
+ *
  */
