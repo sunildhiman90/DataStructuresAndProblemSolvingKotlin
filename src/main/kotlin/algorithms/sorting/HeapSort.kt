@@ -1,5 +1,20 @@
 package algorithms.sorting
 
+/**
+ * Definition:-
+ * Heap sort is a comparison-based sorting technique based on Binary Heap data structure. It is similar to the selection sort where we
+ * first find the minimum element and place the minimum element at the beginning. Repeat the same process for the remaining elements.
+ *
+ * How Heap Sort Algorithm works ?
+ * First convert the array into heap data structure using heapify, then one by one delete the root node of the Max-heap and replace
+ * it with the last node in the heap and then heapify the root of the heap. Repeat this process until size of heap is greater than 1.
+ *
+ * 1. Build a heap from the given input array.
+ * 2. Repeat the following steps until the heap contains only one element:
+ *   a. Swap the root element of the heap (which is the largest element) with the last element of the heap.
+ *   b. Remove the last element of the heap (which is now in the correct position).
+ *   c. Heapify the remaining elements of the heap.
+ */
 
 /**
  * Step 1:
@@ -7,16 +22,14 @@ package algorithms.sorting
  * becoz all leaf nodes start from (n/2) to n-1, so before that we have non leaf nodes
  *
  * Step2: Deletion
- * for all elements, loop in descending order
- * and swap first(which is root and  is largest element) and current elements(last element in unsorted list) in each iteration,
- * so that largest element from root will go to last position in array
- *
+ * for all elements, loop in descending order and swap first(which is root and is largest element) and current elements(last element in
+ * unsorted list) in each iteration, so that largest element from root will go to last position in array
  */
 fun heapSort(list: MutableList<Int>, n: Int) {
 
     //Step1: build heap, starting from (n/2)-1 to 0(start), becoz all leaf nodes start from (n/2) to n-1, so before that we have non leaf nodes
     for (i in (n / 2) - 1 downTo 0) {
-        maxHeapify(list, n = n, startIndex = i) //from i to n
+        maxHeapify(list, n = n, startIndex = i) //heapify from i to n
     }
 
     //Step2: deletion
@@ -31,7 +44,7 @@ fun heapSort(list: MutableList<Int>, n: Int) {
             list,
             i,
             0
-        ) //from start 0 to ith element only, before that all elements will become sorted: last, then second last and then second to second last etc.
+        ) //heapify from start 0 to ith element only, before that all elements will become sorted: last, then second last and then second to second last etc.
     }
 }
 

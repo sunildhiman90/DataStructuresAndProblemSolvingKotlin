@@ -2,10 +2,20 @@ package algorithms.sorting
 
 import java.util.*
 
+
+/**
+ * Definition:-
+ *
+ * Bucket sort is a sorting technique that involves dividing elements into various groups, or buckets. These buckets are formed by
+ * uniformly distributing the elements. Once the elements are divided into buckets, they can be sorted using any other sorting algorithm.
+ * Finally, the sorted elements are gathered together in an ordered fashion.
+ *
+ */
+
 /**
 It divides the unsorted array into separate groups and calls them buckets.
 Sort the individual buckets, and then gather them all together to form the final sorted array.
-*/
+ */
 fun bucketSortFloats(arr: FloatArray, n: Int, numOfBuckets: Int) {
 
     //Step1: create n buckets with empty vector list
@@ -47,7 +57,7 @@ fun bucketSortInteger(arr: DoubleArray, n: Int, numOfBuckets: Int) {
 
     //Step2: Put array elements in buckets
     for (i in 0 until n) {
-        //This part is just for checking the index out of bounds case for when arr[i] is maxElement , then index of array == numOfBucket => index oout of bound, so we need to decrement 1 from that
+        //This part is just for checking the index out of bounds case for when arr[i] is maxElement , then index of array == numOfBucket => index out of bounds, so we need to decrement 1 from that
         //WE NEED TO CHECK FOR IN WHICH CASE WE ARE GETTING COMPELTE NUMBER HERE, THATS WHY WE ARE CHECKING DOUBLE PART - INTEGER PART
         //AND WHEN NUMBER WILL BE COMPLETE, THEN DIFFERENCE BETWEEN DOUBLE VALUE - INTEGER VALUE WILL BE ZERO(AND THAT WILL BE THE CASE WE ARE CHECKING TO AVOID INDEX OUT OF BOUNDS), OTHERWISE IT WILL BE IN DECIMAL
         val diff = (arr[i] - minElement) / range - ((arr[i] - minElement) / range).toInt()
@@ -94,7 +104,6 @@ fun main() {
     bucketSortInteger(arr, n, noOfBuckets)
     println("Sorted array is :" + arr.contentToString())
 }
-
 
 
 /**

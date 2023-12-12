@@ -1,6 +1,17 @@
 package algorithms.sorting
 
-import java.util.*
+
+/**
+ * Definition:-
+ *
+ * Radix Sort is a linear sorting algorithm that sorts elements by processing them digit by digit. It is an efficient sorting
+ * algorithm for integers or strings with fixed-size keys.
+ *
+ * Rather than comparing elements directly, Radix Sort distributes the elements into buckets based on each digit’s value.
+ * By repeatedly sorting the elements by their significant digits, from the least significant to the most significant,
+ * Radix Sort achieves the final sorted order
+ *
+ */
 
 fun radixSort(a: IntArray, n: Int) {
     //int max = getMax(a);
@@ -21,7 +32,7 @@ fun countingSortImpl(a: IntArray, n: Int, pos: Int) {
 
     //step1, freq counting
     for (i in 0 until n) {
-        ++count[a[i] / pos % 10] //for digit at pos, for example, at 1's, 10's and 100's place
+        ++count[(a[i] / pos) % 10] //for digit at pos, for example, at 1's, 10's and 100's place
     }
 
     //step2, position calculation
@@ -31,7 +42,7 @@ fun countingSortImpl(a: IntArray, n: Int, pos: Int) {
 
     //step3, copy sorted array in new array
     for (i in n - 1 downTo 0) {
-        b[--count[a[i] / pos % 10]] = a[i]
+        b[--count[(a[i] / pos) % 10]] = a[i]
     }
 
     //step4, copy array back
@@ -55,7 +66,6 @@ fun getMax(a: IntArray): Int {
     }
     return max
 }
-
 
 
 /**
