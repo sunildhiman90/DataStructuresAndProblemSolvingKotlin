@@ -4,6 +4,21 @@ import utils.measureTimedValueCustom
 
 
 /**
+ * Definition:-
+ *
+ * Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the
+ * wrong order. This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite high.
+ *
+ * How it Works ?
+ *
+ * In Bubble Sort algorithm,
+ * traverse from left and compare adjacent elements and the higher one is placed at right side.
+ * In this way, the largest element is moved to the rightmost end at first.
+ * This process is then continued to find the second largest and place it and so on until the data is sorted.
+ *
+ */
+
+/**
  * It is based on comparing current element with next element if next is smaller(in the inner for loop), then swap, by this way
  * after the end of first iteration, the largest element will be bubble up to the end of list,
  * And if no swapping is done in first iteration then break the loop becoz it means array is already sorted.

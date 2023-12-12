@@ -1,5 +1,23 @@
 package algorithms.sorting
 
+
+/**
+ *
+ * Definition:-
+ *
+ * Merge sort is defined as a sorting algorithm that works by dividing an array into smaller subarrays, sorting each subarray,
+ * and then merging the sorted subarrays back together to form the final sorted array.
+ *
+ * In simple terms, we can say that the process of merge sort is to divide the array into two halves, sort each half,
+ * and then merge the sorted halves back together. This process is repeated until the entire array is sorted.
+ *
+ * How does Merge Sort work-:
+ *
+ * Merge sort is a recursive algorithm that continuously splits the array in half until it cannot be further divided i.e., the array has
+ * only one element left (an array with one element is always sorted). Then the sorted subarrays are merged into one sorted array.
+ */
+
+
 fun divide(list: MutableList<Int>, start: Int, end: Int) {
     //keep dividing until single element, then start == end, and it will return and will proceed with conquer calls then
     if (start >= end) {
@@ -40,7 +58,7 @@ fun conquer(list: MutableList<Int>, start: Int, mid: Int, end: Int) {
 
     // j will be initialized to startIndex because startIndex will change for each recursive call ,
     // before that element will be sorted
-    // copy all elements of new merged array to original array from startIndex before which all elements will be already
+    // copy all elements of new merged array to original array from startIndex before which all elements will be already sorted
     var index2 = start
     for (i in 0 until mergedList.size) {
         list[index2++] = mergedList[i]
