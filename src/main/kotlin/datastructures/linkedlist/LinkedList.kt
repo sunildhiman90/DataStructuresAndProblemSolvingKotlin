@@ -155,7 +155,8 @@ class LinkedList {
         //work done
         head.next?.next =
             head //reverse point here, instead of using newHead.next here, use head.next.next, otherwise if we use newHead.next, then newHEad will update in every call, and logic will not work
-        head.next = null //finally set next of head null
+        head.next =
+            null //finally set next of head null, detach from old list becoz it is set to head.next.next and in next call it will be updated again
         return newHead //it will be last element, it will remain same in all calls
     }
 }
@@ -202,7 +203,7 @@ fun main() {
  * 2nd call -> head is 2 -> it will again call with head as head.next => 3
  * 3rd call -> head is 3 -> it will again call with head as head.next => 4 and this call will return with new head as 4,as next of 4 is null
  *
- * Reverse return calls now -> 3rd call will return in 3rd call remaining code where head was 3 && newHead will be 4
+ * Reverse return calls now -> 3rd call will return at 3rd call remaining code where head was 3 && newHead will be 4
  * 3rd call :-  head is 3 -> it will apply -> head.next.next = head, it means => 3 -> 4 -> 3
  *             and it will apply 2nd part also -> head.next = null => 3 -> null, so new list will become now 4 -> 3 -> null
  *             and finally it will return to 2nd call where head is 2

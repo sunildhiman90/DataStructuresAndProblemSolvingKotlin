@@ -5,7 +5,7 @@ package datastructures.arrays.easy
 fun isArraySorted(arr: IntArray): Boolean {
 
     for (i in 1 until arr.size) {
-        if (arr[i] >= arr[i - 1] == false) return false
+        if (arr[i] < arr[i - 1]) return false
     }
     return true
 }
@@ -14,7 +14,7 @@ fun isArraySorted(arr: IntArray): Boolean {
 fun isArraySortedDesc(arr: IntArray): Boolean {
 
     for (i in 1 until arr.size) {
-        if (arr[i] >= arr[i - 1] == true) return false
+        if (arr[i] > arr[i - 1]) return false
     }
     return true
 }
