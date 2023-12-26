@@ -40,27 +40,9 @@ fun maxSlidingWindow(arr: IntArray, k: Int): IntArray {
     return runningList.toIntArray()
 }
 
-// O(n*log(n)) Using Priority Queue
-fun maxSlidingWindow2(nums: IntArray, k: Int): IntArray {
-    val priorityQueue = PriorityQueue<Int>(Collections.reverseOrder())
-
-    val runningList = mutableListOf<Int>()
-
-    //O(n)
-    for (i in nums.indices) {
-        priorityQueue.add(nums[i]) //O(logn) for each insertion upto n
-
-        // In increasing queue, of size k, 1st element is always the kth largest(means smallest) element from those
-        if (priorityQueue.size > k) priorityQueue.remove()
-        runningList.add(priorityQueue.peek())
-
-    }
-    return runningList.toIntArray()
-}
 
 fun main() {
-    println(maxSlidingWindow(intArrayOf(1, -1), 1).contentToString())
-    println(maxSlidingWindow2(intArrayOf(1, -1), 1).contentToString())
+    println(maxSlidingWindow(intArrayOf(1, 2, 3, 1, 4, 5, 2, 3, 6), 3).contentToString())
 }
 
 /**

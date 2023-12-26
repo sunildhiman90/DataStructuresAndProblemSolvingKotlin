@@ -1,5 +1,6 @@
 package problemsolving.array
 
+//Largest Sum Contiguous Subarray
 class KadaneAlgo {
 }
 
@@ -9,7 +10,7 @@ fun kadaneAlgo(arr: List<Int>): Int {
 
     for (i in arr) {
         sumSoFar += i
-        if(sumSoFar > sumGlobal) {
+        if (sumSoFar > sumGlobal) {
             sumGlobal = sumSoFar
         }
         if (sumSoFar < 0) {
