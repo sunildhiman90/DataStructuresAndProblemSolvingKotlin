@@ -30,7 +30,7 @@ class QueueUsingA(val capacity: Int) {
         check(!isEmpty()) {
             "Queue is empty!"
         }
-        val element = arr[0]
+        val element = arr[0] // first element is the front,no need to talke extra variable
         // only need to traverse till rear
         for (i in 0 until rear) {
             arr[i] = arr[i + 1]

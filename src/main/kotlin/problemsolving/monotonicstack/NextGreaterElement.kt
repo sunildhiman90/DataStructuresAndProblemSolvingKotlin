@@ -29,7 +29,7 @@ fun nextGreaterElementMainCompacted(nums: Array<Int>): Array<Int> {
         // next num
         next = element
 
-        // Find all elements for which next is greater. Means we will remove from stack all elements for which next is greater
+        // Find all elements for which next is greater. Means we will remove from stack all smaller elements for which next is greater
         // and then set in finalArray
         // thats why use decreasing monotonic stack logic for popping, becoz if current(next) element is smaller than prev(stack top),
         // then it does not satisfy our criteria, so push to stack for later adding -1 so stack will contain elements which does not satisfy our criteria ,
